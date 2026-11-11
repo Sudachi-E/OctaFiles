@@ -313,7 +313,7 @@
     <value>Anclar en la barra lateral</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>¡Bienvenido a Files!</value>
+    <value>¡Bienvenido a Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Conceder permiso</value>
@@ -615,7 +615,7 @@
     <value>{0} - acceso directo</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files se encontró con un problema para el que los desarrolladores aún no están preparados.</value>
+    <value>Octa Files se encontró con un problema para el que los desarrolladores aún no están preparados.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>¡Algo ha fallado!</value>
@@ -1839,10 +1839,10 @@
     <value>Enviar informe de error</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Establecer Files como administrador de archivos predeterminado</value>
+    <value>Establecer Octa Files como administrador de archivos predeterminado</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Utilizar Files como diálogo de apertura de archivos</value>
+    <value>Utilizar Octa Files como diálogo de apertura de archivos</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Etiqueta</value>
@@ -1881,7 +1881,7 @@
     <value>Restaurar predeterminado</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Abrir pestaña en instancia existente al abrir Files desde otra aplicación</value>
+    <value>Abrir pestaña en instancia existente al abrir Octa Files desde otra aplicación</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Configuración al iniciar</value>
@@ -1980,7 +1980,7 @@
     <value>Archivos recientes</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Abrir Files al iniciar Windows</value>
+    <value>Abrir Octa Files al iniciar Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atributos</value>
@@ -2055,7 +2055,7 @@
     <value>Fotos</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Actualizar Files</value>
+    <value>Actualizar Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Etiquetas</value>
@@ -2118,10 +2118,10 @@
     <value>¡Hola!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>¿Le gusta Files? Por favor, considere hacer una reseña en Microsoft Store.</value>
+    <value>¿Le gusta Octa Files? Por favor, considere hacer una reseña en Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>¿Le gusta Files? Considere la posibilidad de apoyar el proyecto en GitHub.</value>
+    <value>¿Le gusta Octa Files? Considere la posibilidad de apoyar el proyecto en GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Patrocinador</value>
@@ -2187,7 +2187,7 @@
     <value>Aplanar</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Al aplanar una carpeta se moverá todo el contenido de sus subcarpetas a la ubicación seleccionada. Esta operación es permanente y no puede deshacerse. Al utilizar esta función experimental, usted reconoce el riesgo y acepta no responsabilizar al equipo de Files de ninguna pérdida de datos.</value>
+    <value>Al aplanar una carpeta se moverá todo el contenido de sus subcarpetas a la ubicación seleccionada. Esta operación es permanente y no puede deshacerse. Al utilizar esta función experimental, usted reconoce el riesgo y acepta no responsabilizar al equipo de Octa Files de ninguna pérdida de datos.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Mostrar opciones de aplanado</value>
@@ -3410,7 +3410,7 @@
     <value>Introducir el siguiente código en el enlace inferior para empezar a trabajar con repositorios GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files no tiene acceso a GitHub en este momento.</value>
+    <value>Octa Files no tiene acceso a GitHub en este momento.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Abrir carpeta en {0}</value>
@@ -3525,10 +3525,10 @@
     <value>No volver a mostrar</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files se está ejecutando como administrador</value>
+    <value>Octa Files se está ejecutando como administrador</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Debido a una limitación con Windows y WinAppSdk, arrastrar y soltar no está disponible cuando se ejecuta Files como administrador. Si desea utilizar la función de arrastrar y soltar, puede evitar esta limitación abriendo UAC (Control de cuentas de usuario) desde Inicio, seleccionando el tercer nivel y reiniciando Windows. De lo contrario, puede seguir utilizando Files sin arrastrar y soltar.</value>
+    <value>Debido a una limitación con Windows y WinAppSdk, arrastrar y soltar no está disponible cuando se ejecuta Octa Files como administrador. Si desea utilizar la función de arrastrar y soltar, puede evitar esta limitación abriendo UAC (Control de cuentas de usuario) desde Inicio, seleccionando el tercer nivel y reiniciando Windows. De lo contrario, puede seguir utilizando Octa Files sin arrastrar y soltar.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Permitir que la aplicación se ejecute en segundo plano al cerrar la ventana</value>
@@ -3623,7 +3623,7 @@
     <value>elementos</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files no puede inicializar este directorio como repositorio Git.</value>
+    <value>Octa Files no puede inicializar este directorio como repositorio Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Artista colaborador</value>
@@ -3975,7 +3975,7 @@
     <value>No hay operaciones de archivo en curso</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>La opción de abrir Files al iniciar Windows no está disponible debido a la configuración del sistema o política de grupo. Para volver a activarla, abra la página de inicio en el Administrador de tareas.</value>
+    <value>La opción de abrir Octa Files al iniciar Windows no está disponible debido a la configuración del sistema o política de grupo. Para volver a activarla, abra la página de inicio en el Administrador de tareas.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>No se han podido restaurar los elementos desde la papelera de reciclaje</value>
@@ -4071,10 +4071,10 @@
     <value>Editar permisos</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files sigue ejecutándose en segundo plano para mejorar el rendimiento al arrancar.</value>
+    <value>Octa Files sigue ejecutándose en segundo plano para mejorar el rendimiento al arrancar.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>¿Dónde ha ido Files?</value>
+    <value>¿Dónde ha ido Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Preguntas y discusiones</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Mostrar icono de Files en la bandeja del sistema</value>
+    <value>Mostrar icono de Octa Files en la bandeja del sistema</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Hilos de la CPU</value>

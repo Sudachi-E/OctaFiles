@@ -26,7 +26,7 @@ namespace Files.App.Helpers
 	/// </summary>
 	public static class AppLifecycleHelper
 	{
-		private readonly static string AppInformationKey = @$"Software\Files Community\{Package.Current.Id.Name}\v1\AppInformation";
+		private readonly static string AppInformationKey = @$"Software\Files Community\{AppPackageInfo.Name}\v1\AppInformation";
 
 		/// <summary>
 		/// Gets the value that indicates whether the app is updated.
@@ -80,7 +80,7 @@ namespace Files.App.Helpers
 		/// Gets application package version.
 		/// </summary>
 		public static Version AppVersion { get; } =
-			new(Package.Current.Id.Version.Major, Package.Current.Id.Version.Minor, Package.Current.Id.Version.Build, Package.Current.Id.Version.Revision);
+			new(AppPackageInfo.Version.Major, AppPackageInfo.Version.Minor, AppPackageInfo.Version.Build, AppPackageInfo.Version.Revision);
 
 		/// <summary>
 		/// Gets application icon path.
@@ -88,12 +88,7 @@ namespace Files.App.Helpers
 		public static string AppIconPath => _appIconPath.Value;
 
 		private static readonly Lazy<string> _appIconPath = new(() =>
-			SystemIO.Path.Combine(Package.Current.InstalledPath, AppEnvironment switch
-			{
-				AppEnvironment.Dev => Constants.AssetPaths.DevLogo,
-				AppEnvironment.SideloadPreview or AppEnvironment.StorePreview => Constants.AssetPaths.PreviewLogo,
-				_ => Constants.AssetPaths.StableLogo
-			}));
+			SystemIO.Path.Combine(AppPackageInfo.InstalledPath, Constants.AssetPaths.AppLogo));
 
 		/// <summary>
 		/// Initializes the app components.
@@ -184,7 +179,7 @@ namespace Files.App.Helpers
 			{
 				options.Dsn = Constants.AutomatedWorkflowInjectionKeys.SentrySecret;
 				options.AutoSessionTracking = true;
-				var packageVersion = Package.Current.Id.Version;
+				var packageVersion = AppPackageInfo.Version;
 				options.Release = $"{packageVersion.Major}.{packageVersion.Minor}.{packageVersion.Build}";
 				options.TracesSampleRate = 0.10;
 				// Active-session reports must not be sampled away or their sums undercount;
@@ -193,7 +188,7 @@ namespace Files.App.Helpers
 					context.TransactionContext.Operation == ActiveSessionTracker.TransactionOperation ? 1.0 : null;
 				options.ProfilesSampleRate = 0.05;
 				options.Environment = AppEnvironment == AppEnvironment.StorePreview || AppEnvironment == AppEnvironment.SideloadPreview ? "preview" : "production";
-				options.CacheDirectoryPath = ApplicationData.Current.LocalFolder.Path;
+				options.CacheDirectoryPath = AppStorage.LocalFolderPath;
 
 				options.DisableWinUiUnhandledExceptionIntegration();
 
@@ -272,7 +267,7 @@ namespace Files.App.Helpers
 		public static IServiceProvider ConfigureHost(AppModel appModel)
 		{
 			var services = new ServiceCollection();
-			var fileLoggerProvider = new FileLoggerProvider(Path.Combine(ApplicationData.Current.LocalFolder.Path, $"debug_{(Environment.IsPrivilegedProcess ? "privileged" : "unprivileged")}.log"));
+			var fileLoggerProvider = new FileLoggerProvider(Path.Combine(AppStorage.LocalFolderPath, $"debug_{(Environment.IsPrivilegedProcess ? "privileged" : "unprivileged")}.log"));
 
 			services.AddSingleton(fileLoggerProvider);
 
@@ -575,7 +570,7 @@ namespace Files.App.Helpers
 						// Try to re-launch and start over
 						MainWindow.Instance.DispatcherQueue.EnqueueOrInvokeAsync(async () =>
 						{
-							await Launcher.LaunchUriAsync(new Uri("files-dev:"));
+							await Launcher.LaunchUriAsync(new Uri("octa-files-dev:"));
 						})
 						.Wait(100);
 					}

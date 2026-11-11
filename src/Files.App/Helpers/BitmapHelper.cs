@@ -99,7 +99,7 @@ namespace Files.App.Helpers
 					PrimaryButtonText = Strings.OK.GetLocalizedResource(),
 				};
 
-				if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+				if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 					errorDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 				await errorDialog.TryShowAsync();

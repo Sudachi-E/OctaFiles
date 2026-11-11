@@ -313,7 +313,7 @@
     <value>釘選至側邊欄</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>歡迎使用 Files！</value>
+    <value>歡迎使用 Octa Files！</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>取得權限</value>
@@ -615,7 +615,7 @@
     <value>{0} - 捷徑</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files 遇到我們未處理的錯誤。</value>
+    <value>Octa Files 遇到我們未處理的錯誤。</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>發生錯誤！</value>
@@ -1839,10 +1839,10 @@
     <value>提交錯誤報告</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>將 Files 設為預設的檔案總管</value>
+    <value>將 Octa Files 設為預設的檔案總管</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>將 Files 設定為檔案開啟之預設應用程式</value>
+    <value>將 Octa Files 設定為檔案開啟之預設應用程式</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>檔案標籤</value>
@@ -1881,7 +1881,7 @@
     <value>重設回預設圖示</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>在另一個應用程式開啟 Files 時，在現有的視窗中建立新索引標籤</value>
+    <value>在另一個應用程式開啟 Octa Files 時，在現有的視窗中建立新索引標籤</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>啟動設定</value>
@@ -1980,7 +1980,7 @@
     <value>最近使用的檔案</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>在 Windows 啟動時自動啟動 Files</value>
+    <value>在 Windows 啟動時自動啟動 Octa Files</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>屬性</value>
@@ -2055,7 +2055,7 @@
     <value>圖片</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>更新 Files</value>
+    <value>更新 Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>標籤</value>
@@ -2118,10 +2118,10 @@
     <value>哈囉！</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>喜歡「Files」嗎？請考慮至 Microsoft Store 留下評論。</value>
+    <value>喜歡「Octa Files」嗎？請考慮至 Microsoft Store 留下評論。</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>喜歡 Files 嗎？請考慮在 GitHub 上支持本專案。</value>
+    <value>喜歡 Octa Files 嗎？請考慮在 GitHub 上支持本專案。</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>贊助</value>
@@ -2187,7 +2187,7 @@
     <value>展平</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>展平資料夾將會把其子資料夾中的所有內容移動到選定的位置。此操作是永久性的，無法復原。使用此實驗性功能即表示您承擔風險並同意不對 Files 團隊因任何資料遺失究責。</value>
+    <value>展平資料夾將會把其子資料夾中的所有內容移動到選定的位置。此操作是永久性的，無法復原。使用此實驗性功能即表示您承擔風險並同意不對 Octa Files 團隊因任何資料遺失究責。</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>顯示展平選項</value>
@@ -3410,7 +3410,7 @@
     <value>在下面的連結中輸入以下驗證碼，即可開始使用 GitHub 儲存庫。</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files 目前無法連線至 GitHub。</value>
+    <value>Octa Files 目前無法連線至 GitHub。</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>以 {0} 開啟資料夾</value>
@@ -3525,10 +3525,10 @@
     <value>不再顯示</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>正以系統管理員身分執行 Files</value>
+    <value>正以系統管理員身分執行 Octa Files</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>由於 Windows 和 WinAppSdk 的限制，以管理員模式執行 Files 時無法使用拖放功能（drag and drop）。如果您希望使用拖放功能，可以透過在「開始」選單中開啟 UAC（使用者帳戶控制），選擇「第三級」（僅在應用程式嘗試變更電腦時通知我 (不會降低桌面亮度)），然後重新啟動 Windows 來解決這個限制。否則，您可以繼續使用 Files，但無法使用拖放功能。</value>
+    <value>由於 Windows 和 WinAppSdk 的限制，以管理員模式執行 Octa Files 時無法使用拖放功能（drag and drop）。如果您希望使用拖放功能，可以透過在「開始」選單中開啟 UAC（使用者帳戶控制），選擇「第三級」（僅在應用程式嘗試變更電腦時通知我 (不會降低桌面亮度)），然後重新啟動 Windows 來解決這個限制。否則，您可以繼續使用 Octa Files，但無法使用拖放功能。</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>關閉視窗後在背景繼續執行</value>
@@ -3623,7 +3623,7 @@
     <value>個項目</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files 無法將此目錄初始化為 Git 儲存庫</value>
+    <value>Octa Files 無法將此目錄初始化為 Git 儲存庫</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>參與的藝術家</value>
@@ -3975,7 +3975,7 @@
     <value>目前沒有正在進行的檔案操作</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>由於系統設定或群組原則，無法啟用在 Windows 啟動時開啟 Files 的選項。要重新啟用此選項，請在工作管理員中開啟「啟動」頁面。</value>
+    <value>由於系統設定或群組原則，無法啟用在 Windows 啟動時開啟 Octa Files 的選項。要重新啟用此選項，請在工作管理員中開啟「啟動」頁面。</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>無法將項目從資源回收桶中復原</value>
@@ -4071,10 +4071,10 @@
     <value>編輯權限</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files 正在背景執行以提升啟動速度</value>
+    <value>Octa Files 正在背景執行以提升啟動速度</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Files 在哪裡?</value>
+    <value>Octa Files 在哪裡?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>問題與討論</value>
@@ -4351,7 +4351,7 @@
     <value>左右分割</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>在系統匣顯示 Files 圖示</value>
+    <value>在系統匣顯示 Octa Files 圖示</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU 執行緒</value>

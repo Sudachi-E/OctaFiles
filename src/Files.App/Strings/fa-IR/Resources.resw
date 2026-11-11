@@ -1839,10 +1839,10 @@
     <value>ارسال گزارش اشکال نرم افزاری</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>انتخاب Files به عنوان مدیر فایل پیشفرض</value>
+    <value>انتخاب Octa Files به عنوان مدیر فایل پیشفرض</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>استفاده از Files برای Open File Dialog</value>
+    <value>استفاده از Octa Files برای Open File Dialog</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>برچسب</value>
@@ -1980,7 +1980,7 @@
     <value>فایل‌های اخیر</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>بازکردن Files همراه با ویندوز</value>
+    <value>بازکردن Octa Files همراه با ویندوز</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>صفات</value>
@@ -2187,7 +2187,7 @@
     <value>مسطح</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Files team responsible for any data loss.</value>
+    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Octa Files team responsible for any data loss.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Show flatten options</value>
@@ -3410,7 +3410,7 @@
     <value>برای شروع کار با منابع GitHub، کد زیر را در لینک زیر وارد کنید.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files cannot access GitHub right now.</value>
+    <value>Octa Files cannot access GitHub right now.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>باز کردن پوشه در {0}</value>
@@ -3525,10 +3525,10 @@
     <value>دوباره نمایش داده نشود</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files is running as administrator</value>
+    <value>Octa Files is running as administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Due to a limitation with Windows and WinAppSdk, drag and drop isn't available when running Files as admin. If you wish to use drag and drop, you can work around this limitation by opening UAC (User Account Control) from the Start Menu and selecting the third level, and restarting Windows. Otherwise, you can keep using Files without drag &amp; drop.</value>
+    <value>Due to a limitation with Windows and WinAppSdk, drag and drop isn't available when running Octa Files as admin. If you wish to use drag and drop, you can work around this limitation by opening UAC (User Account Control) from the Start Menu and selecting the third level, and restarting Windows. Otherwise, you can keep using Octa Files without drag &amp; drop.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>هنگامی که پنجره برنامه بسته است، برنامه در پس زمینه درحال اجرا بماند</value>
@@ -4071,10 +4071,10 @@
     <value>Edit permissions</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files is still running in the background to improve startup performance.</value>
+    <value>Octa Files is still running in the background to improve startup performance.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Where did Files go?</value>
+    <value>Where did Octa Files go?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Questions &amp; discussions</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Show Files icon in the System Tray</value>
+    <value>Show Octa Files icon in the System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU threads</value>

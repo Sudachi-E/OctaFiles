@@ -49,7 +49,7 @@ namespace Files.App.Helpers
 		static AppLanguageHelper()
 		{
 			// Populate the Languages collection with available languages
-			var appLanguages = ApplicationLanguages.ManifestLanguages
+			var appLanguages = GetManifestLanguages()
 			   .Append(string.Empty) // Add default language code
 			   .Select(language => new AppLanguageItem(language))
 			   .OrderBy(language => language.Code is not "") // Default language on top
@@ -57,7 +57,7 @@ namespace Files.App.Helpers
 			   .ToList();
 
 			// Get the current primary language override.
-			var current = new AppLanguageItem(ApplicationLanguages.PrimaryLanguageOverride);
+			var current = new AppLanguageItem(GetPrimaryLanguageOverride());
 
 			// Find the index of the saved language
 			var index = appLanguages.IndexOf(appLanguages.FirstOrDefault(dl => dl.Name == current.Name) ?? appLanguages.First());
@@ -74,6 +74,43 @@ namespace Files.App.Helpers
 			PreferredLanguage = SupportedLanguages[index];
 		}
 
+		private static IReadOnlyList<string> GetManifestLanguages()
+		{
+			try
+			{
+				return ApplicationLanguages.ManifestLanguages;
+			}
+			catch
+			{
+				// Unpackaged processes have no package language manifest.
+				return [CultureInfo.InstalledUICulture.Name];
+			}
+		}
+
+		private static string GetPrimaryLanguageOverride()
+		{
+			try
+			{
+				return ApplicationLanguages.PrimaryLanguageOverride;
+			}
+			catch
+			{
+				return string.Empty;
+			}
+		}
+
+		private static void SetPrimaryLanguageOverride(string code)
+		{
+			try
+			{
+				ApplicationLanguages.PrimaryLanguageOverride = code;
+			}
+			catch
+			{
+				// The override needs package identity; the process keeps the system language.
+			}
+		}
+
 		/// <summary>
 		/// Attempts to change the preferred language code by index.
 		/// </summary>
@@ -87,7 +124,7 @@ namespace Files.App.Helpers
 			PreferredLanguage = SupportedLanguages[index];
 
 			// Update the primary language override
-			ApplicationLanguages.PrimaryLanguageOverride = index == 0 ? _defaultCode : PreferredLanguage.Code;
+			SetPrimaryLanguageOverride(index == 0 ? _defaultCode : PreferredLanguage.Code);
 			StringExtensions.ResetLocalizedResources();
 			return true;
 		}
@@ -118,7 +155,7 @@ namespace Files.App.Helpers
 			PreferredLanguage = SupportedLanguages[index];
 
 			// Update the primary language override
-			ApplicationLanguages.PrimaryLanguageOverride = index == 0 ? _defaultCode : PreferredLanguage.Code;
+			SetPrimaryLanguageOverride(index == 0 ? _defaultCode : PreferredLanguage.Code);
 			StringExtensions.ResetLocalizedResources();
 			return true;
 		}

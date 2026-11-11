@@ -313,7 +313,7 @@
     <value>Закріпити в бічній панелі</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Ласкаво просимо до Files!</value>
+    <value>Ласкаво просимо до Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Надати дозволи</value>
@@ -615,7 +615,7 @@
     <value>{0} - ярлик</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files зіткнулися з проблемою, до якої розробники були не готові.</value>
+    <value>Octa Files зіткнулися з проблемою, до якої розробники були не готові.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Сталася помилка!</value>
@@ -1839,10 +1839,10 @@
     <value>Повідомити про несправність</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Встановити Files в якості файлового менеджера за замовчуванням</value>
+    <value>Встановити Octa Files в якості файлового менеджера за замовчуванням</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Використовувати Files як діалог для відкриття файлів</value>
+    <value>Використовувати Octa Files як діалог для відкриття файлів</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Мітка</value>
@@ -1881,7 +1881,7 @@
     <value>Відновити значення за замовчуванням</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Відкрити вкладку в наявному вікні, коли відкривається Files з іншої програми</value>
+    <value>Відкрити вкладку в наявному вікні, коли відкривається Octa Files з іншої програми</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Налаштування запуску</value>
@@ -1980,7 +1980,7 @@
     <value>Нещодавні файли</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Відкривати Files під час запуску Windows</value>
+    <value>Відкривати Octa Files під час запуску Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Атрибути:</value>
@@ -2055,7 +2055,7 @@
     <value>Зображення</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Оновити Files</value>
+    <value>Оновити Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Теги</value>
@@ -2118,10 +2118,10 @@
     <value>Привіт!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Подобається Files? Залиште відгук у Microsoft Store.</value>
+    <value>Подобається Octa Files? Залиште відгук у Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Подобається Files? Підтримайте проєкт на GitHub.</value>
+    <value>Подобається Octa Files? Підтримайте проєкт на GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Спонсор</value>
@@ -2187,7 +2187,7 @@
     <value>Вирівняти</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Вирівнювання теки перемістить увесь вміст її вкладених тек у вибране місце. Ця операція є постійною і не може бути скасована. Використовуючи цю експериментальну функцію, ви визнаєте ризик і погоджуєтеся не притягувати команду Files до відповідальності за будь-яку втрату даних.</value>
+    <value>Вирівнювання теки перемістить увесь вміст її вкладених тек у вибране місце. Ця операція є постійною і не може бути скасована. Використовуючи цю експериментальну функцію, ви визнаєте ризик і погоджуєтеся не притягувати команду Octa Files до відповідальності за будь-яку втрату даних.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Показати параметри вирівнювання</value>
@@ -3410,7 +3410,7 @@
     <value>Введіть вказаний код за посиланням нижче, щоб почати працювати з репозиторіями GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Наразі Files не може отримати доступ до GitHub.</value>
+    <value>Наразі Octa Files не може отримати доступ до GitHub.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Відкрити теку в {0}</value>
@@ -3525,7 +3525,7 @@
     <value>Не показувати знову</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files запущений від імені адміністратора</value>
+    <value>Octa Files запущений від імені адміністратора</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
     <value>Через обмеження з Windows та WinAppSdk, перетягування недоступний при виконанні файлів як адміністратор. Якщо ви хочете використовувати перетягування, ви можете обійти це обмеження, відкривши UAC (контроль за обліковими записами користувачів) в меню Пуск і вибравши третій рівень і відновивши Windows. В іншому випадку, ви можете продовжувати використовувати файли без перетягування і скидання.</value>
@@ -3623,7 +3623,7 @@
     <value>елементи</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files не можуть ініціалізувати Git-репозиторій в цьому каталозі.</value>
+    <value>Octa Files не можуть ініціалізувати Git-репозиторій в цьому каталозі.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Художник-учасник</value>
@@ -3975,7 +3975,7 @@
     <value>Немає поточних операцій з файлами</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Опція для автозапуску Files не доступна через налаштування системи або групову політику. Щоб ввімкнути вручну, відкрийте сторінку автозапуску в диспетчері задач.</value>
+    <value>Опція для автозапуску Octa Files не доступна через налаштування системи або групову політику. Щоб ввімкнути вручну, відкрийте сторінку автозапуску в диспетчері задач.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Не вдалося відновити об'єкти з кошика</value>
@@ -4351,7 +4351,7 @@
     <value>Вертикально</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Показати піктограму Files в System Tray</value>
+    <value>Показати піктограму Octa Files в System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Потоки CPU</value>

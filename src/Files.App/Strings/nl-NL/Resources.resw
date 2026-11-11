@@ -313,7 +313,7 @@
     <value>Aan zijbalk vastmaken</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Toestemming geven</value>
@@ -615,7 +615,7 @@
     <value>{0} - snelkoppeling</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Er is een probleem opgetreden met Files waarvoor de ontwikkelaars zich niet hebben voorbereid.</value>
+    <value>Er is een probleem opgetreden met Octa Files waarvoor de ontwikkelaars zich niet hebben voorbereid.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Er is iets misgegaan.</value>
@@ -1839,10 +1839,10 @@
     <value>Foutrapport indienen</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Gebruik Files als standaard verkenner</value>
+    <value>Gebruik Octa Files als standaard verkenner</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Gebruik Files als Open Bestand Dialoog</value>
+    <value>Gebruik Octa Files als Open Bestand Dialoog</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Label</value>
@@ -1881,7 +1881,7 @@
     <value>Standaardwaarden herstellen</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Tabblad openen in bestaande instantie wanneer Files vanuit een andere app wordt geopend</value>
+    <value>Tabblad openen in bestaande instantie wanneer Octa Files vanuit een andere app wordt geopend</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Opstart instellingen</value>
@@ -1980,7 +1980,7 @@
     <value>Recente bestanden</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Open Files bij opstarten van Windows</value>
+    <value>Open Octa Files bij opstarten van Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attributen</value>
@@ -2055,7 +2055,7 @@
     <value>Afbeeldingen</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Update Files</value>
+    <value>Update Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Labels</value>
@@ -2118,10 +2118,10 @@
     <value>Hallo!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Tevreden met Files? Overweeg dan om in de Microsoft Store te beoordelen.</value>
+    <value>Tevreden met Octa Files? Overweeg dan om in de Microsoft Store te beoordelen.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Tevreden met Files? Overweeg dan om het project op GitHub te steunen.</value>
+    <value>Tevreden met Octa Files? Overweeg dan om het project op GitHub te steunen.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Afvlakken</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Een map afvlakken verplaatst alle inhoud van de submappen naar de geselecteerde locatie. Deze bewerking is permanent en kan niet ongedaan worden gemaakt. Door deze experimentele functie te gebruiken, erken je het risico en ga je ermee akkoord om het Files team niet verantwoordelijk te stellen voor enig dataverlies.</value>
+    <value>Een map afvlakken verplaatst alle inhoud van de submappen naar de geselecteerde locatie. Deze bewerking is permanent en kan niet ongedaan worden gemaakt. Door deze experimentele functie te gebruiken, erken je het risico en ga je ermee akkoord om het Octa Files team niet verantwoordelijk te stellen voor enig dataverlies.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Afvlak-opties weergeven</value>
@@ -3410,7 +3410,7 @@
     <value>Voer de volgende code in op de link hieronder om te beginnen met het werken met GitHub repositories.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files kan nu geen toegang krijgen tot GitHub.</value>
+    <value>Octa Files kan nu geen toegang krijgen tot GitHub.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Map openen in {0}</value>
@@ -3525,7 +3525,7 @@
     <value>Niet meer weergeven</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files wordt uitgevoerd als beheerder</value>
+    <value>Octa Files wordt uitgevoerd als beheerder</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
     <value>Slepen en neerzetten zijn als gevolg van een beperking met Windows en WinAppSd niet beschikbaar als er bestanden als admin worden gebruikt. Als u drag and drop wilt gebruiken, u kunt rond deze beperking werken door UAC (gebruikersaccount Control) te openen uit het startmenu en het derde niveau te selecteren en Windows te herstarten. Anders kun je bestanden blijven gebruiken zonder verslepen en neerzetten.</value>
@@ -3623,7 +3623,7 @@
     <value>items</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files kan deze map niet initialiseren als een Git repository.</value>
+    <value>Octa Files kan deze map niet initialiseren als een Git repository.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Bijdragende kunstenaar</value>
@@ -3975,7 +3975,7 @@
     <value>Geen lopende bestandsbewerkingen</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>De optie om Files te openen tijdens het opstarten van Windows is niet beschikbaar door systeeminstellingen of het groepsbeleid. Om dit opnieuw in te stellen, open het Opstarten tabblad in Taakbeheer.</value>
+    <value>De optie om Octa Files te openen tijdens het opstarten van Windows is niet beschikbaar door systeeminstellingen of het groepsbeleid. Om dit opnieuw in te stellen, open het Opstarten tabblad in Taakbeheer.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Items terugplaatsen vanuit prullenbak mislukt</value>
@@ -4071,10 +4071,10 @@
     <value>Bewerk machtigingen</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files wordt nog steeds op de achtergrond uitgevoerd om opstartprestaties te verbeteren.</value>
+    <value>Octa Files wordt nog steeds op de achtergrond uitgevoerd om opstartprestaties te verbeteren.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Waar is Files naartoe gegaan?</value>
+    <value>Waar is Octa Files naartoe gegaan?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Vragen &amp; discussies</value>
@@ -4351,7 +4351,7 @@
     <value>Verticaal</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Files pictogram weergeven in systeemvak</value>
+    <value>Octa Files pictogram weergeven in systeemvak</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU-threads</value>

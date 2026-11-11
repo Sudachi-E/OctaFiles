@@ -314,7 +314,7 @@
     <value>Afixar em Acesso rápido</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Bem-vindo a Files!</value>
+    <value>Bem-vindo a Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Conceder permissão</value>
@@ -616,7 +616,7 @@
     <value>{0} - atalho</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>O Files encontrou um problema que os programadores não previram.</value>
+    <value>O Octa Files encontrou um problema que os programadores não previram.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Ocorreu um erro!</value>
@@ -1840,10 +1840,10 @@
     <value>Submeter relatório de erros</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Definir Files como o gestor de ficheiros do sistema</value>
+    <value>Definir Octa Files como o gestor de ficheiros do sistema</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Utilizar Files como diálogo para Abrir ficheiros</value>
+    <value>Utilizar Octa Files como diálogo para Abrir ficheiros</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Etiqueta</value>
@@ -1882,7 +1882,7 @@
     <value>Restaurar predefinição</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Abrir separador na instância existente ao abrir Files a partir de outra aplicação</value>
+    <value>Abrir separador na instância existente ao abrir Octa Files a partir de outra aplicação</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Definições de arranque</value>
@@ -1981,7 +1981,7 @@
     <value>Ficheiros recentes</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Abrir Files ao iniciar o Windows</value>
+    <value>Abrir Octa Files ao iniciar o Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atributos</value>
@@ -2056,7 +2056,7 @@
     <value>Imagens</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Atualizar Files</value>
+    <value>Atualizar Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Etiquetas</value>
@@ -2119,10 +2119,10 @@
     <value>Olá!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Está a gostar do Files? Considere deixar uma classificação na Microsoft Store.</value>
+    <value>Está a gostar do Octa Files? Considere deixar uma classificação na Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Está a gostar do Files? Considere apoiar o projeto no GitHub.</value>
+    <value>Está a gostar do Octa Files? Considere apoiar o projeto no GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Patrocinador</value>
@@ -2188,7 +2188,7 @@
     <value>Nivelar</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Nivelar uma pasta moverá todo o conteúdo das subpastas para o local selecionado. Esta operação é permanente e não pode ser revertida. Ao utilizar esta funcionalidade, reconhece o risco e concorda em não responsabilizar a equipa de Files por qualquer perda de dados.</value>
+    <value>Nivelar uma pasta moverá todo o conteúdo das subpastas para o local selecionado. Esta operação é permanente e não pode ser revertida. Ao utilizar esta funcionalidade, reconhece o risco e concorda em não responsabilizar a equipa de Octa Files por qualquer perda de dados.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Mostrar opções de nivelamento</value>
@@ -3411,7 +3411,7 @@
     <value>Introduza este código na ligação abaixo para começar a trabalhar com repositórios GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>De momento, Files não se consegue ligar a GitHub.</value>
+    <value>De momento, Octa Files não se consegue ligar a GitHub.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Abrir pasta em {0}</value>
@@ -3529,7 +3529,7 @@
     <value>A aplicação está a ser executada no modo de administrador</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Devido a uma limitação com o Windows e o WinAppSdk, a funcionalidade arrastar e largar não está disponível quando o Files é executado como administrador. Se pretender utilizar o arrastar e largar, pode contornar esta limitação abrindo o UAC (Controlo de Conta do Utilizador) a partir do Menu Iniciar e selecionando o terceiro nível, e reiniciando o Windows. Caso contrário, pode continuar a utilizar o Files sem a funcionalidade arrastar e soltar.</value>
+    <value>Devido a uma limitação com o Windows e o WinAppSdk, a funcionalidade arrastar e largar não está disponível quando o Octa Files é executado como administrador. Se pretender utilizar o arrastar e largar, pode contornar esta limitação abrindo o UAC (Controlo de Conta do Utilizador) a partir do Menu Iniciar e selecionando o terceiro nível, e reiniciando o Windows. Caso contrário, pode continuar a utilizar o Octa Files sem a funcionalidade arrastar e soltar.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Manter aplicação em segundo plano ao fechar a janela</value>
@@ -3624,7 +3624,7 @@
     <value>itens</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files não conseguiu inicializar este diretório como repositório Git.</value>
+    <value>Octa Files não conseguiu inicializar este diretório como repositório Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Artistas participantes</value>

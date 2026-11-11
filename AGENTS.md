@@ -61,31 +61,54 @@ Before changing a server feature, its WinRT contract, or client code that calls 
 
 ## Build
 
-Prefer explicit platform/configuration builds.
-Unless the task is specifically about resolving or inspecting warnings, add `-v:quiet -clp:ErrorsOnly` to `msbuild` commands so the log proves success or shows only actionable errors.
+Prefer explicit platform/configuration builds and cap noisy output with `-v:q -clp:ErrorsOnly`.
+
+Use the repo-local SDK pinned by `global.json` (`10.0.403`); `msbuild` is not on `PATH` here and the installed Visual Studio BuildTools cannot resolve `Microsoft.NET.Sdk`. `pwsh.exe` is not installed either.
 
 ```powershell
-msbuild -restore Files.slnx -p:Configuration=Debug -p:Platform=x64 -v:quiet -clp:ErrorsOnly
+.\.dotnet\dotnet.exe build src\Files.App\Files.App.csproj -c Debug -p:Platform=x64 -p:FilesPortable=true -v:q -clp:ErrorsOnly
 ```
 
-If `msbuild` isn't available in the current shell, run it from Visual Studio Developer PowerShell. Match `-arch`, `-host_arch`, and `-p:Platform` to the platform you're verifying; use `x64` for x64 work and `arm64` for ARM64 work.
+Pass `-p:FilesPortable=true` as a global property so the `Files.App.Server` project reference builds as an in-process library. Without it, restore fails with the Satori runtime-pack RID error.
 
-```powershell
-pwsh.exe -NoProfile -Command "& {
-  Import-Module 'C:\Program Files\Microsoft Visual Studio\18\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll'
-  Enter-VsDevShell 1ba2cc4e -SkipAutomaticLocation -DevCmdArguments '-arch=x64 -host_arch=x64'
-  msbuild -restore src/Files.App/Files.App.csproj -p:Configuration=Debug -p:Platform=x64 -v:quiet -clp:ErrorsOnly
-}"
-```
+Use `-p:Platform=arm64` for ARM64 work.
 
-For focused C# work, build the affected project first.
+For focused C# work, build the affected project first with the same pattern.
 Do not run build commands in parallel.
 
 ```powershell
-msbuild -restore src/Files.Shared/Files.Shared.csproj -p:Configuration=Debug -p:Platform=x64 -v:quiet -clp:ErrorsOnly
-msbuild -restore src/Files.Core.SourceGenerator/Files.Core.SourceGenerator.csproj -p:Configuration=Debug -p:Platform=x64 -v:quiet -clp:ErrorsOnly
-msbuild -restore src/Files.App/Files.App.csproj -p:Configuration=Debug -p:Platform=x64 -v:quiet -clp:ErrorsOnly
+.\.dotnet\dotnet.exe build src\Files.Shared\Files.Shared.csproj -c Debug -p:Platform=x64 -v:q -clp:ErrorsOnly
+.\.dotnet\dotnet.exe build src\Files.Core.SourceGenerator\Files.Core.SourceGenerator.csproj -c Debug -p:Platform=x64 -v:q -clp:ErrorsOnly
+.\.dotnet\dotnet.exe build src\Files.App\Files.App.csproj -c Debug -p:Platform=x64 -p:FilesPortable=true -v:q -clp:ErrorsOnly
 ```
+
+## Setup Installer
+
+The per-user setup.exe is NSIS-based and ships an unpackaged, self-contained publish of `src/Files.App`.
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File installer\build-setup.ps1
+```
+
+It publishes `artifacts\installer\payload` and writes `artifacts\installer\OctaFilesSetup-<version>-x64.exe`. The installer reflects current source only when this script runs; repacking an older payload ships an older app.
+
+- `-SkipBuild` repacks an existing payload, so it refuses a payload older than the newest file under `src\Files.App*`, `Files.Shared`, or `Files.Storage`.
+- Deleted XAML pages survive incremental builds as generated `.xbf` files in `bin`/`obj` and get published again. The script removes the target configuration's `bin`/`obj` before publishing; if a removed page still appears after an install, rebuild through the script instead of reusing older artifacts.
+- `Assets\AppTiles\Release\**` needs the explicit `Content Update` publish rule in `Files.App.csproj`: WinUI's implicit content items reach `bin` but not `publish`.
+
+## Startup and Performance Verification
+
+Startup work must be measured, never estimated. After making and testing a change, publish Release and time it the same way for the previous and the new build.
+
+```powershell
+.dotnet\dotnet.exe publish src\Files.App\Files.App.csproj -c Release -p:Platform=x64 -p:FilesPortable=true -p:PublishAot=false -p:SelfContained=true -o artifacts\measure-after -v:q -clp:ErrorsOnly -nologo
+```
+
+- Time from process start to the main window being visible: start the published `OctaFiles.exe`, poll `Process.MainWindowHandle` and `IsWindowVisible` every 10 ms, and run each build 7 times.
+- Exclude the first run after a publish: Defender scans the fresh output and inflates it.
+- Kill leftover `OctaFiles` processes and cool down between runs, then report the median and the range for both builds.
+- Overlapping ranges mean no measured change; say so instead of claiming a speedup.
+- Rebuild the setup exe afterwards so the installed app matches the source (see `## Setup Installer`).
 
 ## Test
 
@@ -139,7 +162,7 @@ Apply this section to out-of-process WinRT contracts, their server implementatio
 | Feature entry points and per-client lifetime | [Services](src/Files.App.Server/Services/), [AppService](src/Files.App.Server/AppService.cs), [ServerHost](src/Files.App.Server/ServerHost.cs) |
 | Async completion across processes | [ServerAsync](src/Files.App.Server/ServerAsync.cs) |
 | Concrete managed types exposed through WinRT | [WinRTExposedExternalTypes](src/Files.App.Server/WinRTExposedExternalTypes.cs) |
-| Runtime activation and deployment | [Program](src/Files.App.Server/Program.cs), [Helpers](src/Files.App.Server/Helpers.cs), [package manifest](src/Files.App/Package.appxmanifest) |
+| Runtime activation and deployment | [Program](src/Files.App.Server/Program.cs), [Helpers](src/Files.App.Server/Helpers.cs) |
 | Deferred UI entry points | [DispatcherQueueExtensions](src/Files.App/Extensions/DispatcherQueueExtensions.cs), [BaseLayoutPage](src/Files.App/Views/Layouts/BaseLayoutPage.cs), [InfoPaneViewModel](src/Files.App/ViewModels/UserControls/InfoPaneViewModel.cs) |
 | Native calls and apartment ownership | [NativeMethods.txt](src/Files.Storage/NativeMethods.txt), [NativeMethods.json](src/Files.Storage/NativeMethods.json), [STATask](src/Files.Storage/Windows/Managers/STATask.cs), [ThreadWithMessageQueue](src/Files.Storage/Windows/Shell/ThreadWithMessageQueue.cs) |
 
@@ -207,7 +230,7 @@ Use the actual type and existing imports; these example types are placeholders.
 
 #### `IIterable<T>` and `IIterator<T>` proxy registration
 
-**For each new custom DTO collection crossing the process boundary, register both `IIterable<T>` and `IIterator<T>` in [Files.App/Package.appxmanifest](src/Files.App/Package.appxmanifest).**
+Unpackaged builds host the services in-process, so no proxy-stub registration is needed. If out-of-process WinRT packaging is reintroduced, register both `IIterable<T>` and `IIterator<T>` for each custom DTO collection in the package manifest.
 Register the closed interfaces for the actual DTO type, not only the open generic definitions or the collection's return interface. This is separate from the managed exposure attributes and the service's activation entry.
 
 - A C# `IReadOnlyList<T>` projects to `IVectorView<T>`. Enumeration also queries `IIterable<T>` and uses `IIterator<T>`. Successful `Count`/indexer access does not prove that enumeration works across processes.

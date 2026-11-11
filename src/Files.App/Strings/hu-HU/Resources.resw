@@ -313,7 +313,7 @@
     <value>Kitűzés az oldalsávra</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Engedélyezés</value>
@@ -615,7 +615,7 @@
     <value>{0} - parancsikon</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>A Files egy problémába ütközött, amire a fejlesztők még nem készültek fel.</value>
+    <value>A Octa Files egy problémába ütközött, amire a fejlesztők még nem készültek fel.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Valami hiba történt!</value>
@@ -1839,10 +1839,10 @@
     <value>Hibabejelentés küldése</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>A Files beállítása alapértelmezett fájlkezelőként</value>
+    <value>A Octa Files beállítása alapértelmezett fájlkezelőként</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>A Files használata Open File Dialog</value>
+    <value>A Octa Files használata Open File Dialog</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Címkék</value>
@@ -1881,7 +1881,7 @@
     <value>Visszaállítás</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Új lap megnyitása egy meglévő ablakban, amikor másik alkalmazásból nyitja meg a Files alkalmazást</value>
+    <value>Új lap megnyitása egy meglévő ablakban, amikor másik alkalmazásból nyitja meg a Octa Files alkalmazást</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Indítás</value>
@@ -1980,7 +1980,7 @@
     <value>Előzmények</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>A Files futtatása a Windows indulásakor</value>
+    <value>A Octa Files futtatása a Windows indulásakor</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attribútumok</value>
@@ -2118,10 +2118,10 @@
     <value>Üdvözöljük!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Élvezi a Files használatát? Kérem fontolja meg, hogy véleményt ír a Microsoft Store-ban.</value>
+    <value>Élvezi a Octa Files használatát? Kérem fontolja meg, hogy véleményt ír a Microsoft Store-ban.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Élvezi a Files használatát? Kérem fontolja meg, hogy támogatja a projektet GitHub-on.</value>
+    <value>Élvezi a Octa Files használatát? Kérem fontolja meg, hogy támogatja a projektet GitHub-on.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Támogatás</value>
@@ -2187,7 +2187,7 @@
     <value>Laposítás</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>A mappa laposítása minden tartalmat áthelyez a mappákból a kiválasztott helyre. Ez a művelet végleges és nem vonható vissza. Az kísérleti funkció használatával elfogadja a kockázatot és egyetértene azzal, hogy a Files csapatot nem vonja felelősségre az adatvesztésért.</value>
+    <value>A mappa laposítása minden tartalmat áthelyez a mappákból a kiválasztott helyre. Ez a művelet végleges és nem vonható vissza. Az kísérleti funkció használatával elfogadja a kockázatot és egyetértene azzal, hogy a Octa Files csapatot nem vonja felelősségre az adatvesztésért.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Laposítási opciók megjelenítése</value>
@@ -3410,7 +3410,7 @@
     <value>Írd be a következő kódot az alábbi linken, hogy elkezdhess dolgozni a GitHub tárolókkal.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>A Files jelenleg nem éri el a GitHubot.</value>
+    <value>A Octa Files jelenleg nem éri el a GitHubot.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Mappa megnyitása itt: {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Ne jelenjen meg újra</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>A Files rendszergazdaként fut</value>
+    <value>A Octa Files rendszergazdaként fut</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>A Windows és a WinAppSdk korlátozása miatt a drag &amp; drop nem érhető el, ha a Files rendszergazdaként fut. Ha szeretné használni ezt a funkciót, akkor a korlátozást úgy tudja megkerülni, hogy a Start menüből megnyitja az UAC (User Account Control - Felhasználói fiókvezérlés) programot, és kiválasztja a harmadik szintet, majd újraindítja a Windowst. Ellenkező esetben továbbra is használhatja a Files-t drag &amp; drop nélkül.</value>
+    <value>A Windows és a WinAppSdk korlátozása miatt a drag &amp; drop nem érhető el, ha a Octa Files rendszergazdaként fut. Ha szeretné használni ezt a funkciót, akkor a korlátozást úgy tudja megkerülni, hogy a Start menüből megnyitja az UAC (User Account Control - Felhasználói fiókvezérlés) programot, és kiválasztja a harmadik szintet, majd újraindítja a Windowst. Ellenkező esetben továbbra is használhatja a Octa Files-t drag &amp; drop nélkül.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Az ablak bezárásakor az alkalmazás fusson tovább a háttérben</value>
@@ -3623,7 +3623,7 @@
     <value>elem</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>A Files nem tudja ezt a könyvtárat Git repókét inicializálni.</value>
+    <value>A Octa Files nem tudja ezt a könyvtárat Git repókét inicializálni.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Közreműködő előadó</value>
@@ -3975,7 +3975,7 @@
     <value>Nincsenek folyamatban lévő fájlműveletek</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>A Files megnyitása a Windows indításakor nem lehetséges rendszerbeállítások, vagy csoportházirend beállítás miatt. Ha be szeretné kapcsolni az opciót, azt a Feladatkezelő "Indítás" lapfülén teheti meg.</value>
+    <value>A Octa Files megnyitása a Windows indításakor nem lehetséges rendszerbeállítások, vagy csoportházirend beállítás miatt. Ha be szeretné kapcsolni az opciót, azt a Feladatkezelő "Indítás" lapfülén teheti meg.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Nem sikerült visszaállítani az elemeket a lomtárból</value>
@@ -4071,10 +4071,10 @@
     <value>Engedélyek szerkesztése</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>A Files továbbra is fut a háttérben rendszerindítási teljesítmény javítása érdekében.</value>
+    <value>A Octa Files továbbra is fut a háttérben rendszerindítási teljesítmény javítása érdekében.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Hova tűnt a Files?</value>
+    <value>Hova tűnt a Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Kérdések és beszélgetések</value>
@@ -4351,7 +4351,7 @@
     <value>Függőleges</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Mutassa a Files ikont a rendszer tálcáján</value>
+    <value>Mutassa a Octa Files ikont a rendszer tálcáján</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU szálak</value>

@@ -313,7 +313,7 @@
     <value>Prikvači na alatnu traku Brzi pristup</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Dobrodošli u Files!</value>
+    <value>Dobrodošli u Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Odobri dopuštenje</value>
@@ -615,7 +615,7 @@
     <value>{0} - prečac</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files je naišao na problem za koji se programeri još nisu pripremili.</value>
+    <value>Octa Files je naišao na problem za koji se programeri još nisu pripremili.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Nešto je pošlo po zlu!</value>
@@ -1839,10 +1839,10 @@
     <value>Prijavite grešku</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Postavi Files kao zadani upravitelj datotekama</value>
+    <value>Postavi Octa Files kao zadani upravitelj datotekama</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Koristi Files aplikciju kao dijalog za otvarenje datoteka</value>
+    <value>Koristi Octa Files aplikciju kao dijalog za otvarenje datoteka</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Oznaka datoteke</value>
@@ -1881,7 +1881,7 @@
     <value>Vrati izvorno</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Otvori karticu u postojećoj instanci prilikom pokretanja Files iz druge aplikacije</value>
+    <value>Otvori karticu u postojećoj instanci prilikom pokretanja Octa Files iz druge aplikacije</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Postavke kod pokretanja</value>
@@ -1980,7 +1980,7 @@
     <value>Nedavno korištene datoteke</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Otvori Files pri pokretanju Windowsa</value>
+    <value>Otvori Octa Files pri pokretanju Windowsa</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atributi:</value>
@@ -2055,7 +2055,7 @@
     <value>Slike</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Ažuriraj Files</value>
+    <value>Ažuriraj Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Oznake</value>
@@ -2118,10 +2118,10 @@
     <value>Pozdrav!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Sviđa vam se Files? Ostavite recenziju u Microsoft Storeu.</value>
+    <value>Sviđa vam se Octa Files? Ostavite recenziju u Microsoft Storeu.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Sviđa vam se Files? Podržite projekt na GitHubu.</value>
+    <value>Sviđa vam se Octa Files? Podržite projekt na GitHubu.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponzoriraj</value>
@@ -2187,7 +2187,7 @@
     <value>Izravnaj</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Izravnavanje mape premjestit će sav sadržaj iz njezinih podmapa u odabranu lokaciju. Ova operacija je trajna i ne može se poništiti. Korištenjem ove eksperimentalne značajke prihvaćate rizik i slažete se da nećete držati Files tim odgovornim za bilo kakav gubitak podataka.</value>
+    <value>Izravnavanje mape premjestit će sav sadržaj iz njezinih podmapa u odabranu lokaciju. Ova operacija je trajna i ne može se poništiti. Korištenjem ove eksperimentalne značajke prihvaćate rizik i slažete se da nećete držati Octa Files tim odgovornim za bilo kakav gubitak podataka.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Prikaži opcije izravnavanja</value>
@@ -3410,7 +3410,7 @@
     <value>Unesite sljedeći kod na donji link kako biste započeli rad s GitHub repozitorijima.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files trenutno ne može pristupiti GitHubu.</value>
+    <value>Octa Files trenutno ne može pristupiti GitHubu.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Otvori mapu u {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Ne prikazuj ponovno</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files aplikacija se pokreće kao administrator</value>
+    <value>Octa Files aplikacija se pokreće kao administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Zbog ograničenja u Windowsu i WinAppSdk-u, povlačenje i ispuštanje (drag &amp; drop) nije dostupno kada se Files pokreće kao administrator. Ako želite koristiti drag &amp; drop, možete zaobići ovo ograničenje tako da otvorite UAC (Kontrola korisničkih računa) iz izbornika Start, odaberete treću razinu i ponovno pokrenete Windows. Inače, možete nastaviti koristiti Files bez funkcionalnosti drag &amp; drop.</value>
+    <value>Zbog ograničenja u Windowsu i WinAppSdk-u, povlačenje i ispuštanje (drag &amp; drop) nije dostupno kada se Octa Files pokreće kao administrator. Ako želite koristiti drag &amp; drop, možete zaobići ovo ograničenje tako da otvorite UAC (Kontrola korisničkih računa) iz izbornika Start, odaberete treću razinu i ponovno pokrenete Windows. Inače, možete nastaviti koristiti Octa Files bez funkcionalnosti drag &amp; drop.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Ostavi aplikaciju pokrenutu u pozadini prilikom zatvaranja prozora</value>
@@ -3623,7 +3623,7 @@
     <value>stavki</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files ne može inicijalizirati ovaj direktorij kao Git repozitorij.</value>
+    <value>Octa Files ne može inicijalizirati ovaj direktorij kao Git repozitorij.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Autor doprinosa</value>
@@ -3975,7 +3975,7 @@
     <value>Nema aktivnih operacija s datotekama</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Opcija za otvaranje Files pri pokretanju sustava Windows nije dostupna zbog postavki sustava ili grupnih pravila. Za ponovno omogućavanje otvorite stranicu pokretanja u Upravitelju zadataka.</value>
+    <value>Opcija za otvaranje Octa Files pri pokretanju sustava Windows nije dostupna zbog postavki sustava ili grupnih pravila. Za ponovno omogućavanje otvorite stranicu pokretanja u Upravitelju zadataka.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Neuspješno vraćanje stavki iz koša za smeće</value>
@@ -4071,10 +4071,10 @@
     <value>Uredi dopuštenja</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files i dalje radi u pozadini kako bi poboljšao brzinu pokretanja.</value>
+    <value>Octa Files i dalje radi u pozadini kako bi poboljšao brzinu pokretanja.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Gdje je Files nestao?</value>
+    <value>Gdje je Octa Files nestao?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Pitanja i rasprave</value>
@@ -4351,7 +4351,7 @@
     <value>Okomito</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Prikaži ikonu Files u sistemskoj traci</value>
+    <value>Prikaži ikonu Octa Files u sistemskoj traci</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU dretve</value>

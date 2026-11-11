@@ -76,7 +76,9 @@ public partial class App
 					SafetyExtensions.IgnoreExceptions(session.Dispose, Logger);
 				if (!IsServerDisconnected(ex) || Environment.TickCount64 >= deadline)
 					throw;
+#if !FILES_PORTABLE
 				ServerFactoryCache.Clear();
+#endif
 				await Task.Delay(100, serverSessionStopping.Token).ConfigureAwait(false);
 			}
 		}
@@ -102,7 +104,9 @@ public partial class App
 				return;
 			serverProcess = null;
 			serverSession = null;
+#if !FILES_PORTABLE
 			ServerFactoryCache.Clear();
+#endif
 		}
 		(sender as Process)?.Dispose();
 		_ = SafetyExtensions.IgnoreExceptions(async () =>

@@ -1842,7 +1842,7 @@
     <value>Files를 기본 파일 탐색기로 설정</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>파일 열기 대화 창에서 Files 사용</value>
+    <value>파일 열기 대화 창에서 Octa Files 사용</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>파일 태그</value>
@@ -2055,7 +2055,7 @@
     <value>사진</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Files 업데이트</value>
+    <value>Octa Files 업데이트</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>태그</value>
@@ -2187,7 +2187,7 @@
     <value>평면</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>폴더를 평면으로 하면 해당 하위 폴더의 모든 콘텐츠가 선택한 위치로 이동합니다. 이 작업은 영구적이며 실행 취소할 수 없습니다. 이 실험적 기능을 사용함으로써 귀하는 위험을 감수하고 데이터 손실이 발생한 경우에도 Files 팀에게는 어떠한 책임이 없음을 동의하므로 간주합니다.</value>
+    <value>폴더를 평면으로 하면 해당 하위 폴더의 모든 콘텐츠가 선택한 위치로 이동합니다. 이 작업은 영구적이며 실행 취소할 수 없습니다. 이 실험적 기능을 사용함으로써 귀하는 위험을 감수하고 데이터 손실이 발생한 경우에도 Octa Files 팀에게는 어떠한 책임이 없음을 동의하므로 간주합니다.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>평면 옵션 표시</value>
@@ -4351,7 +4351,7 @@
     <value>수직</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Files 아이콘을 시스템 트레이에 표시</value>
+    <value>Octa Files 아이콘을 시스템 트레이에 표시</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU 스레드</value>

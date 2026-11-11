@@ -5,9 +5,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>$(WindowsTargetFramework)</TargetFramework>
     <TargetPlatformMinVersion>$(MinimalWindowsVersion)</TargetPlatformMinVersion>
-    <PublishProfile>win-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
-    <EnableMsixTooling>true</EnableMsixTooling>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -27,14 +25,5 @@
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" />
     <PackageReference Include="Microsoft.WindowsAppSDK" />
   </ItemGroup>
-
-  <!--  Allows the Single-project MSIX Packaging Tools extension to be activated for this project even if the Windows App SDK Nuget package has not yet been restored.  -->
-  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
-    <ProjectCapability Include="Msix" />
-  </ItemGroup>
-  <!--  Allows the Solution Explorer "Package and Publish" context menu entry to be enabled for this project even if the Windows App SDK Nuget package has not yet been restored.  -->
-  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
-    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
-  </PropertyGroup>
 
 </Project>

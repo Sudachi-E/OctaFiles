@@ -313,7 +313,7 @@
     <value>Καρφίτσωμα στην Πλαϊνή μπάρα</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Χορήγηση άδειας</value>
@@ -615,7 +615,7 @@
     <value>{0} - συντόμευση</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Το Files αντιμετώπισε ένα πρόβλημα για το οποίο οι προγραμματιστές δεν είχαν προετοιμαστεί ακόμα.</value>
+    <value>Το Octa Files αντιμετώπισε ένα πρόβλημα για το οποίο οι προγραμματιστές δεν είχαν προετοιμαστεί ακόμα.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Κάτι πήγε στραβά!</value>
@@ -1839,10 +1839,10 @@
     <value>Υποβολή αναφοράς σφάλματος</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Ορισμός του Files ως το προεπιλεγμένο πρόγραμμα διαχείρησης αρχείων</value>
+    <value>Ορισμός του Octa Files ως το προεπιλεγμένο πρόγραμμα διαχείρησης αρχείων</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Χρήση Files ως παράθυρο διαλόγου για άνοιγμα αρχείων</value>
+    <value>Χρήση Octa Files ως παράθυρο διαλόγου για άνοιγμα αρχείων</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Ετικέτα</value>
@@ -1980,7 +1980,7 @@
     <value>Πρόσφατα αρχεία</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Άνοιγμα του Files κατά την εκκίνηση των Windows</value>
+    <value>Άνοιγμα του Octa Files κατά την εκκίνηση των Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Χαρακτηριστικά</value>
@@ -2055,7 +2055,7 @@
     <value>Εικόνες</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Ενημέρωση του Files</value>
+    <value>Ενημέρωση του Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Ετικέτες</value>
@@ -2187,7 +2187,7 @@
     <value>Επιπέδωση</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Η επιπέδωση ενός φακέλου θα μετακινήσει όλα τα περιεχόμενα από τους υποφακέλους του στην επιλεγμένη θέση. Αυτή η λειτουργία είναι μόνιμη και δεν μπορεί να αναιρεθεί. Χρησιμοποιώντας αυτό το πειραματικό χαρακτηριστικό, αναγνωρίζετε τον κίνδυνο και συμφωνείτε να μην θεωρείτε την ομάδα του Files υπεύθυνη για οποιαδήποτε απώλεια δεδομένων.</value>
+    <value>Η επιπέδωση ενός φακέλου θα μετακινήσει όλα τα περιεχόμενα από τους υποφακέλους του στην επιλεγμένη θέση. Αυτή η λειτουργία είναι μόνιμη και δεν μπορεί να αναιρεθεί. Χρησιμοποιώντας αυτό το πειραματικό χαρακτηριστικό, αναγνωρίζετε τον κίνδυνο και συμφωνείτε να μην θεωρείτε την ομάδα του Octa Files υπεύθυνη για οποιαδήποτε απώλεια δεδομένων.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Εμφάνιση επιλογών επιπέδωσης</value>
@@ -3410,7 +3410,7 @@
     <value>Εισάγετε τον ακόλουθο κωδικό στον παρακάτω σύνδεσμο για να ξεκινήσετε να εργάζεστε με τα αποθετήρια του GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Το Files δεν μπορεί να έχει πρόσβαση στο GitHub αυτή τη στιγμή.</value>
+    <value>Το Octa Files δεν μπορεί να έχει πρόσβαση στο GitHub αυτή τη στιγμή.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Open folder in {0}</value>
@@ -3525,7 +3525,7 @@
     <value>Να μην εμφανιστεί ξανά</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Το Files εκτελείται με δικαιώματα διαχειριστή</value>
+    <value>Το Octa Files εκτελείται με δικαιώματα διαχειριστή</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
     <value>Λόγω ενός περιορισμού με τα Windows και WinAppSdk, το drag and drop δεν είναι διαθέσιμο κατά την εκτέλεση αρχείων ως διαχειριστή. Αν θέλετε να χρησιμοποιήσετε drag and drop, μπορείτε να εργαστείτε γύρω από αυτόν τον περιορισμό ανοίγοντας το UAC (Έλεγχος Λογαριασμού Χρήστη) από το μενού Έναρξη και επιλέγοντας το τρίτο επίπεδο, και επανεκκινώντας τα Windows. Διαφορετικά, μπορείτε να συνεχίσετε να χρησιμοποιείτε τα Αρχεία χωρίς drag &amp; drop.</value>
@@ -3623,7 +3623,7 @@
     <value>στοιχεία</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Το Files δεν μπορεί να προετοιμάσει αυτόν τον κατάλογο ως αποθετήριο Git.</value>
+    <value>Το Octa Files δεν μπορεί να προετοιμάσει αυτόν τον κατάλογο ως αποθετήριο Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Συνεισφέρων Καλλιτέχνης</value>
@@ -4071,10 +4071,10 @@
     <value>Επεξεργασία δικαιωμάτων</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Το Files εξακολουθεί να εκτελείται στο παρασκήνιο για να βελτιωθούν οι επιδόσεις εκκίνησης.</value>
+    <value>Το Octa Files εξακολουθεί να εκτελείται στο παρασκήνιο για να βελτιωθούν οι επιδόσεις εκκίνησης.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Πού πήγε το Files;</value>
+    <value>Πού πήγε το Octa Files;</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Ερωτήσεις &amp; συζητήσεις</value>

@@ -33,7 +33,7 @@ namespace Files.App.Data.Items
 		private readonly nint _oldWndProc;
 		private readonly WNDPROC _newWndProc;
 
-		private readonly ApplicationDataContainer _applicationDataContainer = ApplicationData.Current.LocalSettings;
+		private readonly SettingsValues _applicationDataContainer = AppStorage.LocalSettings;
 
 		/// <summary>
 		/// Gets hWnd of this <see cref="Window"/>.
@@ -161,9 +161,6 @@ namespace Files.App.Data.Items
 
 			var values = GetDataStore(out _, true);
 
-			if (_applicationDataContainer.Containers.ContainsKey("WinUIEx"))
-				_applicationDataContainer.DeleteContainer("WinUIEx");
-
 			values["MainWindowPlacementData"] = Convert.ToBase64String(data.ToArray());
 		}
 
@@ -230,28 +227,11 @@ namespace Files.App.Data.Items
 			}
 		}
 
-		private IPropertySet GetDataStore(out bool oldDataExists, bool useNewStore = true)
+		private SettingsValues GetDataStore(out bool oldDataExists, bool useNewStore = true)
 		{
-			IPropertySet values;
 			oldDataExists = false;
 
-			if (_applicationDataContainer.Containers.TryGetValue("Files", out var dataContainer))
-			{
-				values = dataContainer.Values;
-			}
-			else if (!useNewStore && _applicationDataContainer.Containers.TryGetValue("WinUIEx", out var oldDataContainer))
-			{
-				values = oldDataContainer.Values;
-				oldDataExists = true;
-			}
-			else
-			{
-				values = _applicationDataContainer.CreateContainer(
-					"Files",
-					ApplicationDataCreateDisposition.Always).Values;
-			}
-
-			return values;
+			return _applicationDataContainer;
 		}
 
 		private unsafe List<Tuple<string, Rect>> GetAllMonitorInfo()

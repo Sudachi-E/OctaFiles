@@ -156,7 +156,7 @@ namespace Files.App.Helpers
 		// WINUI3
 		private static ContentDialog SetContentDialogRoot(ContentDialog contentDialog)
 		{
-			if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 			{
 				contentDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 			}

@@ -198,6 +198,8 @@
 		<uc:LocationUnavailableIndicator
 			Title="{x:Bind ParentShellPageInstance.ShellViewModel.LocationUnavailableTitle, Mode=OneWay}"
 			Grid.Row="3"
+			x:Name="LocationUnavailableIndicator"
+			x:Load="{x:Bind ParentShellPageInstance.ShellViewModel.IsLocationUnavailable, Mode=OneWay}"
 			MaxWidth="400"
 			Margin="24,125,24,0"
 			HorizontalAlignment="Center"

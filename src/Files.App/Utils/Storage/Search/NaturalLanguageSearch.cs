@@ -174,11 +174,23 @@ namespace Files.App.Utils.Storage
 
 		private static bool TryUnlockFeature()
 		{
-			var packageId = Package.Current.Id;
-			var publisherId = packageId.FamilyName[(packageId.FamilyName.IndexOf('_') + 1)..];
+			try
+			{
+				return TryUnlockFeatureCore();
+			}
+			catch (Exception ex)
+			{
+				App.Logger.LogInformation(ex, "Language model feature unlock is unavailable");
+				return false;
+			}
+		}
+
+		private static bool TryUnlockFeatureCore()
+		{
+			var publisherId = AppPackageInfo.FamilyName[(AppPackageInfo.FamilyName.IndexOf('_') + 1)..];
 			var access = LimitedAccessFeatures.TryUnlockFeature(
 				LanguageModelFeatureId,
-				packageId.Name is "FilesDev" ? DevLafToken : Constants.AutomatedWorkflowInjectionKeys.LanguageModelLafToken,
+				AppPackageInfo.Name is "OctaFilesDev" ? DevLafToken : Constants.AutomatedWorkflowInjectionKeys.LanguageModelLafToken,
 				$"{publisherId} has registered their use of {LanguageModelFeatureId} with Microsoft and agrees to the terms of use.");
 
 			if (access.Status is LimitedAccessFeatureStatus.Available or LimitedAccessFeatureStatus.AvailableWithoutToken)

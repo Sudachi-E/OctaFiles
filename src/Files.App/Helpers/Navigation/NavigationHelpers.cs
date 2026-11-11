@@ -410,7 +410,7 @@ namespace Files.App.Helpers
 					(windowTitle, _, _) = await GetSelectedTabInfoAsync(pathArgs);
 
 				if (navigationArg == MainPageViewModel.SelectedTabItem?.NavigationParameter?.NavigationParameter)
-					MainWindow.Instance.AppWindow.Title = $"{windowTitle} - Files";
+					MainWindow.Instance.AppWindow.Title = $"{windowTitle} - Octa Files";
 			});
 		}
 
@@ -431,7 +431,7 @@ namespace Files.App.Helpers
 			if (string.IsNullOrWhiteSpace(path))
 				return Task.FromResult(false);
 
-			var folderUri = new Uri($"files-dev:?folder={Uri.EscapeDataString(path)}");
+			var folderUri = new Uri($"octa-files-dev:?folder={Uri.EscapeDataString(path)}");
 
 			return Launcher.LaunchUriAsync(folderUri).AsTask();
 		}
@@ -439,7 +439,7 @@ namespace Files.App.Helpers
 		public static Task<bool> OpenTabInNewWindowAsync(string tabArgs, int? dropX = null, int? dropY = null)
 		{
 			var drop = dropX is int x && dropY is int y ? $"&x={x}&y={y}" : "";
-			return Launcher.LaunchUriAsync(new Uri($"files-dev:?tab={Uri.EscapeDataString(tabArgs)}{drop}")).AsTask();
+			return Launcher.LaunchUriAsync(new Uri($"octa-files-dev:?tab={Uri.EscapeDataString(tabArgs)}{drop}")).AsTask();
 		}
 
 		public static void OpenInSecondaryPane(IShellPage associatedInstance, ListedItem listedItem, ShellPaneArrangement arrangement = ShellPaneArrangement.None)
@@ -454,7 +454,7 @@ namespace Files.App.Helpers
 
 		public static Task LaunchNewWindowAsync()
 		{
-			return Launcher.LaunchUriAsync(new Uri("files-dev:?window=")).AsTask();
+			return Launcher.LaunchUriAsync(new Uri("octa-files-dev:?window=")).AsTask();
 		}
 
 		public static async Task OpenSelectedItemsAsync(IShellPage associatedInstance, bool openViaApplicationPicker = false)

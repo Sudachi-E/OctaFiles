@@ -117,10 +117,10 @@ internal static class JumpListCatalog
 		await gate.WaitAsync();
 		try
 		{
-			PInvoke.SetCurrentProcessExplicitAppUserModelID($"{Package.Current.Id.FamilyName}!App").ThrowOnFailure();
+			PInvoke.SetCurrentProcessExplicitAppUserModelID($"{IdentityStorage.FamilyName}!App").ThrowOnFailure();
 			if (!JumpList.IsSupported())
 				return;
-			using var lease = await Task.Run(() => FileWriteLease.Acquire(Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "jump-list")));
+			using var lease = await Task.Run(() => FileWriteLease.Acquire(Path.Combine(IdentityStorage.LocalFolderPath, "jump-list")));
 			var list = await JumpList.LoadCurrentAsync();
 			list.SystemGroupKind = JumpListSystemGroupKind.None;
 			action(list);

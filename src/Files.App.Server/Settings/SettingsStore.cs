@@ -32,7 +32,7 @@ internal sealed class SettingsStore
 	private SettingsStore(string fileName)
 	{
 		this.fileName = fileName;
-		var directory = Path.Combine(ApplicationData.Current.LocalFolder.Path, "settings");
+		var directory = Path.Combine(IdentityStorage.LocalFolderPath, "settings");
 		Directory.CreateDirectory(directory);
 		path = Path.Combine(directory, fileName);
 		watcher = new FileSystemWatcher(directory, fileName)

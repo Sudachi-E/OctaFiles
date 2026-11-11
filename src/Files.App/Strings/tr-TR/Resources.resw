@@ -313,7 +313,7 @@
     <value>Hızlı erişime sabitle</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Files'a hoş geldiniz!</value>
+    <value>Octa Files'a hoş geldiniz!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>İzin ver</value>
@@ -615,7 +615,7 @@
     <value>{0} - kısayol</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files uygulaması, geliştiricilerin karşılaşmadığı bir sorunla karşılaştı.</value>
+    <value>Octa Files uygulaması, geliştiricilerin karşılaşmadığı bir sorunla karşılaştı.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Bir şeyler ters gitti!</value>
@@ -1980,7 +1980,7 @@
     <value>Son dosyalar</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Windows başlatıldığında Files'ı aç</value>
+    <value>Windows başlatıldığında Octa Files'ı aç</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Öznitelikler</value>
@@ -2055,7 +2055,7 @@
     <value>Resimler</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Files'ı güncelle</value>
+    <value>Octa Files'ı güncelle</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Etiketler</value>
@@ -2118,10 +2118,10 @@
     <value>Merhaba!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Files hoşunuza mı gitti? Lütfen Microsoft Store'da inceleme yazmayı düşünün.</value>
+    <value>Octa Files hoşunuza mı gitti? Lütfen Microsoft Store'da inceleme yazmayı düşünün.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Files'ı beğendiniz mi? Lütfen GitHub'da projeyi desteklemeyi düşünün.</value>
+    <value>Octa Files'ı beğendiniz mi? Lütfen GitHub'da projeyi desteklemeyi düşünün.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Destekle</value>
@@ -2187,7 +2187,7 @@
     <value>Düzleştir</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Bir klasörü düzleştirmek içerikleri alt klasörlerinden seçilen konuma taşıyacaktır. Bu işlem kalıcıdır ve geri alınamaz. Bu deneysel özelliği kullanarak, veri kaybı riskini ve herhangi bir veri kaybında Files ekibini sorumlu tutmamayı kabul etmelisiniz.</value>
+    <value>Bir klasörü düzleştirmek içerikleri alt klasörlerinden seçilen konuma taşıyacaktır. Bu işlem kalıcıdır ve geri alınamaz. Bu deneysel özelliği kullanarak, veri kaybı riskini ve herhangi bir veri kaybında Octa Files ekibini sorumlu tutmamayı kabul etmelisiniz.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Düzleştirme seçeneklerini göster</value>
@@ -3410,7 +3410,7 @@
     <value>GitHub repolarıyla çalışmaya başlamak için aşağıdaki bağlantıya aşağıdaki kodu girin.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files, GitHub'a şu anda erişemiyor.</value>
+    <value>Octa Files, GitHub'a şu anda erişemiyor.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Klasörü {0} içinde aç</value>
@@ -3525,10 +3525,10 @@
     <value>Bir daha gösterme</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files yönetici olarak çalışıyor</value>
+    <value>Octa Files yönetici olarak çalışıyor</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Windows ile WinAppSdk arasındaki bir kısıtlamadan ötürü sürükle ve bırak, Files yönetici olarak çalışırken kullanılamaz. Sürükle ve bırakı kullanmak istiyorsanız, geçici bir çözüm olarak Başlat Menüsünden UAC'ı (Kullanıcı Hesap Denetimi) başlatın ve üçüncü düzeyi seçin, ardından Windows'u yeniden başlatın. Aksi hâlde Files'ı sürükle ve bırak olmadan kullanmaya devam edebilirsiniz.</value>
+    <value>Windows ile WinAppSdk arasındaki bir kısıtlamadan ötürü sürükle ve bırak, Octa Files yönetici olarak çalışırken kullanılamaz. Sürükle ve bırakı kullanmak istiyorsanız, geçici bir çözüm olarak Başlat Menüsünden UAC'ı (Kullanıcı Hesap Denetimi) başlatın ve üçüncü düzeyi seçin, ardından Windows'u yeniden başlatın. Aksi hâlde Octa Files'ı sürükle ve bırak olmadan kullanmaya devam edebilirsiniz.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Pencere kapatıldığında uygulamayı arka planda çalışır durumda bırak</value>
@@ -4071,10 +4071,10 @@
     <value>İzinleri düzenle</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files başlangıç performansını iyileştirmek için hâlâ arka planda çalışıyor.</value>
+    <value>Octa Files başlangıç performansını iyileştirmek için hâlâ arka planda çalışıyor.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Files nereye gitti?</value>
+    <value>Octa Files nereye gitti?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Sorular ve tartışmalar</value>
@@ -4351,7 +4351,7 @@
     <value>Dikey</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Sistem tepsisinde Files simgesini göster</value>
+    <value>Sistem tepsisinde Octa Files simgesini göster</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU iş parçacıkları</value>

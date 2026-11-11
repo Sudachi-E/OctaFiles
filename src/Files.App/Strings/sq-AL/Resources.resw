@@ -313,7 +313,7 @@
     <value>Fiksoje te shiriti anÃ«sor</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Jep lejen</value>
@@ -1839,7 +1839,7 @@
     <value>Paraqisni raportin e gabimeve</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Cakto Files si menaxherin e parazgjedhur të skedarëve</value>
+    <value>Cakto Octa Files si menaxherin e parazgjedhur të skedarëve</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
     <value>Përdorni skedarët si dialogun e skedarit të hapur</value>
@@ -2187,7 +2187,7 @@
     <value>Rrafshoj</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Rrafshimi i një dosjeje do të zhvendosë të gjithë përmbajtjen nga nëndosjet e tij në vendndodhjen e zgjedhur. Ky operacion është i përhershëm dhe nuk mund të zhbëhet. Duke përdorur këtë veçori eksperimentale, ju e pranoni rrezikun dhe pranoni të mos mbani përgjegjës ekipin e Files për çdo humbje të të dhënave.</value>
+    <value>Rrafshimi i një dosjeje do të zhvendosë të gjithë përmbajtjen nga nëndosjet e tij në vendndodhjen e zgjedhur. Ky operacion është i përhershëm dhe nuk mund të zhbëhet. Duke përdorur këtë veçori eksperimentale, ju e pranoni rrezikun dhe pranoni të mos mbani përgjegjës ekipin e Octa Files për çdo humbje të të dhënave.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Shfaq opsionet e rrafshimit</value>
@@ -3525,10 +3525,10 @@
     <value>Mos u shfaq më</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files po ekzekutohet si administrator</value>
+    <value>Octa Files po ekzekutohet si administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Për shkak të një kufizimi me Windows dhe WinAppSdk, tërhiq dhe lësho nuk ofrohet kur ekzekuton Files si administrator. Nëse dëshironi të përdorni drag and drop, mund të zgjidhni këtë kufizim duke hapur UAC (User Account Control) nga menyja Start dhe duke zgjedhur nivelin e tretë dhe duke rifilluar Windows. Përndryshe, mund të vazhdoni të përdorni skedarët pa zvarritje dhe lëshim.</value>
+    <value>Për shkak të një kufizimi me Windows dhe WinAppSdk, tërhiq dhe lësho nuk ofrohet kur ekzekuton Octa Files si administrator. Nëse dëshironi të përdorni drag and drop, mund të zgjidhni këtë kufizim duke hapur UAC (User Account Control) nga menyja Start dhe duke zgjedhur nivelin e tretë dhe duke rifilluar Windows. Përndryshe, mund të vazhdoni të përdorni skedarët pa zvarritje dhe lëshim.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Lëreni aplikacionin të funksionojë në sfond kur dritarja është e mbyllur</value>
@@ -4071,10 +4071,10 @@
     <value>Redakto lejet</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files po ekzekutohet ende në sfond për të përmirësuar performancën e nisjes.</value>
+    <value>Octa Files po ekzekutohet ende në sfond për të përmirësuar performancën e nisjes.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Ku shkuan Files?</value>
+    <value>Ku shkuan Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Pyetje dhe diskutime</value>
@@ -4351,7 +4351,7 @@
     <value>Vertikale</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Shfaq ikonën Files në System Tray</value>
+    <value>Shfaq ikonën Octa Files në System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Fijet e CPU-së</value>

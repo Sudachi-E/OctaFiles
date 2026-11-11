@@ -9,7 +9,7 @@ internal static class TagCatalog
 {
 	private static readonly FileTagRegistryStore database = new();
 	private static readonly RegistryChangeMonitor monitor = new(Registry.CurrentUser,
-		@$"Software\Files Community\{Windows.ApplicationModel.Package.Current.Id.Name}\v1\FileTags");
+		@$"Software\Files Community\{IdentityStorage.Name}\v1\FileTags");
 	internal static readonly CachedTask<IReadOnlyList<TaggedFileInfo>> Items = new(() => Task.FromResult<IReadOnlyList<TaggedFileInfo>>(
 		database.GetAll(ignoreAccessErrors: true).Select(item => new TaggedFileInfo(item)).ToList().AsReadOnly()), TimeSpan.FromMinutes(5), monitor.HasChanged);
 	private static readonly CachedTask<bool> maintenance = new(() => Task.Run(() =>

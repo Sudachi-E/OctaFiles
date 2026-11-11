@@ -22,17 +22,21 @@ internal static class ServerHost
 	private static bool startupGraceExpired;
 	private static Timer? startupGrace;
 	private static bool quitting;
+	private static bool isInProcess;
 	private static int pendingUpdates;
 	private static SystemTrayIcon? tray;
 	private static DispatcherQueueController controller = null!;
 	private static BackgroundSettingsMonitor settings = null!;
 
-	internal static void Initialize()
+	internal static void Initialize(bool inProcess = false)
 	{
+		isInProcess = inProcess;
 		controller = DispatcherQueueController.CreateOnDedicatedThread();
 		settings = new BackgroundSettingsMonitor();
 		settings.Changed += OnSettingsChanged;
 		OnSettingsChanged();
+		if (inProcess)
+			return;
 		startupGrace = new Timer(_ =>
 		{
 			lock (gate)
@@ -136,6 +140,9 @@ internal static class ServerHost
 
 	private static void ExitIfIdle()
 	{
+		if (isInProcess)
+			return;
+
 		lock (gate)
 		{
 			if (clients.Count == 0 && (quitting || (hadClient && pendingUpdates > 0) ||

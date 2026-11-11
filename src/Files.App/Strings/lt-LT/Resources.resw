@@ -313,7 +313,7 @@
     <value>Prisegti prie Å¡oninÄ—s juostos</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Suteikti leidimÄ…</value>
@@ -1980,7 +1980,7 @@
     <value>Naujausi failai</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Atidarykite „Files“ paleidę „Windows“.</value>
+    <value>Atidarykite „Octa Files“ paleidę „Windows“.</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atributai</value>

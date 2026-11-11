@@ -14,7 +14,23 @@ namespace Files.Storage
 	public sealed class FileTagRegistryStore
 	{
 		private static string? _FileTagsKey;
-		private string? FileTagsKey => _FileTagsKey ??= SafetyExtensions.IgnoreExceptions(() => @$"Software\Files Community\{Package.Current.Id.Name}\v1\FileTags");
+		private string? FileTagsKey => _FileTagsKey ??= SafetyExtensions.IgnoreExceptions(() => @$"Software\Files Community\{ApplicationName}\v1\FileTags");
+
+		// Package.Current throws 0x80073D54 in unpackaged processes; fall back to the packaged identity name.
+		private static string ApplicationName
+		{
+			get
+			{
+				try
+				{
+					return Package.Current.Id.Name;
+				}
+				catch
+				{
+					return "OctaFilesDev";
+				}
+			}
+		}
 
 		public bool IsAvailable => FileTagsKey is not null;
 

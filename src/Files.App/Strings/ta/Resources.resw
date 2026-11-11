@@ -313,7 +313,7 @@
     <value>பக்கப்பட்டய்'ல பொருத்து</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>அனுமதி வழங்கு</value>
@@ -615,7 +615,7 @@
     <value>{0} - குறுக்குவழி</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files ran into a problem that the developers didn't prepare for yet.</value>
+    <value>Octa Files ran into a problem that the developers didn't prepare for yet.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>ஏதோ தப்பய்டுச்சு!</value>
@@ -1839,10 +1839,10 @@
     <value>பிழ அறிக்க சமர்ப்பி</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Set Files as the default file manager</value>
+    <value>Set Octa Files as the default file manager</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Use Files as Open File Dialog</value>
+    <value>Use Octa Files as Open File Dialog</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>குறி</value>
@@ -1881,7 +1881,7 @@
     <value>Restore default</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Open tab in existing instance when opening Files from another app</value>
+    <value>Open tab in existing instance when opening Octa Files from another app</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Startup settings</value>
@@ -1980,7 +1980,7 @@
     <value>Recent files</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Open Files on Windows startup</value>
+    <value>Open Octa Files on Windows startup</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attributes</value>
@@ -2055,7 +2055,7 @@
     <value>Pictures</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Files'அ புதுப்பி</value>
+    <value>Octa Files'அ புதுப்பி</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>குறிங்க</value>
@@ -2118,10 +2118,10 @@
     <value>Hello!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider reviewing in the Microsoft Store.</value>
+    <value>Enjoying Octa Files? Please consider reviewing in the Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider supporting the project on GitHub.</value>
+    <value>Enjoying Octa Files? Please consider supporting the project on GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Flatten</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Files team responsible for any data loss.</value>
+    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Octa Files team responsible for any data loss.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Show flatten options</value>
@@ -3410,7 +3410,7 @@
     <value>Enter the following code at the link below to start working with GitHub repositories.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files cannot access GitHub right now.</value>
+    <value>Octa Files cannot access GitHub right now.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Open folder in {0}</value>
@@ -3525,10 +3525,10 @@
     <value>இனிமேல் காட்டாத</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files நிர்வாகியா ஓடுது</value>
+    <value>Octa Files நிர்வாகியா ஓடுது</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Due to a limitation with Windows and WinAppSdk, drag and drop isn't available when running Files as admin. If you wish to use drag and drop, you can work around this limitation by opening UAC (User Account Control) from the Start Menu and selecting the third level, and restarting Windows. Otherwise, you can keep using Files without drag &amp; drop.</value>
+    <value>Due to a limitation with Windows and WinAppSdk, drag and drop isn't available when running Octa Files as admin. If you wish to use drag and drop, you can work around this limitation by opening UAC (User Account Control) from the Start Menu and selecting the third level, and restarting Windows. Otherwise, you can keep using Octa Files without drag &amp; drop.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Leave app running in the background when the window is closed</value>
@@ -3623,7 +3623,7 @@
     <value>பொருள்கள்</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files can't initialize this directory as a Git repository.</value>
+    <value>Octa Files can't initialize this directory as a Git repository.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Contributing Artist</value>
@@ -3975,7 +3975,7 @@
     <value>No ongoing file operations</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>The option to open Files on Windows Startup is not available due to your system settings or group policy. To re-enable, open the startup page in Task Manager.</value>
+    <value>The option to open Octa Files on Windows Startup is not available due to your system settings or group policy. To re-enable, open the startup page in Task Manager.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Failed to restore items from Recycle Bin</value>
@@ -4071,10 +4071,10 @@
     <value>அனுமதிகள திருத்து</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files is still running in the background to improve startup performance.</value>
+    <value>Octa Files is still running in the background to improve startup performance.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Files எங்க போச்சு?</value>
+    <value>Octa Files எங்க போச்சு?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>கேள்விகள் &amp; உரையாடல்கள்</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Show Files icon in the System Tray</value>
+    <value>Show Octa Files icon in the System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU threads</value>

@@ -9,16 +9,31 @@ namespace Files.App.Services
 		public bool IsPinned(string itemPath)
 		{
 			var tileId = GetNativeTileId(itemPath);
-			return SecondaryTile.Exists(tileId);
+
+			// SecondaryTile requires package identity.
+			try
+			{
+				return SecondaryTile.Exists(tileId);
+			}
+			catch
+			{
+				return false;
+			}
 		}
 
 		/// <inheritdoc/>
 		public Task<bool> IsPinnedAsync(IStorable storable)
 		{
 			var tileId = GetNativeTileId(storable.Id);
-			var exists = SecondaryTile.Exists(tileId);
 
-			return Task.FromResult(exists);
+			try
+			{
+				return Task.FromResult(SecondaryTile.Exists(tileId));
+			}
+			catch
+			{
+				return Task.FromResult(false);
+			}
 		}
 
 		/// <inheritdoc/>
@@ -61,10 +76,16 @@ namespace Files.App.Services
 		/// <inheritdoc/>
 		public async Task UnpinAsync(IStorable storable)
 		{
-			var startScreen = StartScreenManager.GetDefault();
 			var tileId = GetNativeTileId(storable.Id);
 
-			await startScreen.TryRemoveSecondaryTileAsync(tileId);
+			try
+			{
+				await StartScreenManager.GetDefault().TryRemoveSecondaryTileAsync(tileId);
+			}
+			catch
+			{
+				// Pinning is unavailable without package identity.
+			}
 		}
 
 		private static string GetNativeTileId(string id)

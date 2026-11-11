@@ -77,7 +77,7 @@ namespace Files.App.Actions
 
 					DecompressArchiveDialog decompressArchiveDialog = new() { ViewModel = decompressArchiveViewModel };
 
-					if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+					if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 						decompressArchiveDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 					ContentDialogResult option = await decompressArchiveDialog.TryShowAsync();

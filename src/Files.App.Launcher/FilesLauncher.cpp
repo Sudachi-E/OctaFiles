@@ -70,7 +70,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	LocalFree(szArglist);
 
 	WCHAR szBuf[MAX_PATH];
-	ExpandEnvironmentStringsW(L"%LOCALAPPDATA%\\Microsoft\\WindowsApps\\files-dev.exe", szBuf, MAX_PATH - 1);
+	ExpandEnvironmentStringsW(L"%LOCALAPPDATA%\\Microsoft\\WindowsApps\\octa-files-dev.exe", szBuf, MAX_PATH - 1);
 	std::wcout << szBuf << std::endl;
 	if (_waccess(szBuf, 0) == -1)
 	{
@@ -168,7 +168,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			TCHAR args[1024];
 			swprintf(args, _countof(args) - 1, L"\"%s\" %s \"%s\"", szBuf, verb, target.c_str());
 
-			std::wstring uriWithArgs = L"files-dev:?cmd=" + str2wstr(wstring_to_utf8_hex(args));
+			std::wstring uriWithArgs = L"octa-files-dev:?cmd=" + str2wstr(wstring_to_utf8_hex(args));
 
 			std::wcout << L"Invoking: " << args << L" = " << uriWithArgs << std::endl;
 
@@ -254,14 +254,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		SHELLEXECUTEINFO ShExecInfo = { 0 };
 		ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
-		ShExecInfo.fMask = SEE_MASK_NOASYNC | SEE_MASK_FLAG_NO_UI | SEE_MASK_NOCLOSEPROCESS;
-		ShExecInfo.lpFile = L"files-dev:";
+		ShExecInfo.fMask = SEE_MASK_NOASYNC | SEE_MASK_FLAG_NO_UI | SEE_MASK_NOCLOSEPROCESS;			ShExecInfo.lpFile = L"octa-files-dev:";
 		ShExecInfo.nShow = SW_SHOW;
 
 		if (!ShellExecuteEx(&ShExecInfo))
 		{
 			std::wcout << L"Protocol error: " << GetLastError() << std::endl;
-			//ShExecInfo.lpFile = L"files-dev.exe";
+			//ShExecInfo.lpFile = L"octa-files-dev.exe";
 			//if (!ShellExecuteEx(&ShExecInfo))
 			//{
 				//std::wcout << L"Command line error: " << GetLastError() << std::endl;

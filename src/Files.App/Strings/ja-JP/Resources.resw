@@ -313,7 +313,7 @@
     <value>サイドバーにピン留めする</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Files へようこそ！</value>
+    <value>Octa Files へようこそ！</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>付与された権限</value>
@@ -615,7 +615,7 @@
     <value>{0} - ショートカット</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files は、開発者がまだ想定していない問題に遭遇しました。</value>
+    <value>Octa Files は、開発者がまだ想定していない問題に遭遇しました。</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>問題が発生しました</value>
@@ -1839,10 +1839,10 @@
     <value>バグ レポートを送信</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Files を既定のファイルマネージャーに設定する</value>
+    <value>Octa Files を既定のファイルマネージャーに設定する</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>ファイルを開くダイアログで Files を使用</value>
+    <value>ファイルを開くダイアログで Octa Files を使用</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>タグ</value>
@@ -1881,7 +1881,7 @@
     <value>既定値に戻す</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>別のアプリから Files を開くときに既存のウィンドウのタブを開く</value>
+    <value>別のアプリから Octa Files を開くときに既存のウィンドウのタブを開く</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>起動時の設定</value>
@@ -1980,7 +1980,7 @@
     <value>最近使用したファイル</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Windows 起動時に Files を開く</value>
+    <value>Windows 起動時に Octa Files を開く</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>属性</value>
@@ -2055,7 +2055,7 @@
     <value>ピクチャ</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Files を更新</value>
+    <value>Octa Files を更新</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>タグ</value>
@@ -2118,10 +2118,10 @@
     <value>こんにちは！</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Files をお楽しみいただけましたか? Microsoft Store でのレビューをご検討ください。</value>
+    <value>Octa Files をお楽しみいただけましたか? Microsoft Store でのレビューをご検討ください。</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Files をお楽しみいただけましたか? GitHub でプロジェクトをサポートすることをご検討ください。</value>
+    <value>Octa Files をお楽しみいただけましたか? GitHub でプロジェクトをサポートすることをご検討ください。</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>スポンサー</value>
@@ -2187,7 +2187,7 @@
     <value>フラット化</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>フォルダーをフラット化すると、そのサブフォルダーから選択した場所にすべての項目を移動します。この操作は恒久的で、元に戻すことはできません。この実験的機能を使用する場合は、リスクを認識し、Files 開発チームはあらゆるデータ損失に対する責任を負わないことに同意してください。</value>
+    <value>フォルダーをフラット化すると、そのサブフォルダーから選択した場所にすべての項目を移動します。この操作は恒久的で、元に戻すことはできません。この実験的機能を使用する場合は、リスクを認識し、Octa Files 開発チームはあらゆるデータ損失に対する責任を負わないことに同意してください。</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>フラット化のオプションを表示</value>
@@ -3410,7 +3410,7 @@
     <value>GitHub リポジトリでの作業を開始するには、以下のリンク先で次のコードを入力してください。</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files は現在 GitHub にアクセスできません。</value>
+    <value>Octa Files は現在 GitHub にアクセスできません。</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>{0} でフォルダを開く</value>
@@ -3525,10 +3525,10 @@
     <value>次回から表示しない</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files は管理者として実行されています</value>
+    <value>Octa Files は管理者として実行されています</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Windows および WinAppSdk の制限により、Files を管理者として実行している場合はドラッグ アンド ドロップを使用できません。ドラッグ アンド ドロップを使用したい場合は、スタート メニューから UAC (ユーザー アカウント制御) を開き、3番目のレベルを選択して Windows を再起動することでこの制限を回避できます。そうでない場合は、ドラッグ アンド ドロップなしで Files を使い続けることもできます。</value>
+    <value>Windows および WinAppSdk の制限により、Octa Files を管理者として実行している場合はドラッグ アンド ドロップを使用できません。ドラッグ アンド ドロップを使用したい場合は、スタート メニューから UAC (ユーザー アカウント制御) を開き、3番目のレベルを選択して Windows を再起動することでこの制限を回避できます。そうでない場合は、ドラッグ アンド ドロップなしで Octa Files を使い続けることもできます。</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>ウィンドウを閉じたときにアプリをバックグラウンドで実行したままにする</value>
@@ -3976,7 +3976,7 @@
     <value>実行中のファイル操作はありません</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Windows 起動時に Files を開くオプションはあなたのシステム設定かグループ ポリシーによって利用できません。再度有効にするにはタスク マネージャーのスタートアップ ページを開いてください。</value>
+    <value>Windows 起動時に Octa Files を開くオプションはあなたのシステム設定かグループ ポリシーによって利用できません。再度有効にするにはタスク マネージャーのスタートアップ ページを開いてください。</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>ごみ箱から項目を復元できませんでした</value>
@@ -4072,10 +4072,10 @@
     <value>アクセス許可を編集</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>起動パフォーマンスを向上させるため、Files はバックグラウンドで実行されています。</value>
+    <value>起動パフォーマンスを向上させるため、Octa Files はバックグラウンドで実行されています。</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Files はどこに行きましたか?</value>
+    <value>Octa Files はどこに行きましたか?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>質問と議論</value>
@@ -4352,7 +4352,7 @@
     <value>縦</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>システム トレイに Files のアイコンを表示する</value>
+    <value>システム トレイに Octa Files のアイコンを表示する</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU スレッド数</value>

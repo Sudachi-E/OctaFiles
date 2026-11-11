@@ -35,7 +35,7 @@ namespace Files.App
 			InitializeComponent();
 
 			ExtendsContentIntoTitleBar = true;
-			Title = "Files";
+			Title = "Octa Files";
 			AppWindow.TitleBar.ButtonBackgroundColor = Colors.Transparent;
 			AppWindow.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
 			AppWindow.TitleBar.ButtonPressedBackgroundColor = Colors.Transparent;
@@ -85,17 +85,19 @@ namespace Files.App
 				=> firstFrame.TrySetResult(false);
 		}
 
-		public void ShowSplashScreen()
-		{
-			var rootFrame = EnsureWindowIsInitialized();
-
-			rootFrame?.Navigate(typeof(SplashScreenPage));
-		}
-
 		internal void ShowMainPage()
 		{
 			EnsureWindowIsInitialized()?.Navigate(typeof(MainPage),
 				new MainPageNavigationArguments { DeferInitialization = true }, new SuppressNavigationTransitionInfo());
+		}
+
+		/// <summary>
+		/// Realizes the main page chrome that is deferred past the first painted frame.
+		/// </summary>
+		internal void RealizeMainPageChrome()
+		{
+			if (EnsureWindowIsInitialized()?.Content is MainPage mainPage)
+				mainPage.RealizeDeferredChrome();
 		}
 
 		[DynamicWindowsRuntimeCast(typeof(OverlappedPresenter))]
@@ -110,9 +112,9 @@ namespace Files.App
 			{
 				case ILaunchActivatedEventArgs launchArgs:
 					if (launchArgs.Arguments is not null &&
-						(CommandLineParser.SplitArguments(launchArgs.Arguments, true)[0].EndsWith($"files-dev.exe", StringComparison.OrdinalIgnoreCase)
-						|| CommandLineParser.SplitArguments(launchArgs.Arguments, true)[0].EndsWith($"files-dev", StringComparison.OrdinalIgnoreCase)
-						|| CommandLineParser.SplitArguments(launchArgs.Arguments, true)[0].Equals(Path.Join(Package.Current.InstalledPath, "Files.exe"), StringComparison.OrdinalIgnoreCase)))
+						(CommandLineParser.SplitArguments(launchArgs.Arguments, true)[0].EndsWith($"octa-files-dev.exe", StringComparison.OrdinalIgnoreCase)
+						|| CommandLineParser.SplitArguments(launchArgs.Arguments, true)[0].EndsWith($"octa-files-dev", StringComparison.OrdinalIgnoreCase)
+						|| CommandLineParser.SplitArguments(launchArgs.Arguments, true)[0].Equals(Path.Join(AppPackageInfo.InstalledPath, "OctaFiles.exe"), StringComparison.OrdinalIgnoreCase)))
 					{
 						// WINUI3: When launching from commandline the argument is not ICommandLineActivatedEventArgs (#10370)
 						var ppm = CommandLineParser.ParseUntrustedCommands(launchArgs.Arguments);
@@ -121,7 +123,7 @@ namespace Files.App
 						else
 							await InitializeFromCmdLineArgsAsync(rootFrame, ppm, Program.ConsumeLaunchCwd());
 					}
-					else if (rootFrame.Content is null || rootFrame.Content is SplashScreenPage || !MainPageViewModel.AppInstances.Any())
+					else if (rootFrame.Content is null || !MainPageViewModel.AppInstances.Any())
 					{
 						// When the navigation stack isn't restored navigate to the first page,
 						// configuring the new page by passing required information as a navigation parameter
@@ -141,7 +143,7 @@ namespace Files.App
 					break;
 
 				case IProtocolActivatedEventArgs eventArgs:
-					if (eventArgs.Uri.AbsoluteUri == "files-dev:")
+					if (eventArgs.Uri.AbsoluteUri == "octa-files-dev:")
 					{
 						rootFrame.Navigate(typeof(MainPage), null, new SuppressNavigationTransitionInfo());
 
@@ -218,7 +220,7 @@ namespace Files.App
 						}
 
 						var index = 0;
-						if (rootFrame.Content is null || rootFrame.Content is SplashScreenPage || !MainPageViewModel.AppInstances.Any())
+						if (rootFrame.Content is null || !MainPageViewModel.AppInstances.Any())
 						{
 							// When the navigation stack isn't restored navigate to the first page,
 							// configuring the new page by passing required information as a navigation parameter
@@ -239,7 +241,7 @@ namespace Files.App
 					catch (Exception ex)
 					{
 						App.Logger.LogWarning(ex, "Failed to open files.");
-						if (rootFrame.Content is null || rootFrame.Content is SplashScreenPage || !MainPageViewModel.AppInstances.Any())
+						if (rootFrame.Content is null || !MainPageViewModel.AppInstances.Any())
 							rootFrame.Navigate(typeof(MainPage), null, new SuppressNavigationTransitionInfo());
 						else
 							Win32Helper.BringToForegroundEx(new(WindowHandle));

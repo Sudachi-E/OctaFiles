@@ -34,14 +34,14 @@ namespace Files.App.Helpers
 
 		private static async Task<CoreWebView2Environment> CreateAsync()
 		{
-			var defaultUserDataFolder = Path.Combine(ApplicationData.Current.LocalFolder.Path, DefaultUserDataFolderName);
+			var defaultUserDataFolder = Path.Combine(AppStorage.LocalFolderPath, DefaultUserDataFolderName);
 			_ = Task.Run(() =>
 			{
 				if (Directory.Exists(defaultUserDataFolder))
 					SafetyExtensions.IgnoreExceptions(() => Directory.Delete(defaultUserDataFolder, true), App.Logger);
 			});
 
-			var userDataFolder = Path.Combine(ApplicationData.Current.TemporaryFolder.Path, UserDataFolderName);
+			var userDataFolder = Path.Combine(AppStorage.TemporaryFolderPath, UserDataFolderName);
 			var options = new CoreWebView2EnvironmentOptions() { AdditionalBrowserArguments = "--disable-component-update" };
 
 			return await CoreWebView2Environment.CreateWithOptionsAsync(null, userDataFolder, options);

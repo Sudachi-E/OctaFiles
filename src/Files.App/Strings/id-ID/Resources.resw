@@ -313,7 +313,7 @@
     <value>Sematkan ke Bilah Sisi</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Berikan izin</value>
@@ -615,7 +615,7 @@
     <value>{0} - pintasan</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files mengalami masalah yang belum disiapkan oleh pengembang.</value>
+    <value>Octa Files mengalami masalah yang belum disiapkan oleh pengembang.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Terjadi kesalahan!</value>
@@ -1839,10 +1839,10 @@
     <value>Laporkan bug</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Atur Files sebagai pengelola file bawaan</value>
+    <value>Atur Octa Files sebagai pengelola file bawaan</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Gunakan Files sebagai Dialog Buka File</value>
+    <value>Gunakan Octa Files sebagai Dialog Buka File</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Tag</value>
@@ -1881,7 +1881,7 @@
     <value>Pulihkan ke bawaan</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Buka tab di instance yang sama ketika membuka Files dari app lain</value>
+    <value>Buka tab di instance yang sama ketika membuka Octa Files dari app lain</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Pengaturan startup</value>
@@ -1980,7 +1980,7 @@
     <value>File terbaru</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Buka Files saat Windows mulai</value>
+    <value>Buka Octa Files saat Windows mulai</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atribut</value>
@@ -2055,7 +2055,7 @@
     <value>Gambar</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Perbarui Files</value>
+    <value>Perbarui Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Penanda</value>
@@ -2118,10 +2118,10 @@
     <value>Halo!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Menikmati Files? Mohon pertimbangkan untuk memberi ulasan di Microsoft Store.</value>
+    <value>Menikmati Octa Files? Mohon pertimbangkan untuk memberi ulasan di Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Menikmati Files? Mohon pertimbangkan untuk memberi ulasan di GitHub.</value>
+    <value>Menikmati Octa Files? Mohon pertimbangkan untuk memberi ulasan di GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Ratakan</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Meratakan folder akan memindahkan semua isi dari subfolder ke lokasi yang dipilih. Operasi ini bersifat permanen dan tidak dapat dibatalkan. Dengan menggunakan fitur eksperimental ini, Anda mengakui risikonya dan setuju untuk tidak menuntut tim Files atas kehilangan data apa pun.</value>
+    <value>Meratakan folder akan memindahkan semua isi dari subfolder ke lokasi yang dipilih. Operasi ini bersifat permanen dan tidak dapat dibatalkan. Dengan menggunakan fitur eksperimental ini, Anda mengakui risikonya dan setuju untuk tidak menuntut tim Octa Files atas kehilangan data apa pun.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Tampilkan opsi perataan</value>
@@ -3410,7 +3410,7 @@
     <value>Masukkan kode berikut pada tautan dibawah untuk memulai bekerja dengan repositori GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Saat ini, Files tidak dapat mengakses GitHub.</value>
+    <value>Saat ini, Octa Files tidak dapat mengakses GitHub.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Buka folder di {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Jangan tampilkan lagi</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files sedang berjalan sebagai admin</value>
+    <value>Octa Files sedang berjalan sebagai admin</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Dikarenakan limitasi WIndows dan WinAppSDK, fitur drag and drop tidak tersedia saat menjalankan Files sebagai admin. Jika ingin memakai fitur drag and drop sementara bisa dengan membuka UAC (User Account Control) dari Start Menu dan pilih level ketiga, dan muat ulang Windows, sementara itu kamu dapat memakai Files tanpa fitur drag and drop.</value>
+    <value>Dikarenakan limitasi WIndows dan WinAppSDK, fitur drag and drop tidak tersedia saat menjalankan Octa Files sebagai admin. Jika ingin memakai fitur drag and drop sementara bisa dengan membuka UAC (User Account Control) dari Start Menu dan pilih level ketiga, dan muat ulang Windows, sementara itu kamu dapat memakai Octa Files tanpa fitur drag and drop.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Biarkan app berjalan di latar belakang ketika window di tutup</value>
@@ -4071,10 +4071,10 @@
     <value>Edit akses</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files sedang berjalan di latar belakang untuk meningkatkan performa startup.</value>
+    <value>Octa Files sedang berjalan di latar belakang untuk meningkatkan performa startup.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Kemana Files pergi?</value>
+    <value>Kemana Octa Files pergi?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Pertanyaan dan Diskusi</value>
@@ -4351,7 +4351,7 @@
     <value>Vertikal</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Tampilkan ikon Files di Baki Sistem</value>
+    <value>Tampilkan ikon Octa Files di Baki Sistem</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Thread CPU</value>

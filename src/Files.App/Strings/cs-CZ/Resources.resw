@@ -313,7 +313,7 @@
     <value>Připnout na postranní panel</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Udělit oprávnění</value>
@@ -615,7 +615,7 @@
     <value>{0} - zástupce</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files narazil na problém, na který se vývojáři ještě nepřipravili.</value>
+    <value>Octa Files narazil na problém, na který se vývojáři ještě nepřipravili.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Něco se pokazilo!</value>
@@ -1839,10 +1839,10 @@
     <value>Odeslat hlášení o chybě</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Nastavit Files jako výchozí správce souborů</value>
+    <value>Nastavit Octa Files jako výchozí správce souborů</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Použít Files v dialogu otevření souboru</value>
+    <value>Použít Octa Files v dialogu otevření souboru</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Štítek</value>
@@ -1980,7 +1980,7 @@
     <value>Nedávné soubory</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Otevřít aplikaci Files při spuštění systému Windows</value>
+    <value>Otevřít aplikaci Octa Files při spuštění systému Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atributy</value>
@@ -2055,7 +2055,7 @@
     <value>Obrázky</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Aktualizovat Files</value>
+    <value>Aktualizovat Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Štítky</value>
@@ -2118,10 +2118,10 @@
     <value>Zdravíme!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Užíváte si Files? Zvažte prosím ohodnocení v Microsoft Store.</value>
+    <value>Užíváte si Octa Files? Zvažte prosím ohodnocení v Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Líbí se Vám aplikace Files? Zvažte prosím podpoření projektu na GitHub.</value>
+    <value>Líbí se Vám aplikace Octa Files? Zvažte prosím podpoření projektu na GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponzorovat</value>
@@ -2187,7 +2187,7 @@
     <value>Sjednocení</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Sjednocení složky přesune veškerý obsah z podsložek do vybraného umístění. Tato operace je trvalá a nelze ji vrátit zpět. Používáním této experimentální funkce potvrzujete riziko a souhlasíte s tím, že tým Files není odpovědný za ztrátu dat.</value>
+    <value>Sjednocení složky přesune veškerý obsah z podsložek do vybraného umístění. Tato operace je trvalá a nelze ji vrátit zpět. Používáním této experimentální funkce potvrzujete riziko a souhlasíte s tím, že tým Octa Files není odpovědný za ztrátu dat.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Zobrazit možnost sjednocení složek</value>
@@ -3410,7 +3410,7 @@
     <value>Zadejte následující kód na přihlašovací stránce aby jste mohli začít pracovat s repozitářemi GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files nemá aktuálně přístup ke GitHubu.</value>
+    <value>Octa Files nemá aktuálně přístup ke GitHubu.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Otevřít složku v {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Příště nezobrazovat</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files je spuštěn s oprávněním správce</value>
+    <value>Octa Files je spuštěn s oprávněním správce</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Kvůli omezení systému Windows a aplikace WinAppSdk není při spuštění aplikace Files jako správce k dispozici funkce 'drag &amp; drop'. Pokud chcete 'drag &amp; drop' použít, můžete toto omezení obejít tak, že v nabídce Start otevřete UAC (Řízení uživatelských účtů), vyberete třetí úroveň a restartujete systém Windows. V opačném případě můžete nadále používat aplikaci Files bez funkce 'drag &amp; drop'.</value>
+    <value>Kvůli omezení systému Windows a aplikace WinAppSdk není při spuštění aplikace Octa Files jako správce k dispozici funkce 'drag &amp; drop'. Pokud chcete 'drag &amp; drop' použít, můžete toto omezení obejít tak, že v nabídce Start otevřete UAC (Řízení uživatelských účtů), vyberete třetí úroveň a restartujete systém Windows. V opačném případě můžete nadále používat aplikaci Octa Files bez funkce 'drag &amp; drop'.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Ponechat aplikaci běžet na pozadí, když je okno zavřeno</value>
@@ -3975,7 +3975,7 @@
     <value>Žádné probíhající operace se soubory</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Možnost otevřít Files při spuštění systému Windows není dostupná kvůli nastavení systému nebo skupinovým pravidlům. Chcete-li ji umožnit, otevřete úvodní stránku ve Správci úloh.</value>
+    <value>Možnost otevřít Octa Files při spuštění systému Windows není dostupná kvůli nastavení systému nebo skupinovým pravidlům. Chcete-li ji umožnit, otevřete úvodní stránku ve Správci úloh.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Obnovení položek z koše se nezdařilo</value>
@@ -4071,10 +4071,10 @@
     <value>Upravit oprávnění</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files stále běží na pozadí za účelem zlepšení rychlosti spouštění.</value>
+    <value>Octa Files stále běží na pozadí za účelem zlepšení rychlosti spouštění.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Kam se poděl Files?</value>
+    <value>Kam se poděl Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Otázky a diskuse</value>
@@ -4351,7 +4351,7 @@
     <value>Vertikálně</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Zobrazit ikonu Files v systémové liště</value>
+    <value>Zobrazit ikonu Octa Files v systémové liště</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU vlákna</value>

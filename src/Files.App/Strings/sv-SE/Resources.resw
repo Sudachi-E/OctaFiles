@@ -313,7 +313,7 @@
     <value>Fäst i sidofältet</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Ge tillstånd</value>
@@ -615,7 +615,7 @@
     <value>{0} - genväg</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files stötte på ett problem som utvecklarna inte ännu var förberedda för.</value>
+    <value>Octa Files stötte på ett problem som utvecklarna inte ännu var förberedda för.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Något gick fel!</value>
@@ -1839,10 +1839,10 @@
     <value>Skicka felrapport</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Ange Files som standardfilhanterare</value>
+    <value>Ange Octa Files som standardfilhanterare</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Använd Files för att öppna fildialoger</value>
+    <value>Använd Octa Files för att öppna fildialoger</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Tagg</value>
@@ -1980,7 +1980,7 @@
     <value>Senaste filer</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Öppna Files vid Windowsstart</value>
+    <value>Öppna Octa Files vid Windowsstart</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attribut</value>
@@ -4351,7 +4351,7 @@
     <value>Vertikal</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Show Files icon in the System Tray</value>
+    <value>Show Octa Files icon in the System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU-trådar</value>

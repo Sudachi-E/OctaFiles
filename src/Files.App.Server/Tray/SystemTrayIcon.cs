@@ -135,10 +135,8 @@ namespace Files.App.Server
 		/// </remarks>
 		public SystemTrayIcon()
 		{
-			var assetFolder = appEnvironment.Contains("preview", StringComparison.Ordinal) ? "Preview"
-				: appEnvironment.Contains("stable", StringComparison.Ordinal) ? "Release" : "Dev";
-			_Icon = new(System.IO.Path.Combine(Package.Current.InstalledPath, "Assets", "AppTiles", assetFolder, "Logo.ico"));
-			_Tooltip = $"{Package.Current.DisplayName}{(Environment.IsPrivilegedProcess ? $" ({resources.GetString("FilesRunningAsAdmin")})" : string.Empty)}";
+			_Icon = new(System.IO.Path.Combine(IdentityStorage.InstalledPath, "Assets", "AppTiles", "Release", "Logo.ico"));
+			_Tooltip = $"{IdentityStorage.DisplayName}{(Environment.IsPrivilegedProcess ? $" ({resources.GetString("FilesRunningAsAdmin")})" : string.Empty)}";
 			_taskbarRestartMessageId = PInvoke.RegisterWindowMessage("TaskbarCreated");
 
 			Id = (appEnvironment, Environment.IsPrivilegedProcess) switch
@@ -275,7 +273,7 @@ namespace Files.App.Server
 
 			_lastLaunchDate = DateTime.Now;
 			if (!ServerHost.ActivateWindow())
-				_ = SafetyExtensions.IgnoreExceptions(() => Launcher.LaunchUriAsync(new Uri("files-dev:")).AsTask(), Program.Logger);
+				_ = SafetyExtensions.IgnoreExceptions(() => Launcher.LaunchUriAsync(new Uri("octa-files-dev:")).AsTask(), Program.Logger);
 		}
 
 		private void OnDocumentationClicked()

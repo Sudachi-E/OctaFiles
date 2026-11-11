@@ -15,7 +15,7 @@ class Program
 {
 	internal static readonly TaskCompletionSource<bool> ExitSignal = new(TaskCreationOptions.RunContinuationsAsynchronously);
 	private static readonly CancellationTokenSource cancellationTokenSource = new();
-	private static readonly FileLoggerProvider logProvider = new(Path.Combine(ApplicationData.Current.LocalFolder.Path, $"debug_server_{(Environment.IsPrivilegedProcess ? "privileged" : "unprivileged")}.log"));
+	private static readonly FileLoggerProvider logProvider = new(Path.Combine(IdentityStorage.LocalFolderPath, $"debug_server_{(Environment.IsPrivilegedProcess ? "privileged" : "unprivileged")}.log"));
 	internal static readonly ILogger Logger = logProvider.CreateLogger(nameof(Program));
 
 	static Type[] GetActivatableTypes() =>
@@ -37,10 +37,32 @@ class Program
 	{
 		AppDomain.CurrentDomain.FirstChanceException += OnFirstChanceException;
 
-		RoRevokeActivationFactoriesSafeHandle? cookie = null;
-
 		_ = PInvoke.RoInitialize(RO_INIT_TYPE.RO_INIT_MULTITHREADED);
 		ServerHost.Initialize();
+
+		var cookie = RegisterActivationFactories();
+
+		AppDomain.CurrentDomain.ProcessExit += (_, _) => cancellationTokenSource.Cancel();
+
+		try
+		{
+			await ExitSignal.Task.WaitAsync(cancellationTokenSource.Token);
+		}
+		catch (OperationCanceledException)
+		{
+			return;
+		}
+		finally
+		{
+			cookie?.Dispose();
+			await ServerHost.ShutdownAsync();
+			logProvider.Dispose();
+		}
+	}
+
+	internal static RoRevokeActivationFactoriesSafeHandle? RegisterActivationFactories()
+	{
+		RoRevokeActivationFactoriesSafeHandle? cookie = null;
 
 		var types = GetActivatableTypes();
 		var classIds = new HSTRING[types.Length];
@@ -85,22 +107,7 @@ class Program
 			}
 		}
 
-		AppDomain.CurrentDomain.ProcessExit += (_, _) => cancellationTokenSource.Cancel();
-
-		try
-		{
-			await ExitSignal.Task.WaitAsync(cancellationTokenSource.Token);
-		}
-		catch (OperationCanceledException)
-		{
-			return;
-		}
-		finally
-		{
-			cookie?.Dispose();
-			await ServerHost.ShutdownAsync();
-			logProvider.Dispose();
-		}
+		return cookie;
 	}
 
 	private static void OnFirstChanceException(object? sender, FirstChanceExceptionEventArgs e)

@@ -175,7 +175,7 @@ namespace Files.App.ViewModels.Settings
 			AppLifecycleHelper.SaveSessionTabs();
 
 			// Launches a new instance of Files
-			await Launcher.LaunchUriAsync(new Uri("files-dev:"));
+			await Launcher.LaunchUriAsync(new Uri("octa-files-dev:"));
 
 			// Closes the current instance
 			Environment.Exit(0);
@@ -278,7 +278,7 @@ namespace Files.App.ViewModels.Settings
 					UserSettingsService.GeneralSettingsService.OpenTabInExistingInstance = value;
 
 					// Needed in Program.cs
-					ApplicationData.Current.LocalSettings.Values["OpenTabInExistingInstance"] = value;
+					AppStorage.LocalSettings.Values["OpenTabInExistingInstance"] = value;
 
 					OnPropertyChanged();
 				}

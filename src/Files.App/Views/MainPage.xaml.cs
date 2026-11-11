@@ -43,6 +43,7 @@ namespace Files.App.Views
 
 		private readonly Dictionary<TabBarItem, double> _sidebarScrollByTab = new();
 		private TabBarItem? _previousSidebarTab;
+		private bool _isChromeRealized;
 
 		[DynamicWindowsRuntimeCast(typeof(MenuFlyout))]
 		public MainPage()
@@ -71,11 +72,6 @@ namespace Files.App.Views
 			App.AppModel.PropertyChanged += AppModel_PropertyChanged;
 
 			ApplySidebarWidthState();
-
-			// Realize the navigation controls before the first measure pass.
-			FindName(nameof(InnerNavigationToolbar));
-			FindName(nameof(TabControl));
-			FindName(nameof(NavToolbar));
 		}
 
 		private void NumberedTabKeyboardAccelerator_Invoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs e)
@@ -104,7 +100,7 @@ namespace Files.App.Views
 		// WINUI3
 		private ContentDialog SetContentDialogRoot(ContentDialog contentDialog)
 		{
-			if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				contentDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 			return contentDialog;
@@ -256,7 +252,26 @@ namespace Files.App.Views
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
+			// Tabs and their toolbar view models are wired up during initialization, so the deferred chrome must exist by then.
+			if (e.Parameter is not MainPageNavigationArguments { DeferInitialization: true })
+				RealizeDeferredChrome();
+
 			_ = ViewModel.OnNavigatedToAsync(e);
+		}
+
+		/// <summary>
+		/// Creates the chrome that <c>x:Load="False"</c> keeps out of the first painted frame.
+		/// </summary>
+		internal void RealizeDeferredChrome()
+		{
+			if (_isChromeRealized)
+				return;
+
+			_isChromeRealized = true;
+
+			FindName(nameof(TabControl));
+			FindName(nameof(NavToolbar));
+			FindName(nameof(InnerNavigationToolbar));
 		}
 
 		protected override async void OnPreviewKeyDown(KeyRoutedEventArgs e) => await OnPreviewKeyDownAsync(e);

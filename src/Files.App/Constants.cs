@@ -62,9 +62,7 @@ namespace Files.App
 
 		public static class AssetPaths
 		{
-			public const string DevLogo = "Assets/AppTiles/Dev/Logo.ico";
-			public const string PreviewLogo = "Assets/AppTiles/Preview/Logo.ico";
-			public const string StableLogo = "Assets/AppTiles/Release/Logo.ico";
+			public const string AppLogo = "Assets/AppTiles/Release/Logo.ico";
 		}
 
 		public static class UI
@@ -182,7 +180,7 @@ namespace Files.App
 			public const string PrivacyPolicyUrl = @"https://files.community/privacy";
 			public const string SupportUsUrl = @"https://files.community/sponsor";
 			public const string CrowdinUrl = @"https://crowdin.com/project/files-app";
-			public static readonly string ReleaseNotesUrl = $"https://files.community/blog/posts/v{Package.Current.Id.Version.Major}-{Package.Current.Id.Version.Minor}-{Package.Current.Id.Version.Build}?minimal";
+			public static readonly string ReleaseNotesUrl = $"https://files.community/blog/posts/v{AppPackageInfo.Version.Major}-{AppPackageInfo.Version.Minor}-{AppPackageInfo.Version.Build}?minimal";
 		}
 
 		public static class DocsPath
@@ -259,6 +257,7 @@ namespace Files.App
 				"FilesPreview", // sideload preview
 				"49306atecsolution.FilesPreview", // store preview
 				"FilesDev", // dev
+				"OctaFilesDev", // octa dev
 			};
 		}
 
@@ -266,8 +265,8 @@ namespace Files.App
 		{
 			// These strings are intentionally hardcoded and cannot be moved to resource files.
 			// The Windows App Runtime (which powers the resource loading system) may itself be unavailable at this point
-			public const string MissingRuntimeMessage = "Files failed to start. A required Windows component could not be loaded. Try reinstalling Files from the Microsoft Store or from https://files.community/download";
-			public const string MissingRuntimeTitle = "Files - Startup Error";
+			public const string MissingRuntimeMessage = "Octa Files failed to start. A required Windows component could not be loaded. Try reinstalling Octa Files from the Microsoft Store or from https://files.community/download";
+			public const string MissingRuntimeTitle = "Octa Files - Startup Error";
 		}
 	}
 }

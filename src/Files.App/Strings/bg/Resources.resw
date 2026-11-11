@@ -313,7 +313,7 @@
     <value>Закачане към страничната лента</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Даване на разрешение</value>
@@ -615,7 +615,7 @@
     <value>{0} - пряк път</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files се сблъскаха с проблем, за който разработчиците все още не са се подготвили.</value>
+    <value>Octa Files се сблъскаха с проблем, за който разработчиците все още не са се подготвили.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Нещо се обърка!</value>
@@ -1839,10 +1839,10 @@
     <value>Подаване на доклад за грешка</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Задайте Files като файлов мениджър по подразбиране</value>
+    <value>Задайте Octa Files като файлов мениджър по подразбиране</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Използвай Files като диалогов прозорец за отваряне на файл</value>
+    <value>Използвай Octa Files като диалогов прозорец за отваряне на файл</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Файлов етикет</value>
@@ -1980,7 +1980,7 @@
     <value>Скорошни файлове</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Изпълни Files при стартиране на Windows</value>
+    <value>Изпълни Octa Files при стартиране на Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Атрибути</value>
@@ -2118,10 +2118,10 @@
     <value>Hello!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider reviewing in the Microsoft Store.</value>
+    <value>Enjoying Octa Files? Please consider reviewing in the Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider supporting the project on GitHub.</value>
+    <value>Enjoying Octa Files? Please consider supporting the project on GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Flatten</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Files team responsible for any data loss.</value>
+    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Octa Files team responsible for any data loss.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Show flatten options</value>
@@ -3410,7 +3410,7 @@
     <value>Enter the following code at the link below to start working with GitHub repositories.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files в момента няма достъп до GitHub.</value>
+    <value>Octa Files в момента няма достъп до GitHub.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Open folder in {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Без ново показване</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files се изпълнява като администратор</value>
+    <value>Octa Files се изпълнява като администратор</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Due to a limitation with Windows and WinAppSdk, drag and drop isn't available when running Files as admin. If you wish to use drag and drop, you can work around this limitation by opening UAC (User Account Control) from the Start Menu and selecting the third level, and restarting Windows. Otherwise, you can keep using Files without drag &amp; drop.</value>
+    <value>Due to a limitation with Windows and WinAppSdk, drag and drop isn't available when running Octa Files as admin. If you wish to use drag and drop, you can work around this limitation by opening UAC (User Account Control) from the Start Menu and selecting the third level, and restarting Windows. Otherwise, you can keep using Octa Files without drag &amp; drop.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Leave app running in the background when the window is closed</value>
@@ -3975,7 +3975,7 @@
     <value>Няма текущи операции с файла</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>The option to open Files on Windows Startup is not available due to your system settings or group policy. To re-enable, open the startup page in Task Manager.</value>
+    <value>The option to open Octa Files on Windows Startup is not available due to your system settings or group policy. To re-enable, open the startup page in Task Manager.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Неуспешно възстановяване на елементи от кошчето</value>
@@ -4071,10 +4071,10 @@
     <value>Редактиране на позволенията</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files is still running in the background to improve startup performance.</value>
+    <value>Octa Files is still running in the background to improve startup performance.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Къде отиде Files?</value>
+    <value>Къде отиде Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Въпроси и обсъждания</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Show Files icon in the System Tray</value>
+    <value>Show Octa Files icon in the System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU threads</value>

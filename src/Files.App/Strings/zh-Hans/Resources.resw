@@ -313,7 +313,7 @@
     <value>固定到侧边栏</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>欢迎使用 Files！</value>
+    <value>欢迎使用 Octa Files！</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>授予权限</value>
@@ -615,7 +615,7 @@
     <value>{0} - 快捷方式</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files 发生未知错误。</value>
+    <value>Octa Files 发生未知错误。</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>发生错误！</value>
@@ -1839,10 +1839,10 @@
     <value>提交错误报告</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>将 Files 设为默认文件管理器</value>
+    <value>将 Octa Files 设为默认文件管理器</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>使用 Files 作为打开文件对话框</value>
+    <value>使用 Octa Files 作为打开文件对话框</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>文件标签</value>
@@ -1881,7 +1881,7 @@
     <value>恢复默认</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>从另一个应用程序打开 Files 时，在现有窗口中新建标签页</value>
+    <value>从另一个应用程序打开 Octa Files 时，在现有窗口中新建标签页</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>启动设置</value>
@@ -2055,7 +2055,7 @@
     <value>图片</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>更新 Files</value>
+    <value>更新 Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>标签</value>
@@ -2118,10 +2118,10 @@
     <value>您好！</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>喜欢 Files 吗？请考虑在 Microsoft Store 中给我们写评价。</value>
+    <value>喜欢 Octa Files 吗？请考虑在 Microsoft Store 中给我们写评价。</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>喜欢 Files 吗？请考虑在 GitHub上支持该项目。</value>
+    <value>喜欢 Octa Files 吗？请考虑在 GitHub上支持该项目。</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>赞助</value>
@@ -2187,7 +2187,7 @@
     <value>展平</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>展平 (Flatten) 文件夹将把该文件夹的子文件夹中的所有项目统一放置到选定目录下。此操作是永久性的，不可撤消。 使用此实验性功能，即表示您知晓风险且 Files 团队不对任何数据丢失负责。</value>
+    <value>展平 (Flatten) 文件夹将把该文件夹的子文件夹中的所有项目统一放置到选定目录下。此操作是永久性的，不可撤消。 使用此实验性功能，即表示您知晓风险且 Octa Files 团队不对任何数据丢失负责。</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>显示展平选项</value>
@@ -3410,7 +3410,7 @@
     <value>若要开始使用 GitHub 存储库，请点击下方的链接，并输入以下验证码。</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files 目前无法访问 GitHub。</value>
+    <value>Octa Files 目前无法访问 GitHub。</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>在 {0} 中打开文件夹</value>
@@ -3525,10 +3525,10 @@
     <value>不再显示</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files 正在以管理员身份运行</value>
+    <value>Octa Files 正在以管理员身份运行</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>由于 Windows 和 WinAppSdk 的限制，当以管理员身份运行 Files 时，拖动和拖放不可用。 若要启用拖放， 你可以从开始菜单中打开 UAC（用户帐户控制）设置，选择第三个保护等级并重启 Windows，以解除这一限制。 否则，你可以继续使用 Files，但无法使用拖放。</value>
+    <value>由于 Windows 和 WinAppSdk 的限制，当以管理员身份运行 Octa Files 时，拖动和拖放不可用。 若要启用拖放， 你可以从开始菜单中打开 UAC（用户帐户控制）设置，选择第三个保护等级并重启 Windows，以解除这一限制。 否则，你可以继续使用 Octa Files，但无法使用拖放。</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>当窗口关闭后保持应用程序后台运行</value>
@@ -3623,7 +3623,7 @@
     <value>个项目</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files 无法将此目录初始化为 Git 仓库.</value>
+    <value>Octa Files 无法将此目录初始化为 Git 仓库.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>参与创作的艺术家</value>
@@ -3975,7 +3975,7 @@
     <value>没有正在进行的文件操作</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>由于您的系统设置或组策略，选项“在 Windows 启动时打开 Files”不可用。 若要重新启用，请在任务管理器中打开“启动”页。</value>
+    <value>由于您的系统设置或组策略，选项“在 Windows 启动时打开 Octa Files”不可用。 若要重新启用，请在任务管理器中打开“启动”页。</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>从回收站还原项目失败</value>
@@ -4071,10 +4071,10 @@
     <value>编辑权限</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files 仍在后台运行，这可以使其更快启动。</value>
+    <value>Octa Files 仍在后台运行，这可以使其更快启动。</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Files 到哪里去了？</value>
+    <value>Octa Files 到哪里去了？</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>问题和讨论</value>
@@ -4351,7 +4351,7 @@
     <value>垂直</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>在系统托盘中显示 Files 图标</value>
+    <value>在系统托盘中显示 Octa Files 图标</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU 线程</value>

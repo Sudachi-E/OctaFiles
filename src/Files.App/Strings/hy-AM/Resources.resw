@@ -313,7 +313,7 @@
     <value>Մեխել Կողագոտուն</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Շնորհել թույլտվություն</value>
@@ -615,7 +615,7 @@
     <value>{0} - կարճատ</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files ran into a problem that the developers didn't prepare for yet.</value>
+    <value>Octa Files ran into a problem that the developers didn't prepare for yet.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Something went wrong!</value>
@@ -1839,10 +1839,10 @@
     <value>Ներկայացնել սխալի զեկույց</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Կայել Files-ը որպես լռելյալին նիշքի կառավարիչ</value>
+    <value>Կայել Octa Files-ը որպես լռելյալին նիշքի կառավարիչ</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Use Files as Open File Dialog</value>
+    <value>Use Octa Files as Open File Dialog</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Պիտակ</value>
@@ -1881,7 +1881,7 @@
     <value>Վերականգնել լռելյային</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Բացել ներդիրը գոյություն ունեցող օրինակում՝ այլ հավելվածից Files բացելիս</value>
+    <value>Բացել ներդիրը գոյություն ունեցող օրինակում՝ այլ հավելվածից Octa Files բացելիս</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Մեկնարկի կայանքներ</value>
@@ -2055,7 +2055,7 @@
     <value>Նկարներ</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Արդիացնել Files-ը</value>
+    <value>Արդիացնել Octa Files-ը</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Պիտակներ</value>
@@ -2118,10 +2118,10 @@
     <value>Hello!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider reviewing in the Microsoft Store.</value>
+    <value>Enjoying Octa Files? Please consider reviewing in the Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider supporting the project on GitHub.</value>
+    <value>Enjoying Octa Files? Please consider supporting the project on GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Հարթել</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Պանակը հարթեցնելու դեպքում ամբողջ բովանդակությունը նրա ենթապանակներից կտեղափոխվի ընտրված վայր:  Այս գործողությունը մշտական ​​է եւ հնարավոր չէ հետարկել:  Օգտագործելով այս փորձարարական հատկությունը՝ դուք ընդունում եք ռիսկը եւ համաձայնում եք, որ Files թիմը պատասխանատվություն չի կրի տվյալների կորստի համար:</value>
+    <value>Պանակը հարթեցնելու դեպքում ամբողջ բովանդակությունը նրա ենթապանակներից կտեղափոխվի ընտրված վայր:  Այս գործողությունը մշտական ​​է եւ հնարավոր չէ հետարկել:  Օգտագործելով այս փորձարարական հատկությունը՝ դուք ընդունում եք ռիսկը եւ համաձայնում եք, որ Octa Files թիմը պատասխանատվություն չի կրի տվյալների կորստի համար:</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Show flatten options</value>
@@ -3410,7 +3410,7 @@
     <value>Enter the following code at the link below to start working with GitHub repositories.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files-ը չի կարող մտնել GitHub այս պահին</value>
+    <value>Octa Files-ը չի կարող մտնել GitHub այս պահին</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Բացել պանակը {0}-ում</value>
@@ -3525,10 +3525,10 @@
     <value>Այլեւս չցուցադրել</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files is running as administrator</value>
+    <value>Octa Files is running as administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Windows-ի եւ WinAppSdk-ի սահմանափակման պատճառով, քաշել եւ գցել հնարավոր չէ Files-ը որպես վարիչ գործարկելիս:  Եթե ​​ցանկանում եք օգտագործել քաշել եւ գցել, կարող եք հաղթահարել այս սահմանափակումը՝ բացելով UAC-ը (User Account Control) Մեկնարկի Ցանկից եւ ընտրելով երրորդ մակարդակը ու վերագործարկելով Windows-ը:  Հակառակ դեպքում, դուք կարող եք շարունակել օգտագործել Files-ը՝ առանց քաշելու և գցելու:</value>
+    <value>Windows-ի եւ WinAppSdk-ի սահմանափակման պատճառով, քաշել եւ գցել հնարավոր չէ Octa Files-ը որպես վարիչ գործարկելիս:  Եթե ​​ցանկանում եք օգտագործել քաշել եւ գցել, կարող եք հաղթահարել այս սահմանափակումը՝ բացելով UAC-ը (User Account Control) Մեկնարկի Ցանկից եւ ընտրելով երրորդ մակարդակը ու վերագործարկելով Windows-ը:  Հակառակ դեպքում, դուք կարող եք շարունակել օգտագործել Octa Files-ը՝ առանց քաշելու և գցելու:</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Թողել հավելվածի աշխատի խորքում, երբ պատուհանը փակ է</value>
@@ -3623,7 +3623,7 @@
     <value>տարր</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files can't initialize this directory as a Git repository.</value>
+    <value>Octa Files can't initialize this directory as a Git repository.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Contributing Artist</value>
@@ -3975,7 +3975,7 @@
     <value>Չկան ընթացիկ նիշքի գործողություններ</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Windows Startup-ում Files-ը բացելու տարբերակը հասանելի չէ ձեր համակարգի կայանքների կամ խմբային քաղաքականության պատճառով: Վերամիացնելու համար բացեք գործարկման էջը Խնդիրների Կառավարիչում:</value>
+    <value>Windows Startup-ում Octa Files-ը բացելու տարբերակը հասանելի չէ ձեր համակարգի կայանքների կամ խմբային քաղաքականության պատճառով: Վերամիացնելու համար բացեք գործարկման էջը Խնդիրների Կառավարիչում:</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Failed to restore items from Recycle Bin</value>
@@ -4074,7 +4074,7 @@
     <value>Նիշքերը դեռ աշխատում են խորքում՝ գործարկման արդյունավետությունը բարելավելու համար:</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Ո՞ւր է գնացել Files-ը</value>
+    <value>Ո՞ւր է գնացել Octa Files-ը</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Հարցեր և քննարկումներ</value>
@@ -4351,7 +4351,7 @@
     <value>Ուղղահայաց</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Show Files icon in the System Tray</value>
+    <value>Show Octa Files icon in the System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>ԿՄՄ հոսքեր</value>

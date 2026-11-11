@@ -166,7 +166,7 @@ namespace Files.App.Utils.Storage
 						CloseButtonText = Strings.Cancel.GetLocalizedResource()
 					};
 
-					if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+					if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 						dialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 					ContentDialogResult result = await dialog.TryShowAsync();
@@ -386,7 +386,7 @@ namespace Files.App.Utils.Storage
 						CloseButtonText = Strings.Cancel.GetLocalizedResource()
 					};
 
-					if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+					if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 						dialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 					ContentDialogResult result = await dialog.TryShowAsync();

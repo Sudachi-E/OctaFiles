@@ -313,7 +313,7 @@
     <value>Przypnij do panelu bocznego</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Witamy w Files!</value>
+    <value>Witamy w Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Przyznaj uprawnienia</value>
@@ -615,7 +615,7 @@
     <value>{0} - skrót</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Aplikacja Files napotkała problem, na który się nie przygotowaliśmy.</value>
+    <value>Aplikacja Octa Files napotkała problem, na który się nie przygotowaliśmy.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Coś poszło nie tak!</value>
@@ -1839,10 +1839,10 @@
     <value>Wyślij raport o błędzie</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Ustaw Files jako domyślny menedżer plików</value>
+    <value>Ustaw Octa Files jako domyślny menedżer plików</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Użyj aplikacji Files jako okno dialogowe otwierania plików</value>
+    <value>Użyj aplikacji Octa Files jako okno dialogowe otwierania plików</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Tag pliku</value>
@@ -1881,7 +1881,7 @@
     <value>Przywróć domyślne</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Otwórz kartę w istniejącym oknie, gdy otwierasz Files z innej aplikacji</value>
+    <value>Otwórz kartę w istniejącym oknie, gdy otwierasz Octa Files z innej aplikacji</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Ustawienia uruchamiania</value>
@@ -1980,7 +1980,7 @@
     <value>Ostatnie pliki</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Otwórz aplikację Files wraz z systemem Windows</value>
+    <value>Otwórz aplikację Octa Files wraz z systemem Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atrybuty</value>
@@ -2055,7 +2055,7 @@
     <value>Obrazy</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Zaktualizuj aplikację Files</value>
+    <value>Zaktualizuj aplikację Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Tagi</value>
@@ -2118,10 +2118,10 @@
     <value>Cześć!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Podoba Ci się Files? Rozważ zostawienie recenzji w sklepie Microsoft.</value>
+    <value>Podoba Ci się Octa Files? Rozważ zostawienie recenzji w sklepie Microsoft.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Podoba Ci się Files? Rozważ wsparcie projektu na GitHub.</value>
+    <value>Podoba Ci się Octa Files? Rozważ wsparcie projektu na GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsoruj</value>
@@ -2187,7 +2187,7 @@
     <value>Spłaszcz</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Spłaszczenie folderu przeniesie całą zawartość z jego podfolderów do wybranej lokalizacji. Ta operacja jest trwała i nie może zostać cofnięta. Korzystając z tej funkcji eksperymentalnej, potwierdzasz ryzyko i zgadzasz się nie ponosić odpowiedzialności zespołu Files za utratę danych.</value>
+    <value>Spłaszczenie folderu przeniesie całą zawartość z jego podfolderów do wybranej lokalizacji. Ta operacja jest trwała i nie może zostać cofnięta. Korzystając z tej funkcji eksperymentalnej, potwierdzasz ryzyko i zgadzasz się nie ponosić odpowiedzialności zespołu Octa Files za utratę danych.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Pokaż opcje spłaszczania</value>
@@ -3525,7 +3525,7 @@
     <value>Nie pokazuj ponownie</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Aplikacja Files jest uruchomiona jako administrator</value>
+    <value>Aplikacja Octa Files jest uruchomiona jako administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
     <value>Ze względu na ograniczenie z Windows i WinAppSdk, przeciągnij i upuść nie jest dostępne podczas uruchamiania plików jako administratora. Jeśli chcesz użyć przeciągnij i upuść, możesz pracować nad tym ograniczeniem, otwierając UAC (kontrola konta użytkownika) z Menu Start i wybierając trzeci poziom oraz uruchamiając ponownie Windows. W przeciwnym razie możesz nadal używać plików bez przeciągania i upuszczania.</value>
@@ -3623,7 +3623,7 @@
     <value>elementy</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files nie może zainicjować tego folderu jako repozytorium Git.</value>
+    <value>Octa Files nie może zainicjować tego folderu jako repozytorium Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Współtwórca</value>
@@ -3975,7 +3975,7 @@
     <value>Brak bieżących operacji plików</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Opcja otwierania Files przy starcie systemu Windows jest niedostępna ze względu na twoje ustawienia systemu lub polisy grupowej. Aby włączyć ponownie, otwórz stronę "uruchamianie" w Menedżerze Zadań.</value>
+    <value>Opcja otwierania Octa Files przy starcie systemu Windows jest niedostępna ze względu na twoje ustawienia systemu lub polisy grupowej. Aby włączyć ponownie, otwórz stronę "uruchamianie" w Menedżerze Zadań.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Nie udało się przywrócić plików z kosza</value>
@@ -4071,10 +4071,10 @@
     <value>Edytuj uprawnienia</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files dalej działa w tle, aby poprawić wydajność uruchamiania.</value>
+    <value>Octa Files dalej działa w tle, aby poprawić wydajność uruchamiania.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Gdzie się podziało Files?</value>
+    <value>Gdzie się podziało Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Pytania i dyskusja</value>
@@ -4351,7 +4351,7 @@
     <value>Pionowo</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Pokaż ikonę Files w zasobniku systemowym</value>
+    <value>Pokaż ikonę Octa Files w zasobniku systemowym</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Wątki CPU</value>

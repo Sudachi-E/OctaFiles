@@ -32,7 +32,7 @@ namespace Files.App
 		/// </summary>
 		public static string ConsumeLaunchCwd()
 		{
-			var values = ApplicationData.Current.LocalSettings.Values;
+			var values = AppStorage.LocalSettings.Values;
 			var cwd = values.TryGetValue(LaunchCwdKey, out var raw) ? raw as string : null;
 			if (cwd is not null)
 				values.Remove(LaunchCwdKey);
@@ -51,9 +51,16 @@ namespace Files.App
 			Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 			WinRT.ComWrappersSupport.InitializeComWrappers();
 
-			ApplicationData.Current.LocalSettings.Values[LaunchCwdKey] = Environment.CurrentDirectory;
+			// Carry settings, tags, and layout data over from the previous identity.
+			AppDataMigration.Run();
 
-			var OpenTabInExistingInstance = ApplicationData.Current.LocalSettings.Values.Get("OpenTabInExistingInstance", true);
+#if FILES_PORTABLE
+			PortableServerBootstrap.Start();
+#endif
+
+			AppStorage.LocalSettings.Values[LaunchCwdKey] = Environment.CurrentDirectory;
+
+			var OpenTabInExistingInstance = AppStorage.LocalSettings.Values.Get("OpenTabInExistingInstance", true);
 
 			AppActivationArguments activatedArgs;
 			try
@@ -176,8 +183,8 @@ namespace Files.App
 			var cmdLaunchArgs = activatedArgs.Data is ILaunchActivatedEventArgs launchArgs &&
 				launchArgs.Arguments is not null &&
 				CommandLineParser.SplitArguments(launchArgs.Arguments, true).FirstOrDefault() is string arg0 &&
-				(arg0.EndsWith($"files-dev.exe", StringComparison.OrdinalIgnoreCase) ||
-				arg0.EndsWith($"files-dev", StringComparison.OrdinalIgnoreCase)) ? launchArgs.Arguments : null;
+				(arg0.EndsWith($"octa-files-dev.exe", StringComparison.OrdinalIgnoreCase) ||
+				arg0.EndsWith($"octa-files-dev", StringComparison.OrdinalIgnoreCase)) ? launchArgs.Arguments : null;
 			var cmdProtocolArgs = activatedArgs.Data is IProtocolActivatedEventArgs protocolArgs &&
 				protocolArgs.Uri.Query.TrimStart('?').Split('=') is string[] parsedArgs &&
 				parsedArgs.Length == 2 && parsedArgs[0] == "cmd" ? Uri.UnescapeDataString(parsedArgs[1]) : null;

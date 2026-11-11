@@ -6,8 +6,6 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <DefaultLanguage>en-US</DefaultLanguage>
-        <AppxBundleAutoResourcePackageQualifiers>Scale|DXFeatureLevel</AppxBundleAutoResourcePackageQualifiers>
-        <AppxDefaultResourceQualifiers>Language=en-US;af;ar;be-BY;bg;ca;cs-CZ;da;de-DE;el;en-GB;es-ES;es-419;fa-IR;fi-FI;fil-PH;fr-FR;he-IL;hi-IN;hr-HR;hu-HU;hy-AM;id-ID;it-IT;ja-JP;ka;km-KH;ko-KR;lt-LT;lv-LV;ms-MY;nb-NO;nl-NL;pl-PL;pt-BR;pt-PT;ro-RO;ru-RU;sk-SK;sq-AL;sr-Cyrl;sv-SE;ta;th-TH;tr-TR;uk-UA;vi;zh-Hans;zh-Hant</AppxDefaultResourceQualifiers>
         <TargetFramework>$(WindowsTargetFramework)</TargetFramework>
         <TargetPlatformMinVersion>$(MinimalWindowsVersion)</TargetPlatformMinVersion>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -29,8 +27,16 @@
         <MSBuildWarningsNotAsErrors>$(MSBuildWarningsNotAsErrors);SATORI001;SATORI002</MSBuildWarningsNotAsErrors>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(FilesPortable)' == 'true'">
+        <!-- The unpackaged app loads the server as a managed in-process component. -->
+        <OutputType>Library</OutputType>
+        <PublishAot>false</PublishAot>
+        <SelfContained>false</SelfContained>
+    </PropertyGroup>
+
     <ItemGroup>
         <Manifest Include="app.manifest" />
+        <InternalsVisibleTo Include="OctaFiles" />
         <DirectPInvoke Include="ADVAPI32" />
         <DirectPInvoke Include="CFGMGR32" />
         <DirectPInvoke Include="USER32" />

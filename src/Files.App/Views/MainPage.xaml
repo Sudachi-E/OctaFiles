@@ -346,6 +346,8 @@
 			ActionButtonCommand="{x:Bind ViewModel.ReviewAppCommand}"
 			ActionButtonContent="{helpers:ResourceString Name=RateUs}"
 			CloseButtonContent="{helpers:ResourceString Name=Dismiss}"
+			x:Name="ReviewAppTeachingTip"
+			x:Load="{x:Bind ViewModel.ShowReviewPrompt, Mode=OneWay}"
 			IsOpen="{x:Bind ViewModel.ShowReviewPrompt, Mode=OneWay}"
 			Subtitle="{helpers:ResourceString Name=ReviewFilesSubtitle}" />
 
@@ -358,6 +360,8 @@
 			ActionButtonCommand="{x:Bind ViewModel.SponsorCommand}"
 			ActionButtonContent="{helpers:ResourceString Name=Sponsor}"
 			CloseButtonContent="{helpers:ResourceString Name=Dismiss}"
+			x:Name="SponsorTeachingTip"
+			x:Load="{x:Bind ViewModel.ShowSponsorPrompt, Mode=OneWay}"
 			IsOpen="{x:Bind ViewModel.ShowSponsorPrompt, Mode=OneWay}"
 			Subtitle="{helpers:ResourceString Name=SponsorSubtitle}" />
 

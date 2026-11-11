@@ -85,14 +85,14 @@ internal static class UpdateCatalog
 
 	private static async Task<bool> CheckReleaseNotesAsync()
 	{
-		var version = Package.Current.Id.Version;
+		var version = IdentityStorage.Version;
 		using var response = await client.GetAsync($"https://files.community/blog/posts/v{version.Major}-{version.Minor}-{version.Build}?minimal", HttpCompletionOption.ResponseHeadersRead);
 		return response.IsSuccessStatusCode;
 	}
 
 	private static async Task<bool> CheckSideloadAsync()
 	{
-		var name = Package.Current.Id.Name;
+		var name = IdentityStorage.Name;
 		var url = name switch
 		{
 			"Files" => "https://cdn.files.community/files/stable/Files.Package.appinstaller",
@@ -105,7 +105,7 @@ internal static class UpdateCatalog
 		var document = await XDocument.LoadAsync(stream, LoadOptions.None, stopping.Token);
 		var root = document.Root;
 		var bundle = root?.Element(root.Name.Namespace + "MainBundle");
-		var installed = Package.Current.Id.Version;
+		var installed = IdentityStorage.Version;
 		return bundle?.Attribute("Name")?.Value == name &&
 			Version.TryParse(root?.Attribute("Version")?.Value, out var available) &&
 			available > new Version(installed.Major, installed.Minor, installed.Build, installed.Revision);
@@ -115,7 +115,7 @@ internal static class UpdateCatalog
 	{
 		try
 		{
-			var destFolderPath = Path.Combine(UserDataPaths.GetDefault().LocalAppData, "Files");
+			var destFolderPath = Path.Combine(UserDataPaths.GetDefault().LocalAppData, "Octa Files");
 			var destExeFilePath = Path.Combine(destFolderPath, "Files.App.Launcher.exe");
 			var branchFilePath = Path.Combine(destFolderPath, "Branch.txt");
 
@@ -129,7 +129,7 @@ internal static class UpdateCatalog
 				try
 				{
 					var branch = await File.ReadAllTextAsync(branchFilePath, Encoding.UTF8);
-					if (!string.Equals(branch.Trim(), "files-dev", StringComparison.OrdinalIgnoreCase))
+					if (!string.Equals(branch.Trim(), "octa-files-dev", StringComparison.OrdinalIgnoreCase))
 						return;
 				}
 				catch
@@ -141,7 +141,7 @@ internal static class UpdateCatalog
 				try
 				{
 					// Create branch file for users updating from versions earlier than v4.0.20.
-					await File.WriteAllTextAsync(branchFilePath, "files-dev", Encoding.UTF8);
+					await File.WriteAllTextAsync(branchFilePath, "octa-files-dev", Encoding.UTF8);
 				}
 				catch
 				{

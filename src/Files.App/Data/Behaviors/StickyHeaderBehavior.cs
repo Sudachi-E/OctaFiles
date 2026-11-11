@@ -22,7 +22,7 @@ namespace Files.App.Data.Behaviors
 	public sealed class StickyHeaderBehavior : BehaviorBase<FrameworkElement>
 	{
 		private static readonly bool IsXamlRootAvailable =
-			ApiInformation.IsPropertyPresent("Microsoft.UI.Xaml.UIElement", "XamlRoot");
+			ApiInfo.IsPropertyPresent("Microsoft.UI.Xaml.UIElement", "XamlRoot");
 
 		private ScrollViewer? _scrollViewer;
 

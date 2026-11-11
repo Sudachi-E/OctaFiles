@@ -313,7 +313,7 @@
     <value>Fixați la Bara Laterală</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Bun venit la Files!</value>
+    <value>Bun venit la Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Acordați permisiunea</value>
@@ -615,7 +615,7 @@
     <value>{0} - comandă rapidă</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files a întâmpinat o problemă pentru care dezvoltatorii nu s-au pregătit încă.</value>
+    <value>Octa Files a întâmpinat o problemă pentru care dezvoltatorii nu s-au pregătit încă.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Ceva nu a mers bine!</value>
@@ -1839,10 +1839,10 @@
     <value>Trimiteți un raport despre o problemă</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Setați Files ca manager de fișiere implicit</value>
+    <value>Setați Octa Files ca manager de fișiere implicit</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Utilizați Files ca dialog de deschidere fișiere</value>
+    <value>Utilizați Octa Files ca dialog de deschidere fișiere</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Etichetă</value>
@@ -1881,7 +1881,7 @@
     <value>Restabiliți valorile implicite</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Deschideți fila în instanța existentă la deschiderea Files dintr-o altă aplicație</value>
+    <value>Deschideți fila în instanța existentă la deschiderea Octa Files dintr-o altă aplicație</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Setări pornire</value>
@@ -1980,7 +1980,7 @@
     <value>Fișiere recente</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Deschideți Files la pornirea Windows</value>
+    <value>Deschideți Octa Files la pornirea Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Atribute</value>
@@ -2055,7 +2055,7 @@
     <value>Imagini</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Actualizați Files</value>
+    <value>Actualizați Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Etichete</value>
@@ -2118,10 +2118,10 @@
     <value>Salut!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Vă place Files? Vă rugăm să luați în considerare lăsarea unei recenzii în Microsoft Store.</value>
+    <value>Vă place Octa Files? Vă rugăm să luați în considerare lăsarea unei recenzii în Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Vă place Files? Vă rugăm să luați în considerare susținerea proiectului pe GitHub.</value>
+    <value>Vă place Octa Files? Vă rugăm să luați în considerare susținerea proiectului pe GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsorizare</value>
@@ -2187,7 +2187,7 @@
     <value>Aplatizare</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Aplatizarea unui folder mută tot conținutul din subfolderele sale în locația selectată. Această operațiune este permanentă și nu poate fii anulată. Prin utilizarea acestei caracteristici experimentale, vă asumați riscul și sunteți de acord să nu trageți la răspundere echipa Files pentru orice pierdere de date.</value>
+    <value>Aplatizarea unui folder mută tot conținutul din subfolderele sale în locația selectată. Această operațiune este permanentă și nu poate fii anulată. Prin utilizarea acestei caracteristici experimentale, vă asumați riscul și sunteți de acord să nu trageți la răspundere echipa Octa Files pentru orice pierdere de date.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Afișare opțiuni de aplatizare</value>
@@ -3410,7 +3410,7 @@
     <value>Introduceți următorul cod la link-ul de mai jos pentru a începe să lucrați cu repozitoriile GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files nu poate accesa GitHub momentan.</value>
+    <value>Octa Files nu poate accesa GitHub momentan.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Deschideți folderul în {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Nu mai afișați</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files rulează ca administrator</value>
+    <value>Octa Files rulează ca administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Din cauza unei limitări a Windows și WinAppSdk, tragerea și fixarea nu sunt disponibile atunci când executați Files ca administrator. Dacă doriți să folosiți caracteristica tragere și fixare puteți lucra în jurul acestei limitări deschizând CCU (Control Cont Utilizator) din Meniul Start și selectând al treilea nivel, și apoi reporniți Windows. Altfel, puteți continua să utilizați Files fără caracteristica tragere și fixare.</value>
+    <value>Din cauza unei limitări a Windows și WinAppSdk, tragerea și fixarea nu sunt disponibile atunci când executați Octa Files ca administrator. Dacă doriți să folosiți caracteristica tragere și fixare puteți lucra în jurul acestei limitări deschizând CCU (Control Cont Utilizator) din Meniul Start și selectând al treilea nivel, și apoi reporniți Windows. Altfel, puteți continua să utilizați Octa Files fără caracteristica tragere și fixare.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Lăsați aplicația să ruleze în fundal atunci când fereastra este închisă</value>
@@ -3623,7 +3623,7 @@
     <value>elemente</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files nu poate inițializa acest director ca un repozitoriu Git.</value>
+    <value>Octa Files nu poate inițializa acest director ca un repozitoriu Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Artiști Contribuitori</value>
@@ -3975,7 +3975,7 @@
     <value>Fără operațiuni de fișiere în curs</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Opțiunea de a deschide Files la pornirea Windows nu este disponibilă din cauza setărilor de sistem sau a politicii de grup. Pentru a reîncerca, deschideți pagina de pornire în Managerul de Activități.</value>
+    <value>Opțiunea de a deschide Octa Files la pornirea Windows nu este disponibilă din cauza setărilor de sistem sau a politicii de grup. Pentru a reîncerca, deschideți pagina de pornire în Managerul de Activități.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Nu s-au putut restaura elementele din Coșul de Reciclare</value>
@@ -4071,10 +4071,10 @@
     <value>Editare permisiuni</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files încă rulează în fundal pentru a îmbunătăți performanța la pornire.</value>
+    <value>Octa Files încă rulează în fundal pentru a îmbunătăți performanța la pornire.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Unde s-a dus Files?</value>
+    <value>Unde s-a dus Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Întrebări și discuții</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Afișați pictograma Files în System Tray</value>
+    <value>Afișați pictograma Octa Files în System Tray</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Fire CPU</value>

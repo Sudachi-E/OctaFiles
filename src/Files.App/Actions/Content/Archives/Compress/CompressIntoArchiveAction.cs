@@ -29,7 +29,7 @@ namespace Files.App.Actions
 
 			var dialog = new CreateArchiveDialog() { FileName = fileName };
 
-			if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				dialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 			var result = await dialog.TryShowAsync();

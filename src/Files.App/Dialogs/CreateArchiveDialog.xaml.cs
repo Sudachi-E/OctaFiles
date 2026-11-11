@@ -90,7 +90,7 @@ namespace Files.App.Dialogs
 
 		private static ContentDialog SetContentDialogRoot(ContentDialog contentDialog)
 		{
-			if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				contentDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot; // WinUi3
 			return contentDialog;
 		}

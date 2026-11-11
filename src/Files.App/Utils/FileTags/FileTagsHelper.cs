@@ -56,7 +56,7 @@ namespace Files.App.Utils.FileTags
 							PrimaryButtonText = "Ok".GetLocalizedResource()
 						};
 
-						if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+						if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 							dialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 						await dialog.TryShowAsync();

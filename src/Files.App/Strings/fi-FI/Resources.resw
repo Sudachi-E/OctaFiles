@@ -313,7 +313,7 @@
     <value>Kiinnitä sivupalkkiin</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Tervetuloa Files-sovellukseen!</value>
+    <value>Tervetuloa Octa Files-sovellukseen!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Myönnä käyttöoikeus</value>
@@ -615,7 +615,7 @@
     <value>{0}-pikakuvake</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files törmäsi ongelmaan, johon kehittäjät eivät osanneet vielä varautua.</value>
+    <value>Octa Files törmäsi ongelmaan, johon kehittäjät eivät osanneet vielä varautua.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Jokin meni pieleen!</value>
@@ -1839,7 +1839,7 @@
     <value>Lähetä virheraportti</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Aseta Files oletustiedostonhallintaohjelmaksi</value>
+    <value>Aseta Octa Files oletustiedostonhallintaohjelmaksi</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
     <value>Käytä Filesia avaa tiedosto -valintaikkunana</value>
@@ -1980,7 +1980,7 @@
     <value>Viimeisimmät tiedostot</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Avaa Files Windowsin käynnistyksessä</value>
+    <value>Avaa Octa Files Windowsin käynnistyksessä</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Määritteet</value>
@@ -2055,7 +2055,7 @@
     <value>Kuvat</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Päivitä Files</value>
+    <value>Päivitä Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Tunnisteet</value>
@@ -2118,10 +2118,10 @@
     <value>Hei!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Pidätkö Files-sovelluksesta? Harkitse arvion antamista Microsoft Storessa.</value>
+    <value>Pidätkö Octa Files-sovelluksesta? Harkitse arvion antamista Microsoft Storessa.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Pidätkö Files-sovelluksesta? Harkitse projektin tukemista GitHubissa.</value>
+    <value>Pidätkö Octa Files-sovelluksesta? Harkitse projektin tukemista GitHubissa.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsoroi</value>
@@ -2187,7 +2187,7 @@
     <value>Tasoitettu</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Kansion tasoittaminen siirtää kaikki alikansioiden sisällöt valittuun sijaintiin. Tämä toimenpide on pysyvä eikä sitä voi perua. Käyttämällä tätä kokeellista ominaisuutta hyväksyt riskin ja sitoudut olemaan vaatimatta Files-tiimiltä korvauksia mahdollisesta tietojen menetyksestä.</value>
+    <value>Kansion tasoittaminen siirtää kaikki alikansioiden sisällöt valittuun sijaintiin. Tämä toimenpide on pysyvä eikä sitä voi perua. Käyttämällä tätä kokeellista ominaisuutta hyväksyt riskin ja sitoudut olemaan vaatimatta Octa Files-tiimiltä korvauksia mahdollisesta tietojen menetyksestä.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Näytä tasoitusasetukset</value>
@@ -3410,7 +3410,7 @@
     <value>Kirjoita seuraava koodi alla olevaan linkkiin aloittaaksesi työskentelyn GitHub-repositorioissa.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files ei voi käyttää GitHubia juuri nyt.</value>
+    <value>Octa Files ei voi käyttää GitHubia juuri nyt.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Avaa kansio sovelluksessa {0}</value>
@@ -3525,7 +3525,7 @@
     <value>Älä näytä uudelleen</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files on käynnissä järjestelmänvalvojana</value>
+    <value>Octa Files on käynnissä järjestelmänvalvojana</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
     <value>Koska rajoitus Windows ja WinAppSdk, vedä ja pudota ei ole käytettävissä, kun käynnissä tiedostoja ylläpitäjä. Jos haluat käyttää vedä ja pudota, Voit työskennellä tämän rajoituksen ympärillä avaamalla UAC (User Account Control) aloitusvalikosta ja valitsemalla kolmannen tason ja käynnistämällä Windows-ikkunat uudelleen. Muussa tapauksessa voit pitää tiedostoja ilman vedä &amp; pudotusta.</value>
@@ -3623,7 +3623,7 @@
     <value>kohdetta</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files ei voi alustaa tätä hakemistoa Git-repositoriona.</value>
+    <value>Octa Files ei voi alustaa tätä hakemistoa Git-repositoriona.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Osallistuva esittäjä</value>
@@ -3975,7 +3975,7 @@
     <value>Ei käynnissä olevia tiedostotoimintoja</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Mahdollisuus avata Files Windowsin käynnistyksessä ei ole käytettävissä järjestelmäasetusten tai ryhmäkäytäntöjen vuoksi. Ota se uudelleen käyttöön avaamalla käynnistysohjelmat Tehtävienhallinnassa.</value>
+    <value>Mahdollisuus avata Octa Files Windowsin käynnistyksessä ei ole käytettävissä järjestelmäasetusten tai ryhmäkäytäntöjen vuoksi. Ota se uudelleen käyttöön avaamalla käynnistysohjelmat Tehtävienhallinnassa.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Kohteiden palautus roskakorista epäonnistui</value>
@@ -4071,10 +4071,10 @@
     <value>Muokkaa käyttöoikeuksia</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files on edelleen käynnissä taustalla suorituskyvyn parantamiseksi käynnistettäessä.</value>
+    <value>Octa Files on edelleen käynnissä taustalla suorituskyvyn parantamiseksi käynnistettäessä.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Mihin Files katosi?</value>
+    <value>Mihin Octa Files katosi?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Kysymykset ja keskustelut</value>
@@ -4351,7 +4351,7 @@
     <value>Pystysuora</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Näytä Files-kuvake ilmaisinalueella</value>
+    <value>Näytä Octa Files-kuvake ilmaisinalueella</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Suorittimen säikeet</value>

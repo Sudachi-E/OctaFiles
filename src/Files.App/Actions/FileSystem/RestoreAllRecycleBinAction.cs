@@ -44,7 +44,7 @@ namespace Files.App.Actions
 				DefaultButton = ContentDialogButton.Primary
 			};
 
-			if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				confirmationDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 			if (await confirmationDialog.TryShowAsync() is not ContentDialogResult.Primary)
@@ -61,7 +61,7 @@ namespace Files.App.Actions
 					PrimaryButtonText = Strings.OK.GetLocalizedResource(),
 				};
 
-				if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+				if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 					errorDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 				await errorDialog.TryShowAsync();

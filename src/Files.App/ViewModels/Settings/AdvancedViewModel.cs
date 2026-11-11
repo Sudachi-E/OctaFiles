@@ -70,10 +70,10 @@ namespace Files.App.ViewModels.Settings
 			if (IsSetAsDefaultFileManager == DetectIsSetAsDefaultFileManager())
 				return;
 
-			var destFolder = Path.Combine(ApplicationData.Current.LocalFolder.Path, "FilesOpenDialog");
+			var destFolder = Path.Combine(AppStorage.LocalFolderPath, "FilesOpenDialog");
 			Directory.CreateDirectory(destFolder);
 
-			foreach (var file in Directory.GetFiles(Path.Combine(Package.Current.InstalledLocation.Path, "Assets", "FilesOpenDialog")))
+			foreach (var file in Directory.GetFiles(Path.Combine(AppPackageInfo.InstalledPath, "Assets", "FilesOpenDialog")))
 			{
 				if (!SafetyExtensions.IgnoreExceptions(() => File.Copy(file, Path.Combine(destFolder, Path.GetFileName(file)), true), App.Logger))
 				{
@@ -83,12 +83,12 @@ namespace Files.App.ViewModels.Settings
 				}
 			}
 
-			var dataPath = Environment.ExpandEnvironmentVariables("%LocalAppData%\\Files");
+			var dataPath = Environment.ExpandEnvironmentVariables("%LocalAppData%\\Octa Files");
 			if (IsSetAsDefaultFileManager)
 			{
 				var sourcePath = Path.Combine(destFolder, "*");
 				var branchPath = Path.Combine(dataPath, "Branch.txt");
-				var command = $"-command \"New-Item -Force -Path {Win32Helper.ToPowerShellStringLiteral(dataPath)} -ItemType Directory; Copy-Item -Filter *.* -Path {Win32Helper.ToPowerShellStringLiteral(sourcePath)} -Recurse -Force -Destination {Win32Helper.ToPowerShellStringLiteral(dataPath)}; 'files-dev' | Out-File -Encoding utf8 -Force -FilePath {Win32Helper.ToPowerShellStringLiteral(branchPath)}\"";
+				var command = $"-command \"New-Item -Force -Path {Win32Helper.ToPowerShellStringLiteral(dataPath)} -ItemType Directory; Copy-Item -Filter *.* -Path {Win32Helper.ToPowerShellStringLiteral(sourcePath)} -Recurse -Force -Destination {Win32Helper.ToPowerShellStringLiteral(dataPath)}; 'octa-files-dev' | Out-File -Encoding utf8 -Force -FilePath {Win32Helper.ToPowerShellStringLiteral(branchPath)}\"";
 				if (!await Win32Helper.RunPowershellCommandAsync(command, PowerShellExecutionOptions.Hidden))
 				{
 					// Error copying files
@@ -134,9 +134,9 @@ namespace Files.App.ViewModels.Settings
 			if (IsSetAsOpenFileDialog == DetectIsSetAsOpenFileDialog())
 				return;
 
-			var destFolder = Path.Combine(ApplicationData.Current.LocalFolder.Path, "FilesOpenDialog");
+			var destFolder = Path.Combine(AppStorage.LocalFolderPath, "FilesOpenDialog");
 			Directory.CreateDirectory(destFolder);
-			foreach (var file in Directory.GetFiles(Path.Combine(Package.Current.InstalledLocation.Path, "Assets", "FilesOpenDialog")))
+			foreach (var file in Directory.GetFiles(Path.Combine(AppPackageInfo.InstalledPath, "Assets", "FilesOpenDialog")))
 			{
 				if (!SafetyExtensions.IgnoreExceptions(() => File.Copy(file, Path.Combine(destFolder, Path.GetFileName(file)), true), App.Logger))
 				{
@@ -184,7 +184,7 @@ namespace Files.App.ViewModels.Settings
 				if (await ZipStorageFolder.FromStorageFileAsync(file) is not ZipStorageFolder zipFolder)
 					return;
 
-				var localFolderPath = ApplicationData.Current.LocalFolder.Path;
+				var localFolderPath = AppStorage.LocalFolderPath;
 				var settingsFolder = await StorageFolder.GetFolderFromPathAsync(Path.Combine(localFolderPath, Constants.LocalSettings.SettingsFolderName));
 
 				// Import user settings
@@ -247,7 +247,7 @@ namespace Files.App.ViewModels.Settings
 				if (await ZipStorageFolder.FromStorageFileAsync(file) is not ZipStorageFolder zipFolder)
 					return;
 
-				var localFolderPath = ApplicationData.Current.LocalFolder.Path;
+				var localFolderPath = AppStorage.LocalFolderPath;
 
 				// Export user settings
 				var exportSettings = UTF8Encoding.UTF8.GetBytes((string)UserSettingsService.ExportSettings());

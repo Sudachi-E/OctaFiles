@@ -313,7 +313,7 @@
     <value>Épingler à la barre latérale</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Bienvenue dans Files !</value>
+    <value>Bienvenue dans Octa Files !</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Accorder l'autorisation</value>
@@ -615,7 +615,7 @@
     <value>{0} - raccourci</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files a rencontré un problème auquel les développeurs ne s'attendaient pas.</value>
+    <value>Octa Files a rencontré un problème auquel les développeurs ne s'attendaient pas.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Une erreur s'est produite !</value>
@@ -1839,10 +1839,10 @@
     <value>Soumettre un rapport de bug</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Définir Files comme explorateur de fichiers par défaut</value>
+    <value>Définir Octa Files comme explorateur de fichiers par défaut</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Utiliser Files comme sélecteur de fichiers</value>
+    <value>Utiliser Octa Files comme sélecteur de fichiers</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Étiquette</value>
@@ -1881,7 +1881,7 @@
     <value>Restaurer les valeurs par défaut</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Ouvrir l'onglet dans une instance existante lors de l'ouverture de Files depuis une autre application</value>
+    <value>Ouvrir l'onglet dans une instance existante lors de l'ouverture de Octa Files depuis une autre application</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Paramètres de démarrage</value>
@@ -1980,7 +1980,7 @@
     <value>Fichiers récents</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Ouvrir Files au démarrage de Windows</value>
+    <value>Ouvrir Octa Files au démarrage de Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attributs</value>
@@ -2055,7 +2055,7 @@
     <value>Images</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Mettre à jour Files</value>
+    <value>Mettre à jour Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Étiquettes</value>
@@ -2118,10 +2118,10 @@
     <value>Bonjour !</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Vous appréciez Files ? Pensez à laisser un avis dans le Microsoft Store.</value>
+    <value>Vous appréciez Octa Files ? Pensez à laisser un avis dans le Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Vous appréciez Files ? Pensez à soutenir le projet sur GitHub.</value>
+    <value>Vous appréciez Octa Files ? Pensez à soutenir le projet sur GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Aplatir</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>L'aplatissement d'un dossier déplacera tout le contenu de ses sous-dossiers vers l'emplacement sélectionné. Cette opération est définitive et ne peut pas être annulée. En utilisant cette fonctionnalité expérimentale, vous reconnaissez les risques et acceptez de ne pas tenir l'équipe de Files responsable de toute perte de données.</value>
+    <value>L'aplatissement d'un dossier déplacera tout le contenu de ses sous-dossiers vers l'emplacement sélectionné. Cette opération est définitive et ne peut pas être annulée. En utilisant cette fonctionnalité expérimentale, vous reconnaissez les risques et acceptez de ne pas tenir l'équipe de Octa Files responsable de toute perte de données.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Afficher les options d'aplatissement</value>
@@ -3410,7 +3410,7 @@
     <value>Entrez le code suivant dans le lien ci-dessous pour commencer à travailler avec des dépôts GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files ne peut pas accéder à GitHub pour le moment.</value>
+    <value>Octa Files ne peut pas accéder à GitHub pour le moment.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Ouvrir le dossier dans {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Ne plus afficher</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files est exécuté en tant qu'administrateur</value>
+    <value>Octa Files est exécuté en tant qu'administrateur</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>En raison d'une limitation avec Windows et WinAppSdk, le glisser-déposer n'est pas disponible lors de l'exécution de Files en tant qu'administrateur. Si vous souhaitez utiliser le glisser-déposer, vous pouvez contourner cette limitation en ouvrant l'UAC (contrôle de compte d'utilisateur) à partir du menu Démarrer et en sélectionnant le troisième niveau, puis en redémarrant Windows. Sinon, vous pouvez continuer à utiliser Files sans glisser-déposer.</value>
+    <value>En raison d'une limitation avec Windows et WinAppSdk, le glisser-déposer n'est pas disponible lors de l'exécution de Octa Files en tant qu'administrateur. Si vous souhaitez utiliser le glisser-déposer, vous pouvez contourner cette limitation en ouvrant l'UAC (contrôle de compte d'utilisateur) à partir du menu Démarrer et en sélectionnant le troisième niveau, puis en redémarrant Windows. Sinon, vous pouvez continuer à utiliser Octa Files sans glisser-déposer.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Laisser l'application s'exécuter en arrière-plan lorsque la fenêtre est fermée</value>
@@ -3623,7 +3623,7 @@
     <value>éléments</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files ne peut pas initialiser ce dossier en tant que dépôt Git.</value>
+    <value>Octa Files ne peut pas initialiser ce dossier en tant que dépôt Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Artiste contributeur</value>
@@ -3975,7 +3975,7 @@
     <value>Aucune opération en cours</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>L'option pour ouvrir Files au démarrage de Windows n'est pas disponible en raison des paramètres de votre système ou de votre stratégie de groupe. Pour la réactiver, ouvrez la page applications de démarrage dans le gestionnaire des tâches.</value>
+    <value>L'option pour ouvrir Octa Files au démarrage de Windows n'est pas disponible en raison des paramètres de votre système ou de votre stratégie de groupe. Pour la réactiver, ouvrez la page applications de démarrage dans le gestionnaire des tâches.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Échec de la restauration des éléments de la corbeille</value>
@@ -4071,10 +4071,10 @@
     <value>Modifier les autorisations</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files est toujours en cours d'exécution en arrière-plan pour améliorer les performances de démarrage.</value>
+    <value>Octa Files est toujours en cours d'exécution en arrière-plan pour améliorer les performances de démarrage.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Où est passé Files ?</value>
+    <value>Où est passé Octa Files ?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Questions et discussions</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Afficher l'icône de Files dans la zone de notification</value>
+    <value>Afficher l'icône de Octa Files dans la zone de notification</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Threads du CPU</value>

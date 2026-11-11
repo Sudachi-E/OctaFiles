@@ -22,7 +22,6 @@ namespace Files.App
 	/// </summary>
 	public partial class App : Application
 	{
-		public static TaskCompletionSource? SplashScreenLoadingTCS { get; private set; }
 		public static string? OutputPath { get; set; }
 
 		private static FlyoutBase? _LastOpenedFlyout;
@@ -117,9 +116,6 @@ namespace Files.App
 					return provider;
 				});
 
-				// Native AOT opens the main page directly; JIT builds retain the splash screen.
-				var showSplashScreen = System.Runtime.CompilerServices.RuntimeFeature.IsDynamicCodeSupported;
-
 				if (!isStartupTask)
 				{
 					// Construct the window while appearance settings are loaded.
@@ -158,20 +154,14 @@ namespace Files.App
 				MainWindow.Instance.Closed += Window_Closed;
 				MainWindow.Instance.Activated += Window_Activated;
 
-				if (showSplashScreen)
-				{
-					SplashScreenLoadingTCS = new TaskCompletionSource();
-					MainWindow.Instance.ShowSplashScreen();
-				}
-				else
-				{
-					MainWindow.Instance.ShowMainPage();
-				}
+				MainWindow.Instance.ShowMainPage();
 
 				if (!await MainWindow.Instance.ActivateWithBackdropAsync())
 					return;
 
 				Logger.LogInformation("Startup: initial content rendered after {Elapsed} ms", startup.ElapsedMilliseconds);
+
+				// The initial tab is created before the chrome, so the file list is painted first.
 				_ = serviceProvider.GetRequiredService<ICommandManager>();
 
 				var telemetryInitialization = AppLifecycleHelper.AppEnvironment is AppEnvironment.Dev
@@ -181,21 +171,28 @@ namespace Files.App
 
 				Logger.LogInformation($"App launched. Launch args type: {appActivationArguments.Data.GetType().Name}");
 
-				if (SplashScreenLoadingTCS is not null)
-				{
-					await SplashScreenLoadingTCS.Task.WithTimeoutAsync(TimeSpan.FromMilliseconds(500));
-					SplashScreenLoadingTCS = null;
-				}
-
 				_ = SafetyExtensions.IgnoreExceptions(() => SetServerWindowHandleAsync(MainWindow.Instance.WindowHandle), Logger);
-				_ = SafetyExtensions.IgnoreExceptions(async () =>
+				var initializeApplicationTask = SafetyExtensions.IgnoreExceptions(async () =>
 				{
 					await ServerSession;
 					await MainWindow.Instance.InitializeApplicationAsync(appActivationArguments.Data);
 				}, Logger);
 
+				_ = RealizeChromeAfterInitialContentAsync(initializeApplicationTask);
+
 				await telemetryInitialization;
 				await AppLifecycleHelper.InitializeAppComponentsAsync();
+
+				async Task RealizeChromeAfterInitialContentAsync(Task applicationInitialization)
+				{
+					// Never leave the chrome unbuilt when the activation creates no tab or takes too long.
+					await Task.WhenAny(MainPageViewModel.StartupTabsLoadedTask, applicationInitialization, Task.Delay(3000));
+
+					if (MainWindow.Instance.Content is FrameworkElement content)
+						content.RunAfterNextRender(MainWindow.Instance.RealizeMainPageChrome);
+					else
+						MainWindow.Instance.RealizeMainPageChrome();
+				}
 			}
 		}
 
@@ -293,7 +290,7 @@ namespace Files.App
 				SafetyExtensions.IgnoreExceptions(() =>
 				{
 					var dataPackage = Clipboard.GetContent();
-					if (dataPackage.Properties.PackageFamilyName == Package.Current.Id.FamilyName && dataPackage.Contains(StandardDataFormats.StorageItems))
+					if (dataPackage.Properties.PackageFamilyName == AppPackageInfo.FamilyName && dataPackage.Contains(StandardDataFormats.StorageItems))
 						Clipboard.Flush();
 				}, Logger);
 

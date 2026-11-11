@@ -345,10 +345,11 @@ namespace Files.App.ViewModels
 				startupTabsTcs.TrySetResult();
 			}
 
-			await Task.WhenAll(
+			// Drives and network are not needed to show the first tab, so keep them off the navigation path.
+			_ = SafetyExtensions.IgnoreExceptions(() => Task.WhenAll(
 				DrivesViewModel.UpdateDrivesAsync(),
 				NetworkService.UpdateComputersAsync(),
-				NetworkService.UpdateShortcutsAsync());
+				NetworkService.UpdateShortcutsAsync()), App.Logger);
 		}
 
 		private async Task RestoreSessionTabsAsync(List<string> sessionTabs)

@@ -313,7 +313,7 @@
     <value>Fixar a la barra lateral</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Us donem la benvinguda al Files!</value>
+    <value>Us donem la benvinguda al Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Concedeix permís</value>
@@ -615,7 +615,7 @@
     <value>{0} - drecera</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>El Files s'ha trobat amb un problema per al qual els desenvolupadors encara no s'havien preparat.</value>
+    <value>El Octa Files s'ha trobat amb un problema per al qual els desenvolupadors encara no s'havien preparat.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Quelcom ha anat malament!</value>
@@ -1842,7 +1842,7 @@
     <value>Estableix Fitxers com a gestor de fitxers per defecte</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Utilitza Files com a diàleg d'obertura de fitxers</value>
+    <value>Utilitza Octa Files com a diàleg d'obertura de fitxers</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Etiqueta</value>
@@ -1881,7 +1881,7 @@
     <value>Restaura els valors per defecte</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Obre la pestanya en una instància existent quan obriu Files des d'una altra aplicació</value>
+    <value>Obre la pestanya en una instància existent quan obriu Octa Files des d'una altra aplicació</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Configuració d'inici</value>
@@ -2055,7 +2055,7 @@
     <value>Imatges</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Actualitza Files</value>
+    <value>Actualitza Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Etiquetes</value>
@@ -2118,10 +2118,10 @@
     <value>Hola!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Us agrada el Files? Considereu fer una ressenya a la Microsoft Store.</value>
+    <value>Us agrada el Octa Files? Considereu fer una ressenya a la Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Us agrada el Files? Penseu en donar suport al projecte al GitHub.</value>
+    <value>Us agrada el Octa Files? Penseu en donar suport al projecte al GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Patrocinador</value>
@@ -2187,7 +2187,7 @@
     <value>Aplana</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Aplanar una carpeta mourà tot el contingut de les seves subcarpetes a la ubicació seleccionada. Aquesta operació és permanent i no es pot desfer. En utilitzar aquesta funció experimental, reconeixeu el risc i accepteu no fer responsable a l'equip del Files de cap pèrdua de dades.</value>
+    <value>Aplanar una carpeta mourà tot el contingut de les seves subcarpetes a la ubicació seleccionada. Aquesta operació és permanent i no es pot desfer. En utilitzar aquesta funció experimental, reconeixeu el risc i accepteu no fer responsable a l'equip del Octa Files de cap pèrdua de dades.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Mostra les opcions d'aplanament</value>
@@ -3525,10 +3525,10 @@
     <value>No ho mostris més</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>El Files s'executa com a administrador</value>
+    <value>El Octa Files s'executa com a administrador</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>A causa d'una limitació amb Windows i WinAppSdk, arrossegar i deixar anar no està disponible quan s'executa el Files com a administrador. Si voleu utilitzar arrossegar i deixar anar, podeu evitar aquesta limitació obrint l'UAC (control del compte d'usuari) des del menú Inici, seleccionanar el tercer nivell i reiniciar el Windows. En cas contrari, podeu seguir utilitzant el Files sense arrossegar i deixar anar.</value>
+    <value>A causa d'una limitació amb Windows i WinAppSdk, arrossegar i deixar anar no està disponible quan s'executa el Octa Files com a administrador. Si voleu utilitzar arrossegar i deixar anar, podeu evitar aquesta limitació obrint l'UAC (control del compte d'usuari) des del menú Inici, seleccionanar el tercer nivell i reiniciar el Windows. En cas contrari, podeu seguir utilitzant el Octa Files sense arrossegar i deixar anar.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Permet que l'aplicació s'executi en segon pla en tancar la finestra</value>
@@ -3623,7 +3623,7 @@
     <value>elements</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>El Files no pot inicialitzar aquest directori com a repositori Git.</value>
+    <value>El Octa Files no pot inicialitzar aquest directori com a repositori Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Artista col·laborador</value>
@@ -3975,7 +3975,7 @@
     <value>No hi ha operacions de fitxers en curs</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>L'opció d'obrir el Files a l'inici de Windows no està disponible a causa de la configuració del sistema o de la política de grup. Per tornar-lo a activar, obriu la pàgina d'inici al Gestor de tasques.</value>
+    <value>L'opció d'obrir el Octa Files a l'inici de Windows no està disponible a causa de la configuració del sistema o de la política de grup. Per tornar-lo a activar, obriu la pàgina d'inici al Gestor de tasques.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>No s'han pogut restaurar els elements de la paperera de reciclatge</value>
@@ -4071,10 +4071,10 @@
     <value>Edita els permisos</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files encara s'està executant en segon pla per millorar el rendiment d'inici.</value>
+    <value>Octa Files encara s'està executant en segon pla per millorar el rendiment d'inici.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>On ha anat el Files?</value>
+    <value>On ha anat el Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Preguntes i discussions</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Mostra la icona del Files a la safata del sistema</value>
+    <value>Mostra la icona del Octa Files a la safata del sistema</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Fils de la CPU</value>

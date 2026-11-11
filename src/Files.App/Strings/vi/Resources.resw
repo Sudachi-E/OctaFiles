@@ -313,7 +313,7 @@
     <value>Ghim vào thanh bên</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Chào mừng bạn đến với Files!</value>
+    <value>Chào mừng bạn đến với Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Cấp quyền</value>
@@ -615,7 +615,7 @@
     <value>{0} - lối tắt</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files đã gặp một vấn đề chưa được xem xét trước đó.</value>
+    <value>Octa Files đã gặp một vấn đề chưa được xem xét trước đó.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Đã xảy ra lỗi!</value>
@@ -1839,10 +1839,10 @@
     <value>Gửi báo cáo lỗi</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Đặt Files làm trình quản lý tệp mặc định</value>
+    <value>Đặt Octa Files làm trình quản lý tệp mặc định</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Sử dụng Files làm hộp thoại mở tệp</value>
+    <value>Sử dụng Octa Files làm hộp thoại mở tệp</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Nhãn</value>
@@ -1881,7 +1881,7 @@
     <value>Khôi phục mặc định</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Mở thẻ mới trong cửa sổ hiện hoạt khi chạy Files từ ứng dụng khác</value>
+    <value>Mở thẻ mới trong cửa sổ hiện hoạt khi chạy Octa Files từ ứng dụng khác</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Cài đặt khởi động</value>
@@ -1980,7 +1980,7 @@
     <value>Tệp gần đây</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Mở Files khi khởi động Windows</value>
+    <value>Mở Octa Files khi khởi động Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Thuộc tính</value>
@@ -2055,7 +2055,7 @@
     <value>Hình ảnh</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Cập nhật Files</value>
+    <value>Cập nhật Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Nhãn</value>
@@ -2118,10 +2118,10 @@
     <value>Xin chào!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Thích Files? Hãy gửi nhận xét của bạn lên Microsoft Store.</value>
+    <value>Thích Octa Files? Hãy gửi nhận xét của bạn lên Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Thích Files? Hãy cân nhắc hỗ trợ dự án trên GitHub.</value>
+    <value>Thích Octa Files? Hãy cân nhắc hỗ trợ dự án trên GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Tài trợ</value>
@@ -2187,7 +2187,7 @@
     <value>Khử thư mục con</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Tùy chọn này sẽ di chuyển tất cả nội dung từ thư mục con đến vị trí đã chọn. Thao tác có hiệu lực vĩnh viễn và không thể hoàn tác. Đây là tính năng thử nghiệm và bằng việc sử dụng, bạn đã hiểu các rủi ro và đồng ý miễn trừ trách nhiệm của đội ngũ Files khi xảy ra mất mát dữ liệu.</value>
+    <value>Tùy chọn này sẽ di chuyển tất cả nội dung từ thư mục con đến vị trí đã chọn. Thao tác có hiệu lực vĩnh viễn và không thể hoàn tác. Đây là tính năng thử nghiệm và bằng việc sử dụng, bạn đã hiểu các rủi ro và đồng ý miễn trừ trách nhiệm của đội ngũ Octa Files khi xảy ra mất mát dữ liệu.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Hiện tùy chọn khử thư mục con</value>
@@ -3410,7 +3410,7 @@
     <value>Nhập mã đang được hiển thị vào liên kết bên dưới để bắt đầu làm việc với kho lưu trữ GitHub.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files hiện không thể truy cập GitHub.</value>
+    <value>Octa Files hiện không thể truy cập GitHub.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Mở thư mục trong {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Không hiện lại</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files đang chạy với quyền quản trị viên</value>
+    <value>Octa Files đang chạy với quyền quản trị viên</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Do giới hạn của Windows và WinAppSdk, tính năng kéo thả sẽ không khả dụng khi chạy Files với quyền quản trị viên. Để khắc phục, hãy mở cài đặt UAC (User Account Control) từ menu Bắt đầu, chọn mức thứ ba rồi khởi động lại máy. Lưu ý rằng bạn vẫn có thể tiếp tục sử dụng Files mà không cần tính năng này.</value>
+    <value>Do giới hạn của Windows và WinAppSdk, tính năng kéo thả sẽ không khả dụng khi chạy Octa Files với quyền quản trị viên. Để khắc phục, hãy mở cài đặt UAC (User Account Control) từ menu Bắt đầu, chọn mức thứ ba rồi khởi động lại máy. Lưu ý rằng bạn vẫn có thể tiếp tục sử dụng Octa Files mà không cần tính năng này.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Chạy ứng dụng trong nền khi đóng cửa sổ</value>
@@ -3623,7 +3623,7 @@
     <value>mục</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files không thể khởi tạo thư mục này dưới dạng kho lưu trữ Git.</value>
+    <value>Octa Files không thể khởi tạo thư mục này dưới dạng kho lưu trữ Git.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Nghệ sĩ đóng góp</value>
@@ -3975,7 +3975,7 @@
     <value>Không có tác vụ đang thực hiện nào</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Tùy chọn mở Files khi khởi động Windows không khả dụng do các cài đặt hệ thống hoặc Group Policy của bạn. Để kích hoạt lại, hãy mở mục khởi động trong Trình quản lý Tác vụ.</value>
+    <value>Tùy chọn mở Octa Files khi khởi động Windows không khả dụng do các cài đặt hệ thống hoặc Group Policy của bạn. Để kích hoạt lại, hãy mở mục khởi động trong Trình quản lý Tác vụ.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Không thể khôi phục khoản mục từ thùng rác</value>
@@ -4071,10 +4071,10 @@
     <value>Chỉnh sửa quyền</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files sẽ chạy trong nền để cải thiện tốc độ khởi động ứng dụng.</value>
+    <value>Octa Files sẽ chạy trong nền để cải thiện tốc độ khởi động ứng dụng.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Files đang chạy trong nền</value>
+    <value>Octa Files đang chạy trong nền</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Câu hỏi &amp; thảo luận</value>
@@ -4351,7 +4351,7 @@
     <value>Dọc</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Hiện biểu tượng Files trong khay hệ thống</value>
+    <value>Hiện biểu tượng Octa Files trong khay hệ thống</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>Luồng CPU</value>

@@ -51,7 +51,7 @@ namespace Files.App.Actions
 				DefaultButton = ContentDialogButton.Primary
 			};
 
-			if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				confirmationDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 			if (UserSettingsService.FoldersSettingsService.DeleteConfirmationPolicy is DeleteConfirmationPolicies.Never ||

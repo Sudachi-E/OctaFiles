@@ -313,7 +313,7 @@
     <value>Fastgør til sidebjælke</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Giv tilladelse</value>
@@ -615,7 +615,7 @@
     <value>{0} - genvej</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Files løb ind i et for udviklerne ukendt problem.</value>
+    <value>Octa Files løb ind i et for udviklerne ukendt problem.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Noget gik galt!</value>
@@ -1839,10 +1839,10 @@
     <value>Indsend fejlanmeldelse</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Brug Files som standardfilhåndtering</value>
+    <value>Brug Octa Files som standardfilhåndtering</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Brug Files som Åbn fil-dialog</value>
+    <value>Brug Octa Files som Åbn fil-dialog</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Tag</value>
@@ -1881,7 +1881,7 @@
     <value>Gendan standard</value>
   </data>
   <data name="OpenTabInExistingInstance" xml:space="preserve">
-    <value>Åbn fanen i eksisterende instans, når Files åbnes fra en anden app</value>
+    <value>Åbn fanen i eksisterende instans, når Octa Files åbnes fra en anden app</value>
   </data>
   <data name="StartupSettings" xml:space="preserve">
     <value>Opstartsindstillinger</value>
@@ -1980,7 +1980,7 @@
     <value>Seneste filer</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Åbn Files ved Windows-opstart</value>
+    <value>Åbn Octa Files ved Windows-opstart</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attributter</value>
@@ -2055,7 +2055,7 @@
     <value>Billeder</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Opdatere Files</value>
+    <value>Opdatere Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Tags</value>
@@ -2118,10 +2118,10 @@
     <value>Hej!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Synes om Files? Overvej at bedømme den i Microsoft Store.</value>
+    <value>Synes om Octa Files? Overvej at bedømme den i Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Synes om Files? Overvej at støtte projektet på GitHub.</value>
+    <value>Synes om Octa Files? Overvej at støtte projektet på GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsorér</value>
@@ -2187,7 +2187,7 @@
     <value>Flatten</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Flattening en mappe flytter alt indhold fra dens undermapper til den valgte placering. Handlingen er permanent og irreversibel. Ved at bruge denne eksperimentelle funktion anerkender man risikoen og accepterer at friholde Files-teamet for ansvar for evt. tab af data.</value>
+    <value>Flattening en mappe flytter alt indhold fra dens undermapper til den valgte placering. Handlingen er permanent og irreversibel. Ved at bruge denne eksperimentelle funktion anerkender man risikoen og accepterer at friholde Octa Files-teamet for ansvar for evt. tab af data.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Vis flatten-valgmuligheder</value>
@@ -3410,7 +3410,7 @@
     <value>Angiv flg. kode på linket nedenfor for at begynde at arbejde med GitHub-repo'er.</value>
   </data>
   <data name="CannotReachGitHubError" xml:space="preserve">
-    <value>Files kan ikke få adgang til GitHub lige nu.</value>
+    <value>Octa Files kan ikke få adgang til GitHub lige nu.</value>
   </data>
   <data name="OpenInIDE" xml:space="preserve">
     <value>Åbn mappe i {0}</value>
@@ -3525,10 +3525,10 @@
     <value>Vis ikke igen</value>
   </data>
   <data name="FilesRunningAsAdmin" xml:space="preserve">
-    <value>Files kører som administrator</value>
+    <value>Octa Files kører som administrator</value>
   </data>
   <data name="FilesRunningAsAdminContent" xml:space="preserve">
-    <value>Grundet en restriktion i Windows og WinAppSdk er træk-og-slip utilgængelig, når Files afvikles som admin. Ønskes brug af træk-og-slip, kan denne restriktion omgås ved at åbne UAC (Brugerkontokontrol) fra menuen Start, vælge det tredje niveau og genstarte Windows. Ellers må man fortsætte med at bruge Files uden træk-og-slip.</value>
+    <value>Grundet en restriktion i Windows og WinAppSdk er træk-og-slip utilgængelig, når Octa Files afvikles som admin. Ønskes brug af træk-og-slip, kan denne restriktion omgås ved at åbne UAC (Brugerkontokontrol) fra menuen Start, vælge det tredje niveau og genstarte Windows. Ellers må man fortsætte med at bruge Octa Files uden træk-og-slip.</value>
   </data>
   <data name="SettingsLeaveAppRunning" xml:space="preserve">
     <value>Lad appen køre i baggrunden, når vinduet lukkes</value>
@@ -3623,7 +3623,7 @@
     <value>emner</value>
   </data>
   <data name="CannotInitializeGitRepo" xml:space="preserve">
-    <value>Files kan ikke initialisere denne mappe som et Git-repo.</value>
+    <value>Octa Files kan ikke initialisere denne mappe som et Git-repo.</value>
   </data>
   <data name="ContributingArtist" xml:space="preserve">
     <value>Medvirkende kunstner</value>
@@ -3975,7 +3975,7 @@
     <value>Ingen igangværende filoperationer</value>
   </data>
   <data name="OpenOnStartupDisabled" xml:space="preserve">
-    <value>Muligheden for at åbne Files ved Windows-opstart er utilgængelig grundet aktuelle systemindstillinger eller gruppepolitik. For at genaktivere, åbne startsiden i Opgavehåndtering.</value>
+    <value>Muligheden for at åbne Octa Files ved Windows-opstart er utilgængelig grundet aktuelle systemindstillinger eller gruppepolitik. For at genaktivere, åbne startsiden i Opgavehåndtering.</value>
   </data>
   <data name="FailedToRestore" xml:space="preserve">
     <value>Mislykkedes at gendanne emner fra papirkurven</value>
@@ -4071,10 +4071,10 @@
     <value>Redigere tilladelser</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files kører stadig i baggrunden for at forbedre opstartsydeevnen.</value>
+    <value>Octa Files kører stadig i baggrunden for at forbedre opstartsydeevnen.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Hvad blev der af Files?</value>
+    <value>Hvad blev der af Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Spørgsmål og drøftelser</value>
@@ -4351,7 +4351,7 @@
     <value>Lodret</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Vis Files-ikon i systembakke</value>
+    <value>Vis Octa Files-ikon i systembakke</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU-tråde</value>

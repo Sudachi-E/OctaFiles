@@ -30,7 +30,7 @@ namespace Files.App.Actions
 		{
 			try
 			{
-				var debugFile = await ApplicationData.Current.LocalFolder.TryGetItemAsync($"debug_{(Environment.IsPrivilegedProcess ? "privileged" : "unprivileged")}.log") as StorageFile;
+				var debugFile = await (await StorageFolder.GetFolderFromPathAsync(AppStorage.LocalFolderPath)).TryGetItemAsync($"debug_{(Environment.IsPrivilegedProcess ? "privileged" : "unprivileged")}.log") as StorageFile;
 
 				if (debugFile != null && !await Launcher.LaunchFileAsync(debugFile))
 				{
@@ -54,7 +54,7 @@ namespace Files.App.Actions
 						PrimaryButtonText = Strings.OK.GetLocalizedResource(),
 					};
 
-					if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+					if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 						errorDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 					await errorDialog.TryShowAsync();

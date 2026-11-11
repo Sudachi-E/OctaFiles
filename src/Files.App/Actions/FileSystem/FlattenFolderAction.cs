@@ -58,7 +58,7 @@ namespace Files.App.Actions
 				DefaultButton = ContentDialogButton.Primary
 			};
 
-			if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				optionsDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 			var result = await optionsDialog.TryShowAsync();

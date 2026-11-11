@@ -313,7 +313,7 @@
     <value>Fest til sidepanelet</value>
   </data>
   <data name="WelcomeDialogTitle" xml:space="preserve">
-    <value>Welcome to Files!</value>
+    <value>Welcome to Octa Files!</value>
   </data>
   <data name="WelcomeDialog.PrimaryButtonText" xml:space="preserve">
     <value>Gi tilgang</value>
@@ -615,7 +615,7 @@
     <value>{0} - snarvei</value>
   </data>
   <data name="ExceptionNotificationBody" xml:space="preserve">
-    <value>Det oppstod et uventet problem i Files som utviklerne ikke var forberedt på.</value>
+    <value>Det oppstod et uventet problem i Octa Files som utviklerne ikke var forberedt på.</value>
   </data>
   <data name="ExceptionNotificationHeader" xml:space="preserve">
     <value>Noe gikk galt!</value>
@@ -1839,10 +1839,10 @@
     <value>Send inn feilrapport</value>
   </data>
   <data name="SettingsSetAsDefaultFileManager" xml:space="preserve">
-    <value>Bruk Files som standard filbehandler</value>
+    <value>Bruk Octa Files som standard filbehandler</value>
   </data>
   <data name="SettingsSetAsOpenDialog" xml:space="preserve">
-    <value>Bruk Files som åpne-dialog for filer</value>
+    <value>Bruk Octa Files som åpne-dialog for filer</value>
   </data>
   <data name="Tag" xml:space="preserve">
     <value>Fil-merkelapp</value>
@@ -1980,7 +1980,7 @@
     <value>Nylige filer</value>
   </data>
   <data name="SettingsOpenInLogin" xml:space="preserve">
-    <value>Åpne Files ved oppstart av Windows</value>
+    <value>Åpne Octa Files ved oppstart av Windows</value>
   </data>
   <data name="Attributes" xml:space="preserve">
     <value>Attributter</value>
@@ -2055,7 +2055,7 @@
     <value>Bilder</value>
   </data>
   <data name="UpdateFiles" xml:space="preserve">
-    <value>Oppdater Files</value>
+    <value>Oppdater Octa Files</value>
   </data>
   <data name="FileTags" xml:space="preserve">
     <value>Merker</value>
@@ -2118,10 +2118,10 @@
     <value>Hello!</value>
   </data>
   <data name="ReviewFilesSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider reviewing in the Microsoft Store.</value>
+    <value>Enjoying Octa Files? Please consider reviewing in the Microsoft Store.</value>
   </data>
   <data name="SponsorSubtitle" xml:space="preserve">
-    <value>Enjoying Files? Please consider supporting the project on GitHub.</value>
+    <value>Enjoying Octa Files? Please consider supporting the project on GitHub.</value>
   </data>
   <data name="Sponsor" xml:space="preserve">
     <value>Sponsor</value>
@@ -2187,7 +2187,7 @@
     <value>Flatten</value>
   </data>
   <data name="FlattenFolderDialogContent" xml:space="preserve">
-    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Files team responsible for any data loss.</value>
+    <value>Flattening a folder will move all contents from its subfolders to the selected location. This operation is permanent and cannot be undone. By using this experimental feature, you acknowledge the risk and agree not to hold the Octa Files team responsible for any data loss.</value>
   </data>
   <data name="ShowFlattenOptions" xml:space="preserve">
     <value>Show flatten options</value>
@@ -4071,10 +4071,10 @@
     <value>Redigere tillatelser</value>
   </data>
   <data name="BackgroundRunningNotificationBody" xml:space="preserve">
-    <value>Files kjører fortsatt i bakgrunnen for raskere oppstart.</value>
+    <value>Octa Files kjører fortsatt i bakgrunnen for raskere oppstart.</value>
   </data>
   <data name="BackgroundRunningNotificationHeader" xml:space="preserve">
-    <value>Hvor ble det av Files?</value>
+    <value>Hvor ble det av Octa Files?</value>
   </data>
   <data name="QuestionsAndDiscussions" xml:space="preserve">
     <value>Spørsmål og diskusjoner</value>
@@ -4351,7 +4351,7 @@
     <value>Vertical</value>
   </data>
   <data name="ShowSystemTrayIcon" xml:space="preserve">
-    <value>Vis Files-ikon i systemstatusfeltet</value>
+    <value>Vis Octa Files-ikon i systemstatusfeltet</value>
   </data>
   <data name="CPUThreads" xml:space="preserve">
     <value>CPU threads</value>

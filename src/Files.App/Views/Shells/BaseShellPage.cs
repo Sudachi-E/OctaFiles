@@ -829,7 +829,7 @@ namespace Files.App.Views.Shells
 				{
 					var dialog = DynamicDialogFactory.GetFor_ConsentDialog();
 
-					if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+					if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 						dialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 
 					await dialog.ShowAsync();
@@ -866,7 +866,7 @@ namespace Files.App.Views.Shells
 		// WINUI3
 		protected static ContentDialog SetContentDialogRoot(ContentDialog contentDialog)
 		{
-			if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+			if (ApiInfo.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
 				contentDialog.XamlRoot = MainWindow.Instance.Content.XamlRoot;
 			return contentDialog;
 		}
