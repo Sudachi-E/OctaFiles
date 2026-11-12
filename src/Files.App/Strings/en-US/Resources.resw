@@ -492,6 +492,18 @@
   <data name="DriveFreeSpaceAndCapacity" xml:space="preserve">
     <value>{0} free of {1}</value>
   </data>
+  <data name="DriveToolTipCapacity" xml:space="preserve">
+    <value>Capacity: {0}</value>
+    <comment>{0} is the total size of the drive.</comment>
+  </data>
+  <data name="DriveToolTipFileSystem" xml:space="preserve">
+    <value>File system: {0}</value>
+    <comment>{0} is the drive's file system, for example NTFS.</comment>
+  </data>
+  <data name="DriveToolTipFreeSpace" xml:space="preserve">
+    <value>Free space: {0}</value>
+    <comment>{0} is the remaining free space on the drive.</comment>
+  </data>
   <data name="SendTo" xml:space="preserve">
     <value>Send to</value>
   </data>

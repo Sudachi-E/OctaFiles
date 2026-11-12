@@ -71,7 +71,7 @@ namespace Files.App.Data.Items
 				{
 					if (Type != DriveType.CloudDrive)
 					{
-						ToolTip = GetSizeString();
+						ToolTip = GetToolTipText();
 					}
 
 					OnPropertyChanged(nameof(MaxSpaceText));
@@ -90,7 +90,7 @@ namespace Files.App.Data.Items
 				{
 					if (Type != DriveType.CloudDrive)
 					{
-						ToolTip = GetSizeString();
+						ToolTip = GetToolTipText();
 					}
 
 					OnPropertyChanged(nameof(FreeSpaceText));
@@ -123,7 +123,7 @@ namespace Files.App.Data.Items
 				type = value;
 
 				if (value is DriveType.Network or DriveType.CloudDrive)
-					ToolTip = null;
+					ToolTip = GetToolTipText();
 
 				OnPropertyChanged(nameof(TypeText));
 			}
@@ -135,7 +135,21 @@ namespace Files.App.Data.Items
 		public string Filesystem
 		{
 			get => filesystem;
-			set => SetProperty(ref filesystem, value);
+			set
+			{
+				if (SetProperty(ref filesystem, value) && Type != DriveType.CloudDrive)
+					ToolTip = GetToolTipText();
+			}
+		}
+
+		public string DriveLetter
+		{
+			get
+			{
+				var drivePath = Path;
+
+				return drivePath is { Length: >= 2 } && drivePath[1] == ':' ? drivePath[..2] : drivePath ?? string.Empty;
+			}
 		}
 
 		private string? text;
@@ -409,6 +423,30 @@ namespace Files.App.Data.Items
 				Strings.DriveFreeSpaceAndCapacity.GetLocalizedResource(),
 				FreeSpace.ToSizeString(),
 				MaxSpace.ToSizeString());
+		}
+
+		private string GetToolTipText()
+		{
+			var lines = new List<string>(4);
+			var driveLetter = DriveLetter;
+
+			if (!string.IsNullOrEmpty(driveLetter))
+				lines.Add(string.Format(Strings.DriveWithLetter.GetLocalizedResource(), driveLetter));
+
+			if (!string.IsNullOrEmpty(Filesystem))
+				lines.Add(string.Format("DriveToolTipFileSystem".GetLocalizedResource(), Filesystem));
+
+			if (MaxSpace.Bytes > 0d)
+			{
+				lines.Add(string.Format("DriveToolTipFreeSpace".GetLocalizedResource(), FreeSpaceText));
+				lines.Add(string.Format("DriveToolTipCapacity".GetLocalizedResource(), MaxSpaceText));
+			}
+
+			var itemText = Text;
+			if (lines.Count == 0 && !string.IsNullOrEmpty(itemText))
+				lines.Add(itemText);
+
+			return string.Join(Environment.NewLine, lines);
 		}
 	}
 }

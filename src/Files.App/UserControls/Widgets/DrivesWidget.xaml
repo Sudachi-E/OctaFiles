@@ -39,7 +39,7 @@
 						PointerPressed="Button_PointerPressed"
 						RightTapped="Button_RightTapped"
 						Tag="{x:Bind Item.Path}"
-						ToolTipService.ToolTip="{x:Bind Item.Text, Mode=OneWay}">
+						ToolTipService.ToolTip="{x:Bind Item.ToolTip, Mode=OneWay}">
 						<Grid
 							Margin="8"
 							HorizontalAlignment="Stretch"
