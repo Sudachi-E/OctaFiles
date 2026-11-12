@@ -61,6 +61,9 @@ namespace Files.App.ViewModels
 		// Recursive filter hits for the current query, only used while IsFilterRecursive is on
 		private IReadOnlyList<ListedItem>? recursiveFilterResults;
 
+		// Index amount of the current folder, shown to the left of the item count
+		private string? folderIndexText;
+
 		private readonly IWindowsIniService WindowsIniService = Ioc.Default.GetRequiredService<IWindowsIniService>();
 		private readonly IWindowsJumpListService jumpListService = Ioc.Default.GetRequiredService<IWindowsJumpListService>();
 		private readonly IDialogService dialogService = Ioc.Default.GetRequiredService<IDialogService>();
@@ -264,6 +267,7 @@ namespace Files.App.ViewModels
 				_ = Task.Run(() => jumpListService.AddFolderAsync(value));
 
 			WorkingDirectory = value;
+			UpdateFolderIndexStatus();
 
 			string? pathRoot = null;
 			if (!FtpHelpers.IsFtpPath(WorkingDirectory))
@@ -776,6 +780,7 @@ namespace Files.App.ViewModels
 			StorageTrashBinService.Watcher.ItemAdded += RecycleBinItemCreatedAsync;
 			StorageTrashBinService.Watcher.ItemDeleted += RecycleBinItemDeletedAsync;
 			StorageTrashBinService.Watcher.RefreshRequested += RecycleBinRefreshRequestedAsync;
+			FolderIndex.StatusChanged += FolderIndexStatusChanged;
 		}
 
 		private async void LayoutModeChangeRequested(object? sender, LayoutModeEventArgs e)
@@ -1115,6 +1120,29 @@ namespace Files.App.ViewModels
 			}
 		}
 
+		public string? FolderIndexText
+		{
+			get => folderIndexText;
+			private set
+			{
+				if (SetProperty(ref folderIndexText, value, nameof(FolderIndexText)))
+					OnPropertyChanged(nameof(ShowFolderIndex));
+			}
+		}
+
+		public bool ShowFolderIndex => !string.IsNullOrEmpty(FolderIndexText);
+
+		private void FolderIndexStatusChanged(object? sender, string root)
+		{
+			if (isDisposed || !string.Equals(root, WorkingDirectory, StringComparison.OrdinalIgnoreCase))
+				return;
+
+			_ = dispatcherQueue.EnqueueOrInvokeAsync(UpdateFolderIndexStatus);
+		}
+
+		private void UpdateFolderIndexStatus()
+			=> FolderIndexText = FolderIndex.GetStatusText(WorkingDirectory);
+
 		private void FilesAndFolderFilterUpdated()
 		{
 			if (filterDebounceCS is not null)
@@ -1157,6 +1185,23 @@ namespace Files.App.ViewModels
 		{
 			try
 			{
+				// An index of the tree answers without touching the disk; a miss falls back to the walk below
+				if (FolderIndex.TryGetMatches(WorkingDirectory, filter, out var indexedResults))
+				{
+					if (token.IsCancellationRequested || !string.Equals(FilesAndFoldersFilter, filter, StringComparison.Ordinal))
+						return;
+
+					recursiveFilterResults = SortingHelper.OrderFileList(
+						indexedResults,
+						folderSettings.DirectorySortOption,
+						folderSettings.DirectorySortDirection,
+						folderSettings.SortDirectoriesAlongsideFiles,
+						folderSettings.SortFilesFirst).ToList();
+
+					await ApplyFilesAndFoldersChangesAsync();
+					return;
+				}
+
 				var search = new FolderSearch
 				{
 					Query = filter,
@@ -1177,6 +1222,9 @@ namespace Files.App.ViewModels
 					folderSettings.SortFilesFirst).ToList();
 
 				await ApplyFilesAndFoldersChangesAsync();
+
+				// Index the tree after the walk so later queries skip it; repeated calls while typing are ignored
+				FolderIndex.EnsureIndexAsync(WorkingDirectory);
 			}
 			catch (OperationCanceledException)
 			{
@@ -3682,6 +3730,7 @@ namespace Files.App.ViewModels
 			StorageTrashBinService.Watcher.ItemAdded -= RecycleBinItemCreatedAsync;
 			StorageTrashBinService.Watcher.ItemDeleted -= RecycleBinItemDeletedAsync;
 			StorageTrashBinService.Watcher.RefreshRequested -= RecycleBinRefreshRequestedAsync;
+			FolderIndex.StatusChanged -= FolderIndexStatusChanged;
 			UserSettingsService.OnSettingChangedEvent -= UserSettingsService_OnSettingChangedEvent;
 			fileTagsSettingsService.OnSettingImportedEvent -= FileTagsSettingsService_OnSettingUpdated;
 			fileTagsSettingsService.OnTagsUpdated -= FileTagsSettingsService_OnSettingUpdated;

@@ -16,6 +16,17 @@ namespace Files.App.Controls
 		FrameworkElement? ItemDecorator { get; }
 	}
 
+	/// <summary>
+	/// Sidebar rows that show a storage usage line below their name, such as drives.
+	/// </summary>
+	public interface IStorageUsageSource
+	{
+		/// <summary>
+		/// Gets the share of the storage that is used, from 0 to 100.
+		/// </summary>
+		double StorageUsagePercent { get; }
+	}
+
 	public interface ISidebarItemModel : INotifyPropertyChanged
 	{
 

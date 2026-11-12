@@ -15,7 +15,7 @@
 
 			<StaticResource x:Key="StorageBarBackgroundBrush" ResourceKey="ControlFillColorTransparentBrush" />
 
-			<StaticResource x:Key="StorageBarValueBrush" ResourceKey="AccentFillColorDefaultBrush" />
+			<SolidColorBrush x:Key="StorageBarValueBrush" Color="#4CC2FF" />
 			<StaticResource x:Key="StorageBarValueCautionBrush" ResourceKey="SystemFillColorCautionBrush" />
 			<StaticResource x:Key="StorageBarValueCriticalBrush" ResourceKey="SystemFillColorCriticalBrush" />
 			<StaticResource x:Key="StorageBarValueDisabledBrush" ResourceKey="AccentFillColorDisabledBrush" />
@@ -57,7 +57,7 @@
 
 			<StaticResource x:Key="StorageBarBackgroundBrush" ResourceKey="ControlFillColorTransparentBrush" />
 
-			<StaticResource x:Key="StorageBarValueBrush" ResourceKey="AccentFillColorDefaultBrush" />
+			<SolidColorBrush x:Key="StorageBarValueBrush" Color="#4CC2FF" />
 			<StaticResource x:Key="StorageBarValueCautionBrush" ResourceKey="SystemFillColorCautionBrush" />
 			<StaticResource x:Key="StorageBarValueCriticalBrush" ResourceKey="SystemFillColorCriticalBrush" />
 			<StaticResource x:Key="StorageBarValueDisabledBrush" ResourceKey="AccentFillColorDisabledBrush" />

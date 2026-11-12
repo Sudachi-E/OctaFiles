@@ -13,7 +13,7 @@ using ByteSize = ByteSizeLib.ByteSize;
 
 namespace Files.App.Data.Items
 {
-	public sealed partial class DriveItem : ExpandableSidebarItemBase, INavigationControlItem, IFolder, IExpandableSidebarFolder
+	public sealed partial class DriveItem : ExpandableSidebarItemBase, INavigationControlItem, IFolder, IExpandableSidebarFolder, IStorageUsageSource
 	{
 		private BitmapImage? icon;
 		public BitmapImage? Icon
@@ -167,8 +167,12 @@ namespace Files.App.Data.Items
 
 				if (Type == DriveType.Fixed)
 					ShowStorageSense = percentageUsed >= Constants.Widgets.Drives.LowStorageSpacePercentageThreshold;
+
+				OnPropertyChanged(nameof(IStorageUsageSource.StorageUsagePercent));
 			}
 		}
+
+		double IStorageUsageSource.StorageUsagePercent => PercentageUsed;
 
 		private bool showStorageSense = false;
 		public bool ShowStorageSense

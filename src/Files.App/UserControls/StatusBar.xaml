@@ -97,6 +97,14 @@
 				SizeChanged="Content_SizeChanged"
 				Spacing="8">
 
+				<!--  Folder index amount  -->
+				<TextBlock
+					x:Name="FolderIndexAmount"
+					VerticalAlignment="Center"
+					Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+					Text="{x:Bind ShellViewModel.FolderIndexText, Mode=OneWay}"
+					Visibility="{x:Bind ToVisibility(ShellViewModel.ShowFolderIndex), Mode=OneWay, FallbackValue=Collapsed}" />
+
 				<TextBlock
 					x:Name="DirectoryItemCount"
 					VerticalAlignment="Center"

@@ -3,6 +3,7 @@
 	x:Class="Files.App.UserControls.Widgets.DrivesWidget"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controls="using:Files.App.Controls"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:dataitems="using:Files.App.Data.Items"
 	xmlns:helpers="using:Files.App.Helpers"
@@ -79,16 +80,17 @@
 								TextTrimming="CharacterEllipsis"
 								TextWrapping="NoWrap" />
 
-							<ProgressBar
+							<controls:StorageBar
 								x:Name="DriveSpaceProgressBar"
 								Grid.Row="1"
 								Grid.Column="1"
-								VerticalAlignment="Stretch"
-								VerticalContentAlignment="Stretch"
+								VerticalAlignment="Center"
 								x:Load="{x:Bind Item.ShowDriveDetails, Mode=OneWay}"
 								AutomationProperties.AccessibilityView="Raw"
-								Maximum="{x:Bind Item.MaxSpace.GigaBytes, Mode=OneWay}"
-								Value="{x:Bind Item.SpaceUsed.GigaBytes, Mode=OneWay}" />
+								Maximum="100"
+								PercentCaution="90"
+								PercentCritical="90"
+								Value="{x:Bind Item.PercentageUsed, Mode=OneWay}" />
 
 							<Button
 								x:Name="GoToStorageSense"

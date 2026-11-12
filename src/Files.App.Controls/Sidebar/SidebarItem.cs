@@ -107,6 +107,8 @@ namespace Files.App.Controls
 					nameTextBlock.IsTextTrimmedChanged += (_, _) => UpdateElementToolTip();
 			}
 
+			UpdateStorageUsageBar();
+
 			UpdateElementToolTip();
 
 			if (Owner is null)
@@ -182,6 +184,18 @@ namespace Files.App.Controls
 			Icon = presentation?.IconElement;
 			Decorator = presentation?.ItemDecorator;
 			IsExpanded = Item?.IsExpanded ?? true;
+			UpdateStorageUsageBar();
+		}
+
+		[DynamicWindowsRuntimeCast(typeof(StorageBar))]
+		private void UpdateStorageUsageBar()
+		{
+			if (GetTemplateChild("StorageUsageBar") is not StorageBar storageUsageBar)
+				return;
+
+			var usage = Item as IStorageUsageSource;
+			storageUsageBar.Visibility = usage is null ? Microsoft.UI.Xaml.Visibility.Collapsed : Microsoft.UI.Xaml.Visibility.Visible;
+			storageUsageBar.Value = usage?.StorageUsagePercent ?? 0d;
 		}
 
 		[DynamicWindowsRuntimeCast(typeof(ItemsRepeater))]
@@ -270,6 +284,9 @@ namespace Files.App.Controls
 				case nameof(ISidebarItemPresentationModel.ItemDecorator):
 					if (UseItemPresentation)
 						Decorator = (Item as ISidebarItemPresentationModel)?.ItemDecorator;
+					break;
+				case nameof(IStorageUsageSource.StorageUsagePercent):
+					UpdateStorageUsageBar();
 					break;
 				case nameof(ISidebarItemModel.IsExpanded):
 					if (UseItemPresentation)

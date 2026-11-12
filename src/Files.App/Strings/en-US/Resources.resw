@@ -192,6 +192,12 @@
   <data name="SearchInSubfolders" xml:space="preserve">
     <value>Search in subfolders</value>
   </data>
+  <data name="FolderIndexBuilding" xml:space="preserve">
+    <value>Indexing...</value>
+  </data>
+  <data name="FolderIndexItemCount" xml:space="preserve">
+    <value>{0:N0} indexed</value>
+  </data>
   <data name="SearchSettings" xml:space="preserve">
     <value>Search settings...</value>
   </data>

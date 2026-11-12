@@ -217,9 +217,23 @@
 											</ItemsRepeater.ItemTemplate>
 										</ItemsRepeater>
 									</Flyout>
-								</FlyoutBase.AttachedFlyout>
-							</Grid>
-						</Border>
+								</FlyoutBase.AttachedFlyout>						</Grid>
+					</Border>
+
+						<!--  Storage usage line for drives  -->
+						<local:StorageBar
+							x:Name="StorageUsageBar"
+							Grid.Row="1"
+							Height="4"
+							MinHeight="4"
+							Margin="51,0,12,2"
+							Maximum="100"
+							Padding="0"
+							PercentCaution="90"
+							PercentCritical="90"
+							TrackBarHeight="2"
+							ValueBarHeight="4"
+							Visibility="Collapsed" />
 
 						<VisualStateManager.VisualStateGroups>
 
@@ -357,6 +371,7 @@
 									<VisualState.Setters>
 										<Setter Target="RootPanel.MaxWidth" Value="48" />
 										<Setter Target="ItemNameTextBlock.Visibility" Value="Collapsed" />
+									<Setter Target="StorageUsageBar.Visibility" Value="Collapsed" />
 										<Setter Target="ItemDecoratorPresenter.Width" Value="0" />
 										<Setter Target="ChevronColumnDefinition.Width" Value="0" />
 										<Setter Target="IconPresenter.Margin" Value="8,0,0,0" />
