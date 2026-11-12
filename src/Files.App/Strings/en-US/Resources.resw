@@ -189,6 +189,9 @@
   <data name="Search" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="SearchInSubfolders" xml:space="preserve">
+    <value>Search in subfolders</value>
+  </data>
   <data name="SearchSettings" xml:space="preserve">
     <value>Search settings...</value>
   </data>

@@ -33,22 +33,65 @@
 		BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}"
 		BorderThickness="0,1,0,0">
 		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
 			<ColumnDefinition />
+			<ColumnDefinition Width="Auto" />
 			<ColumnDefinition Width="Auto" />
 			<ColumnDefinition Width="Auto" />
 			<ColumnDefinition Width="Auto" />
 		</Grid.ColumnDefinitions>
 
+		<!--  Folder search  -->
+		<Grid
+			x:Name="SearchArea"
+			Grid.Column="0"
+			Margin="0,0,8,0"
+			VerticalAlignment="Center">
+			<Grid
+				x:Name="SearchContent"
+				Visibility="{x:Bind GetSearchAreaVisibility(ShowInfoText, ShellViewModel.CanFilterSearch), Mode=OneWay, FallbackValue=Collapsed}">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+
+				<AutoSuggestBox
+					x:Name="SearchBox"
+					Width="220"
+					Height="28"
+					VerticalAlignment="Center"
+					AutomationProperties.Name="{helpers:ResourceString Name=Search}"
+					PlaceholderText="{helpers:ResourceString Name=Search}"
+					QueryIcon="Find"
+					Text="{x:Bind ShellViewModel.FilesAndFoldersFilter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+				<ToggleButton
+					x:Name="SearchScopeButton"
+					Grid.Column="1"
+					Width="28"
+					Height="28"
+					Margin="4,0,0,0"
+					Padding="0"
+					VerticalAlignment="Center"
+					AutomationProperties.Name="{helpers:ResourceString Name=SearchInSubfolders}"
+					IsChecked="{x:Bind ShellViewModel.IsFilterRecursive, Mode=TwoWay}"
+					ToolTipService.ToolTip="{helpers:ResourceString Name=SearchInSubfolders}">
+					<FontIcon FontSize="12" Glyph="&#xE8B7;" />
+				</ToggleButton>
+			</Grid>
+		</Grid>
+
 		<!--  Folder and selection info  -->
 		<Grid
 			x:Name="InfoArea"
-			Grid.Column="0"
+			Grid.Column="5"
+			HorizontalAlignment="Right"
 			Visibility="{x:Bind ShowInfoText, Mode=OneWay}">
 
 			<StackPanel
 				x:Name="InfoTextPanel"
 				Height="32"
-				HorizontalAlignment="Left"
+				HorizontalAlignment="Right"
 				VerticalAlignment="Stretch"
 				Orientation="Horizontal"
 				SizeChanged="Content_SizeChanged"
@@ -97,7 +140,7 @@
 				x:Name="StatusButton"
 				Height="24"
 				Padding="8,0,8,0"
-				HorizontalAlignment="Left"
+				HorizontalAlignment="Right"
 				VerticalAlignment="Center"
 				AutomationProperties.Name="{helpers:ResourceString Name=Status}"
 				Background="Transparent"
@@ -147,7 +190,7 @@
 		<!--  Actions area, collapses into the Git button in the compact states  -->
 		<StackPanel
 			x:Name="StandardActions"
-			Grid.Column="2"
+			Grid.Column="3"
 			VerticalAlignment="Center"
 			Orientation="Horizontal"
 			SizeChanged="Content_SizeChanged">
@@ -391,7 +434,7 @@
 		<!--  Compact stand-in for the actions area  -->
 		<Grid
 			x:Name="ActionsCompactArea"
-			Grid.Column="3"
+			Grid.Column="4"
 			Visibility="{x:Bind GetActionsAreaVisibility(StatusBarViewModel.ShowOpenInIDEButton, StatusBarViewModel.GitBranchDisplayName), Mode=OneWay, FallbackValue=Collapsed}">
 
 			<Button
@@ -545,7 +588,7 @@
 		<!--  ZIP Encoding Selector  -->
 		<Grid
 			x:Name="EncodingArea"
-			Grid.Column="1"
+			Grid.Column="2"
 			Visibility="{x:Bind StatusBarViewModel.IsZipEncodingSelectorVisible, Mode=OneWay}">
 			<Button
 				x:Name="ZipEncodingSelector"
@@ -634,6 +677,7 @@
 				</VisualState>
 				<VisualState x:Name="CompactIconsState">
 					<VisualState.Setters>
+						<Setter Target="SearchArea.Visibility" Value="Collapsed" />
 						<Setter Target="ZipEncodingLabel.Visibility" Value="Collapsed" />
 						<Setter Target="ZipEncodingIcon.Visibility" Value="Visible" />
 						<Setter Target="StandardActions.Visibility" Value="Collapsed" />
@@ -646,6 +690,7 @@
 				</VisualState>
 				<VisualState x:Name="MinimalState">
 					<VisualState.Setters>
+						<Setter Target="SearchArea.Visibility" Value="Collapsed" />
 						<Setter Target="ZipEncodingSelector.Visibility" Value="Collapsed" />
 						<Setter Target="StandardActions.Visibility" Value="Collapsed" />
 						<Setter Target="GitOverflowButton.Visibility" Value="Visible" />

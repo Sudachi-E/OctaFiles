@@ -84,6 +84,7 @@ namespace Files.App.Views.Shells
 
 			StatusBar.StatusBarViewModel = contentPage?.StatusBarViewModel;
 			StatusBar.SelectedItemsPropertiesViewModel = contentPage?.SelectedItemsPropertiesViewModel;
+			StatusBar.ShellViewModel = (contentPage as BaseLayoutPage)?.ParentShellPageInstance?.ShellViewModel ?? ShellViewModel;
 
 			// The view model's own triggers can all fire before this page's content is
 			// assigned (e.g. restoring a session inside an archive), so re-evaluate the

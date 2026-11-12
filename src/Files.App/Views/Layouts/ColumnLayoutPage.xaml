@@ -293,6 +293,7 @@
 								<!--  Item Name  -->
 								<TextBlock
 									x:Name="ItemName"
+									helpers:TextHighlightHelper.HighlightQuery="{x:Bind HighlightQuery, Mode=OneWay}"
 									Grid.Column="1"
 									Margin="5,0,5,0"
 									HorizontalAlignment="Left"

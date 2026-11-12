@@ -58,6 +58,9 @@ namespace Files.App.ViewModels
 		// Search results waiting to be displayed, only accessed on the UI thread
 		private readonly Queue<ListedItem> pendingSearchResults = new();
 
+		// Recursive filter hits for the current query, only used while IsFilterRecursive is on
+		private IReadOnlyList<ListedItem>? recursiveFilterResults;
+
 		private readonly IWindowsIniService WindowsIniService = Ioc.Default.GetRequiredService<IWindowsIniService>();
 		private readonly IWindowsJumpListService jumpListService = Ioc.Default.GetRequiredService<IWindowsJumpListService>();
 		private readonly IDialogService dialogService = Ioc.Default.GetRequiredService<IDialogService>();
@@ -149,6 +152,12 @@ namespace Files.App.ViewModels
 			WorkingDirectory != "ReleaseNotes" &&
 			WorkingDirectory != "Settings";
 
+		public bool CanFilterSearch =>
+			!string.IsNullOrEmpty(WorkingDirectory) &&
+			WorkingDirectory != "Home" &&
+			WorkingDirectory != "ReleaseNotes" &&
+			WorkingDirectory != "Settings";
+
 		private GitProperties _EnabledGitProperties;
 		public GitProperties EnabledGitProperties
 		{
@@ -183,6 +192,7 @@ namespace Files.App.ViewModels
 		private CancellationTokenSource? searchCTS;
 		private CancellationTokenSource? updateTagGroupCTS;
 		private CancellationTokenSource? filterDebounceCS;
+		private CancellationTokenSource? recursiveFilterCTS;
 		private CancellationTokenSource? networkAvailabilityCTS;
 		private bool isDisposed;
 
@@ -276,6 +286,7 @@ namespace Files.App.ViewModels
 
 			OnPropertyChanged(nameof(WorkingDirectory));
 			OnPropertyChanged(nameof(ShowFilterHeader));
+			OnPropertyChanged(nameof(CanFilterSearch));
 		}
 
 		public async Task<FilesystemResult<BaseStorageFolder>> GetFolderFromPathAsync(string value, CancellationToken cancellationToken = default)
@@ -1093,6 +1104,17 @@ namespace Files.App.ViewModels
 			}
 		}
 
+		private bool _isFilterRecursive;
+		public bool IsFilterRecursive
+		{
+			get => _isFilterRecursive;
+			set
+			{
+				if (SetProperty(ref _isFilterRecursive, value))
+					FilesAndFolderFilterUpdated();
+			}
+		}
+
 		private void FilesAndFolderFilterUpdated()
 		{
 			if (filterDebounceCS is not null)
@@ -1101,15 +1123,64 @@ namespace Files.App.ViewModels
 				filterDebounceCS.Dispose();
 			}
 
+			recursiveFilterCTS?.Cancel();
+			recursiveFilterCTS?.Dispose();
+			recursiveFilterCTS = new CancellationTokenSource();
+			var recursiveToken = recursiveFilterCTS.Token;
+
 			filterDebounceCS = new CancellationTokenSource();
 			var token = filterDebounceCS.Token;
 
 			// filterDebounceCS is disposed on the next update, so the continuation must not register on its token.
 			_ = Task.Delay(250, token)
-				.ContinueWith(_ => ApplyFilesAndFoldersChangesAsync(), CancellationToken.None,
+				.ContinueWith(_ => ApplyFilterAsync(recursiveToken), CancellationToken.None,
 					TaskContinuationOptions.OnlyOnRanToCompletion,
 					TaskScheduler.Default)
 				.Unwrap();
+		}
+
+		private async Task ApplyFilterAsync(CancellationToken token)
+		{
+			var filter = FilesAndFoldersFilter;
+
+			if (IsFilterRecursive && !IsSearchResults && !string.IsNullOrEmpty(filter) && !string.IsNullOrEmpty(WorkingDirectory))
+			{
+				await UpdateRecursiveFilterResultsAsync(filter, token);
+				return;
+			}
+
+			recursiveFilterResults = null;
+			await ApplyFilesAndFoldersChangesAsync();
+		}
+
+		private async Task UpdateRecursiveFilterResultsAsync(string filter, CancellationToken token)
+		{
+			try
+			{
+				var search = new FolderSearch
+				{
+					Query = filter,
+					Folder = WorkingDirectory,
+				};
+
+				var results = new List<ListedItem>();
+				await search.SearchAsync(results, token);
+
+				if (token.IsCancellationRequested || !string.Equals(FilesAndFoldersFilter, filter, StringComparison.Ordinal))
+					return;
+
+				recursiveFilterResults = SortingHelper.OrderFileList(
+					results,
+					folderSettings.DirectorySortOption,
+					folderSettings.DirectorySortDirection,
+					folderSettings.SortDirectoriesAlongsideFiles,
+					folderSettings.SortFilesFirst).ToList();
+
+				await ApplyFilesAndFoldersChangesAsync();
+			}
+			catch (OperationCanceledException)
+			{
+			}
 		}
 
 
@@ -1137,9 +1208,12 @@ namespace Files.App.ViewModels
 					// concurrent watcher removals (e.g. emptying the Recycle Bin) otherwise leave the last item painted.
 					var filesAndFoldersLocal = filesAndFolders?.ToList() ?? new List<ListedItem>();
 
+					// Recursive hits replace the in-folder filter, but never the results of a search page
+					var recursiveResults = IsSearchResults ? null : recursiveFilterResults;
 					var displayedFilesAndFolders = string.IsNullOrEmpty(filter)
 						? filesAndFoldersLocal
-						: await Task.Run(() => filesAndFoldersLocal.Where(x => MatchesFilter(x, filter)).ToList(), addFilesCTS.Token);
+						: recursiveResults?.ToList()
+							?? await Task.Run(() => filesAndFoldersLocal.Where(x => MatchesFilter(x, filter)).ToList(), addFilesCTS.Token);
 
 					var displayedFoldersCount = displayedFilesAndFolders.Count(x => x.PrimaryItemAttribute == StorageItemTypes.Folder && !x.IsArchive);
 
@@ -1156,6 +1230,11 @@ namespace Files.App.ViewModels
 							try
 							{
 								FilesAndFolders.Clear();
+
+								// Matching items carry the query so their names can highlight the matched text
+								foreach (var item in displayedFilesAndFolders)
+									item.HighlightQuery = string.IsNullOrEmpty(filter) ? null : filter;
+
 								FilesAndFolders.AddRange(displayedFilesAndFolders);
 								FoldersCount = displayedFoldersCount;
 
@@ -3461,6 +3540,7 @@ namespace Files.App.ViewModels
 			CancelSearch();
 			var currentSearchCTS = searchCTS = new CancellationTokenSource();
 			var token = currentSearchCTS.Token;
+			recursiveFilterResults = null;
 			filesAndFolders.Clear();
 			IsLoadingItems = true;
 			IsSearchResults = true;
@@ -3591,6 +3671,8 @@ namespace Files.App.ViewModels
 			StopWatchingForLocationRestoration();
 			filterDebounceCS?.Cancel();
 			filterDebounceCS?.Dispose();
+			recursiveFilterCTS?.Cancel();
+			recursiveFilterCTS?.Dispose();
 			networkAvailabilityCTS?.Dispose();
 			semaphoreCTS.Cancel();
 			searchCTS?.Cancel();

@@ -28,6 +28,7 @@ namespace Files.App.UserControls
 		private double _lastGitIconWidth = 32d;
 		private double _lastEncodingWidth = 90d;
 		private double _lastEncodingIconWidth = 32d;
+		private double _lastSearchWidth = 252d;
 
 		private bool _remeasureQueued;
 
@@ -62,6 +63,15 @@ namespace Files.App.UserControls
 		public static readonly DependencyProperty ShowInfoTextProperty =
 			DependencyProperty.Register(nameof(ShowInfoText), typeof(bool), typeof(StatusBar), new PropertyMetadata(false));
 
+		public ShellViewModel? ShellViewModel
+		{
+			get => (ShellViewModel?)GetValue(ShellViewModelProperty);
+			set => SetValue(ShellViewModelProperty, value);
+		}
+
+		public static readonly DependencyProperty ShellViewModelProperty =
+			DependencyProperty.Register(nameof(ShellViewModel), typeof(ShellViewModel), typeof(StatusBar), new PropertyMetadata(null, OnViewModelChanged));
+
 		public StatusBar()
 		{
 			InitializeComponent();
@@ -69,6 +79,9 @@ namespace Files.App.UserControls
 
 		public Visibility ToVisibility(bool value)
 			=> value ? Visibility.Visible : Visibility.Collapsed;
+
+		public Visibility GetSearchAreaVisibility(bool showInfoText, bool canFilterSearch)
+			=> ToVisibility(showInfoText && canFilterSearch);
 
 		public Visibility GetOpenRepoInIDEItemVisibility(bool showOpenInIDEButton, string? gitBranchDisplayName)
 			=> ToVisibility(showOpenInIDEButton && gitBranchDisplayName is not null);
@@ -138,6 +151,8 @@ namespace Files.App.UserControls
 				_lastInfoNaturalWidth = visibleChildren.Sum(child => child.DesiredSize.Width) + InfoTextPanel.Spacing * Math.Max(0, visibleChildren.Count - 1);
 			}
 
+			if (SearchContent.Visibility == Visibility.Visible && SearchContent.DesiredSize.Width > 0)
+				_lastSearchWidth = SearchContent.DesiredSize.Width;
 			if (StandardActions.Visibility == Visibility.Visible)
 				_lastActionsNaturalWidth = StandardActions.DesiredSize.Width;
 			if (StatusButton.Visibility == Visibility.Visible && StatusButton.DesiredSize.Width > 0)
@@ -167,6 +182,7 @@ namespace Files.App.UserControls
 			var infoWidth = ShowInfoText ? _lastInfoNaturalWidth : 0d;
 			var statusButtonWidth = ShowInfoText ? _lastStatusButtonWidth : 0d;
 			var statusIconWidth = ShowInfoText ? _lastStatusIconWidth : 0d;
+			var searchWidth = SearchContent.Visibility == Visibility.Visible ? _lastSearchWidth : 0d;
 			var actionsWidth = hasActions ? _lastActionsNaturalWidth : 0d;
 			var gitButtonWidth = hasActions ? _lastGitButtonWidth : 0d;
 			var gitIconWidth = hasActions ? _lastGitIconWidth : 0d;
@@ -176,10 +192,10 @@ namespace Files.App.UserControls
 			// The widest state that fits wins; expanding also requires the hysteresis width
 			double[] requiredWidths =
 			[
-				infoWidth + SectionGapWidth + actionsWidth + encodingWidth,
-				infoWidth + SectionGapWidth + actionsWidth + encodingIconWidth,
-				infoWidth + SectionGapWidth + gitButtonWidth + encodingIconWidth,
-				statusButtonWidth + SectionGapWidth + gitButtonWidth + encodingIconWidth,
+				searchWidth + SectionGapWidth + infoWidth + SectionGapWidth + actionsWidth + encodingWidth,
+				searchWidth + SectionGapWidth + infoWidth + SectionGapWidth + actionsWidth + encodingIconWidth,
+				searchWidth + SectionGapWidth + infoWidth + SectionGapWidth + gitButtonWidth + encodingIconWidth,
+				searchWidth + SectionGapWidth + statusButtonWidth + SectionGapWidth + gitButtonWidth + encodingIconWidth,
 				statusIconWidth + SectionGapWidth + gitIconWidth + encodingIconWidth,
 				0d,
 			];

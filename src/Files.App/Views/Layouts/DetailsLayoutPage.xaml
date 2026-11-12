@@ -1016,6 +1016,7 @@
 
 										<TextBlock
 											x:Name="ItemName"
+											helpers:TextHighlightHelper.HighlightQuery="{x:Bind HighlightQuery, Mode=OneWay}"
 											Padding="6,0,0,0"
 											VerticalAlignment="Center"
 											Opacity="{x:Bind Opacity, Mode=OneWay}"

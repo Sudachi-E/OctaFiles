@@ -65,6 +65,13 @@ namespace Files.App.Utils
 
 		public string? FolderRelativeId { get; set; }
 
+		private string? highlightQuery;
+		public string? HighlightQuery
+		{
+			get => highlightQuery;
+			set => SetProperty(ref highlightQuery, value);
+		}
+
 		public bool ContainsFilesOrFolders { get; set; } = true;
 
 		private bool loadFileIcon;

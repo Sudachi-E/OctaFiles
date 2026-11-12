@@ -95,6 +95,17 @@ It publishes `artifacts\installer\payload` and writes `artifacts\installer\OctaF
 - `-SkipBuild` repacks an existing payload, so it refuses a payload older than the newest file under `src\Files.App*`, `Files.Shared`, or `Files.Storage`.
 - Deleted XAML pages survive incremental builds as generated `.xbf` files in `bin`/`obj` and get published again. The script removes the target configuration's `bin`/`obj` before publishing; if a removed page still appears after an install, rebuild through the script instead of reusing older artifacts.
 - `Assets\AppTiles\Release\**` needs the explicit `Content Update` publish rule in `Files.App.csproj`: WinUI's implicit content items reach `bin` but not `publish`.
+- The script invokes `dotnet` from `PATH`, which can resolve to a global SDK that does not satisfy `global.json`. Put the repo-local SDK first when running it: `PATH="$PWD/.dotnet:$PATH" powershell.exe -NoProfile -ExecutionPolicy Bypass -File installer/build-setup.ps1`.
+
+To update the installed copy in one step, run:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File installer/build-and-install.ps1
+```
+
+- It closes a running `OctaFiles` process, builds the setup, runs it with `/S`, and fails unless the installed `OctaFiles.dll` matches the payload byte for byte.
+- Use `-SkipBuild` to repack and reinstall without publishing again. The script puts the repo-local SDK first on `PATH` itself, so the `dotnet`-from-`PATH` caveat above does not apply to it.
+- The silent install is per-user, keeps `%LOCALAPPDATA%\Programs\Octa Files\data` (user settings) and does not start the app; start the installed `OctaFiles.exe` to inspect a change.
 
 ## Startup and Performance Verification
 
