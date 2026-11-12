@@ -208,10 +208,6 @@
 					<wctcontrols:SettingsCard Header="{helpers:ResourceString Name=FileTags}">
 						<ToggleSwitch AutomationProperties.Name="{helpers:ResourceString Name=FileTags}" IsOn="{x:Bind ViewModel.ShowFileTagsWidget, Mode=TwoWay}" />
 					</wctcontrols:SettingsCard>
-
-					<wctcontrols:SettingsCard Header="{helpers:ResourceString Name=RecentFiles}">
-						<ToggleSwitch AutomationProperties.Name="{helpers:ResourceString Name=RecentFiles}" IsOn="{x:Bind ViewModel.ShowRecentFilesWidget, Mode=TwoWay}" />
-					</wctcontrols:SettingsCard>
 				</wctcontrols:SettingsExpander.Items>
 			</wctcontrols:SettingsExpander>
 

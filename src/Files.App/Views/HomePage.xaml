@@ -427,7 +427,6 @@
 					<ToggleMenuFlyoutItem IsChecked="{x:Bind ViewModel.ShowDrivesWidget, Mode=TwoWay}" Text="{helpers:ResourceString Name=Drives}" />
 					<ToggleMenuFlyoutItem IsChecked="{x:Bind ViewModel.ShowNetworkLocationsWidget, Mode=TwoWay}" Text="{helpers:ResourceString Name=NetworkLocations}" />
 					<ToggleMenuFlyoutItem IsChecked="{x:Bind ViewModel.ShowFileTagsWidget, Mode=TwoWay}" Text="{helpers:ResourceString Name=FileTags}" />
-					<ToggleMenuFlyoutItem IsChecked="{x:Bind ViewModel.ShowRecentFilesWidget, Mode=TwoWay}" Text="{helpers:ResourceString Name=RecentFiles}" />
 				</MenuFlyoutSubItem>
 				<MenuFlyoutSubItem
 					x:Name="SplitPaneSubMenu"

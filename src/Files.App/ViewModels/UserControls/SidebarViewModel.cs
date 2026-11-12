@@ -31,6 +31,9 @@ namespace Files.App.ViewModels.UserControls
 		private ICommandManager Commands { get; } = Ioc.Default.GetRequiredService<ICommandManager>();
 		private readonly DrivesViewModel drivesViewModel = Ioc.Default.GetRequiredService<DrivesViewModel>();
 		private readonly IFileTagsService fileTagsService;
+		private IWindowsRecentItemsService WindowsRecentItemsService { get; } = Ioc.Default.GetRequiredService<IWindowsRecentItemsService>();
+
+		private const int RecentFilesSectionMaxItems = 10;
 
 		private IShellPanesPage? paneHolder;
 		public IShellPanesPage? PaneHolder
@@ -90,6 +93,7 @@ namespace Files.App.ViewModels.UserControls
 		private readonly SectionType[] SectionOrder =
 			[
 				SectionType.Home,
+				SectionType.RecentFiles,
 				SectionType.Pinned,
 				SectionType.Library,
 				SectionType.Drives,
@@ -320,6 +324,8 @@ namespace Files.App.ViewModels.UserControls
 			sidebarItems = [];
 			UserSettingsService.OnSettingChangedEvent += UserSettingsService_OnSettingChangedEvent;
 			CreateItemHomeAsync();
+			_ = RefreshRecentFilesSectionAsync();
+			WindowsRecentItemsService.RecentFilesChanged += RecentItemsService_RecentFilesChanged;
 
 			Manager_DataChanged(SectionType.Pinned, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
 			Manager_DataChanged(SectionType.Library, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
@@ -344,6 +350,63 @@ namespace Files.App.ViewModels.UserControls
 			PinItemCommand = new RelayCommand(PinItem);
 			EjectDeviceCommand = new RelayCommand(EjectDevice);
 			OpenPropertiesCommand = new RelayCommand<FlyoutBase>(OpenProperties);
+		}
+
+		private async void RecentItemsService_RecentFilesChanged(object? sender, NotifyCollectionChangedEventArgs e)
+			=> await RefreshRecentFilesSectionAsync();
+
+		private async Task RefreshRecentFilesSectionAsync()
+		{
+			if (dispatcherQueue is null)
+				return;
+
+			await WindowsRecentItemsService.UpdateRecentFilesAsync();
+
+			await dispatcherQueue.EnqueueOrInvokeAsync(async () =>
+			{
+				var recentFiles = WindowsRecentItemsService.RecentFiles;
+
+				if (recentFiles.Count == 0)
+				{
+					if (GetSection(SectionType.RecentFiles) is { } emptySection)
+						sidebarItems.Remove(emptySection);
+
+					return;
+				}
+
+				var section = GetSection(SectionType.RecentFiles) ?? await CreateSectionAsync(SectionType.RecentFiles);
+				if (section?.ChildItems is not { } childItems)
+					return;
+
+				childItems.Clear();
+
+				foreach (var recentFile in recentFiles.Take(RecentFilesSectionMaxItems))
+					childItems.Add(CreateRecentFileItem(recentFile));
+			});
+		}
+
+		private LocationItem CreateRecentFileItem(RecentItem recentFile)
+		{
+			var item = new LocationItem()
+			{
+				Text = recentFile.Name,
+				Path = recentFile.Path,
+				Section = SectionType.RecentFiles,
+				SelectsOnInvoked = true,
+				ChildItems = null
+			};
+
+			_ = LoadRecentFileIconAsync(item, recentFile);
+
+			return item;
+		}
+
+		private static async Task LoadRecentFileIconAsync(LocationItem item, RecentItem recentFile)
+		{
+			await recentFile.LoadRecentItemIconAsync();
+
+			if (recentFile.Icon is not null)
+				item.Icon = recentFile.Icon;
 		}
 
 		private Task<LocationItem?> CreateItemHomeAsync()
@@ -588,6 +651,11 @@ namespace Files.App.ViewModels.UserControls
 				case SectionType.Home:
 					section = BuildSection(Strings.Home.GetLocalizedResource(), sectionType, new ContextMenuOptions { IsLocationItem = true }, true);
 					section.Path = "Home";
+					section.IsHeader = true;
+					break;
+
+				case SectionType.RecentFiles:
+					section = BuildSection(Strings.RecentFiles.GetLocalizedResource(), sectionType, new ContextMenuOptions(), false);
 					section.IsHeader = true;
 					break;
 

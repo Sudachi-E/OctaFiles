@@ -416,7 +416,6 @@ namespace Files.App.ViewModels.UserControls
 				case nameof(UserSettingsService.GeneralSettingsService.ShowDrivesWidget):
 				case nameof(UserSettingsService.GeneralSettingsService.ShowNetworkLocationsWidget):
 				case nameof(UserSettingsService.GeneralSettingsService.ShowFileTagsWidget):
-				case nameof(UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget):
 					RefreshWidgetsRequested?.Invoke(this, EventArgs.Empty);
 					OnPropertyChanged(e.SettingName);
 					break;

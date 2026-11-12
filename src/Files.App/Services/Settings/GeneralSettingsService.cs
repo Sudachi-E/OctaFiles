@@ -113,12 +113,6 @@ namespace Files.App.Services.Settings
 			set => Set(value);
 		}
 
-		public bool ShowRecentFilesWidget
-		{
-			get => Get(true);
-			set => Set(value);
-		}
-
 		public bool ShowDrivesWidget
 		{
 			get => Get(true);
@@ -138,12 +132,6 @@ namespace Files.App.Services.Settings
 		}
 
 		public bool FoldersWidgetExpanded
-		{
-			get => Get(true);
-			set => Set(value);
-		}
-
-		public bool RecentFilesWidgetExpanded
 		{
 			get => Get(true);
 			set => Set(value);

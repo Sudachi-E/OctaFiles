@@ -348,7 +348,6 @@ namespace Files.App.Helpers
 					.AddSingleton<DrivesWidgetViewModel>()
 					.AddSingleton<NetworkLocationsWidgetViewModel>()
 					.AddSingleton<FileTagsWidgetViewModel>()
-					.AddSingleton<RecentFilesWidgetViewModel>()
 					.AddSingleton<ReleaseNotesViewModel>()
 					// Utilities
 					.AddSingleton<QuickAccessManager>()

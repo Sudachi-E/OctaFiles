@@ -91,11 +91,6 @@ namespace Files.App.Data.Contracts
 		bool ShowQuickAccessWidget { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether or not to display the recent files widget.
-		/// </summary>
-		bool ShowRecentFilesWidget { get; set; }
-
-		/// <summary>
 		/// Gets or sets a value indicating whether or not to display the drives widget.
 		/// </summary>
 		bool ShowDrivesWidget { get; set; }
@@ -114,11 +109,6 @@ namespace Files.App.Data.Contracts
 		/// Gets or sets a value indicating whether or not to expand the folders widget.
 		/// </summary>
 		bool FoldersWidgetExpanded { get; set; }
-
-		/// <summary>
-		/// Gets or sets a value indicating whether or not to expand the recent files widget.
-		/// </summary>
-		bool RecentFilesWidgetExpanded { get; set; }
 
 		/// <summary>
 		/// Gets or sets a value indicating whether or not to expand the drives widget.

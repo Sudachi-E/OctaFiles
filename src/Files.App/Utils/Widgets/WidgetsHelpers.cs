@@ -49,10 +49,6 @@ namespace Files.App.Helpers
 			{
 				return generalSettingsService.ShowFileTagsWidget;
 			}
-			if (typeof(TWidget) == typeof(RecentFilesWidgetViewModel))
-			{
-				return generalSettingsService.ShowRecentFilesWidget;
-			}
 
 			return false;
 		}

@@ -55,16 +55,6 @@ namespace Files.App.ViewModels
 			}
 		}
 
-		public bool ShowRecentFilesWidget
-		{
-			get => UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget;
-			set
-			{
-				if (value != UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget)
-					UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget = value;
-			}
-		}
-
 		// Commands
 
 		public ICommand ReloadWidgetsCommand { get; }
@@ -94,9 +84,6 @@ namespace Files.App.ViewModels
 				case nameof(IGeneralSettingsService.ShowFileTagsWidget):
 					OnPropertyChanged(nameof(ShowFileTagsWidget));
 					break;
-				case nameof(IGeneralSettingsService.ShowRecentFilesWidget):
-					OnPropertyChanged(nameof(ShowRecentFilesWidget));
-					break;
 			}
 		}
 
@@ -108,7 +95,6 @@ namespace Files.App.ViewModels
 			var reloadDrivesWidget = WidgetsHelpers.TryGetWidget<DrivesWidgetViewModel>(this);
 			var reloadNetworkLocationsWidget = WidgetsHelpers.TryGetWidget<NetworkLocationsWidgetViewModel>(this);
 			var reloadFileTagsWidget = WidgetsHelpers.TryGetWidget<FileTagsWidgetViewModel>(this);
-			var reloadRecentFilesWidget = WidgetsHelpers.TryGetWidget<RecentFilesWidgetViewModel>(this);
 			var insertIndex = 0;
 
 			if (reloadQuickAccessWidget)
@@ -163,18 +149,6 @@ namespace Files.App.ViewModels
 					insertIndex++);
 			}
 
-			if (reloadRecentFilesWidget)
-			{
-				var recentFilesWidget = new RecentFilesWidget();
-
-				InsertWidget(
-					new(
-						recentFilesWidget,
-						recentFilesWidget.ViewModel,
-						(value) => UserSettingsService.GeneralSettingsService.RecentFilesWidgetExpanded = value,
-						() => UserSettingsService.GeneralSettingsService.RecentFilesWidgetExpanded),
-					insertIndex++);
-			}
 		}
 
 		public void RefreshWidgetList()

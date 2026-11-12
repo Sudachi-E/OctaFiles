@@ -487,16 +487,6 @@ namespace Files.App.ViewModels.Settings
 			}
 		}
 
-		public bool ShowRecentFilesWidget
-		{
-			get => UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget;
-			set
-			{
-				if (value != UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget)
-					UserSettingsService.GeneralSettingsService.ShowRecentFilesWidget = value;
-			}
-		}
-
 		public bool ShowPinToSideBar
 		{
 			get => UserSettingsService.GeneralSettingsService.ShowPinToSideBar;
